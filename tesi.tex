@@ -1,0 +1,393 @@
+
+
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[italian]{babel}
+\usepackage{amsmath}
+\usepackage{amsfonts} 
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{physics}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\tikzset{>=latex} % for LaTeX arrow head
+\usepackage{xcolor}
+\colorlet{veccol}{green!45!black}
+\colorlet{myred}{red!90!black}
+\colorlet{myblue}{blue!90!black}
+\colorlet{mypurple}{blue!50!red!80!black!80}
+\tikzstyle{vector}=[->,very thick,veccol]
+\usepackage{pgfplots} % for the axis environment
+\usetikzlibrary{calc} % to do arithmetic with coordinates
+\usetikzlibrary{angles,quotes} % for pic
+\usetikzlibrary{arrows.meta} % for arrow size
+\usetikzlibrary{bending} % for arrow head angle
+\tikzstyle{bend>}=[-{Latex[flex'=1,length=3,width=2.5]}]
+\tikzstyle{bend<}=[{Latex[flex'=1,length=3,width=2.5]}-]
+\usetikzlibrary{arrows.meta}
+\tikzstyle{thin arrow}=[dashed,thin,-{Latex[length=4,width=3]}]
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\author{Elisa Caruso}
+
+
+
+\newtheorem{definition}{Definizione}[section]
+
+\newtheorem{theorem}{Teorema}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+
+\newcommand\normh[1]{\left\lVert#1\right\rVert}
+
+\begin{document} 
+
+\section{Introduzione}
+
+Devo dire che è una dim geometrica\\
+Devo dire che uso la dim di Buser e faccio solo i primi due teoremi di Bieb \\
+Devo enunciare i teoremi di Bieb \\
+
+
+
+\section{Considerazioni preliminari}
+In questa sezione vengono enunciati e dimostrati gli strumenti fondamentali necessari per dare una dimostrazione geometria dei primi due teoremi di Bieberbach. \\
+Considero lo spazio vettoriale n-dimensionale $\mathbb{R}^{n}$  con il prodotto scalare definito $\forall
+ \vb{x} , \vb{y} \in \mathbb{R}^{3}$ da 
+
+\[
+  \vb{x} \cdot \vb{y} =  \sum_{i=1}^{n} x_i y_i 
+\]
+e la norma associata 
+\[
+  \norm{\vb{x}} =  \sqrt{\vb{x} \cdot \vb{x}}
+\]
+Definisco la distanza fra due vettori e l'angolo fra essi. \\
+$ \forall \vb{x}, \vb{y} \in \mathbb{R}^n $  
+\[ d(\vb{x}, \vb{y} ) = \norm{\vb{x-y}}\] 
+\[ \angle (\vb{x},\vb{y}) = arccos \big( \frac{\vb{x} \cdot \vb{y}}{\norm{\vb{x}} \norm{\vb{y}}} \big) \in [0, \pi] \]
+Imponendo una metrica sullo spazio vettoriale $\mathbb{R}^n$ ottengo lo spazio euclideo $\mathbb{E}^n$.
+
+\begin{definition}
+	Un'isometria di $\mathbb{E}^n$  è un funzione $ \alpha : \mathbb{R}^{n} \longrightarrow \mathbb{R}^{n} $  tale che $\forall \vb{x,y} \in \mathbb{R}^n $ vale 
+	\[ d(\alpha(\vb{x}), \alpha(\vb{y})) = d(\vb{x} , \vb{y} )\]
+\end{definition}
+Il seguente teorema è enunciato senza dimostraione in quanto si tratta di un risultato classico dell'algebra lineare. 
+
+\begin{theorem}
+Data un'isometria di $\mathbb{E}^n $, questa può essere scritta in modo unico come composizione di una rotazione e di una traslazione
+\[ \alpha : \mathbb{R}^{n} \longrightarrow \mathbb{R}^{n} \]
+\[\vb{x} \longmapsto \vb{Ax + a} \]
+dove $\vb{A} = rot( \alpha ) \in O(n) $ è la componente di rotazione di $\alpha$ \\
+e $\vb{a} = trans( \alpha ) \in \mathbb{R}^{n} $ è la componente di traslazione dell'isometria. 
+\end{theorem}
+
+\begin{lemma}
+L'insieme delle isometrie di  $\mathbb{E}^{n} $  è un gruppo rispetto all'operazione di composizione di applicazioni lineari. Lo chiamiamo $Isom(n)$.
+\end{lemma}
+
+\begin{definition}
+	Comunque prese  $ \alpha , \beta \in Isom(n)$ posso scriverle come $\alpha : \vb{x} \longmapsto \vb{Ax + a}$ e $\beta : \vb{x} \longmapsto \vb{Bx + b}$ \\
+	Definisco il loro commutatore come  $ [ \alpha , \beta] = \alpha \beta \alpha^{-1} \beta^{-1}$. 
+\end{definition}
+
+\begin{lemma}
+Comunque prese  $ \alpha , \beta \in Isom(n)$ valgono le due seguenti uguaglianze:
+\begin{equation}
+rot([ \alpha	, \beta ]) = \vb{[A, B]} = \vb{ABA^{-1}B^{-1}}
+\end{equation}  
+\begin{equation}
+trans([ \alpha	, \beta ]) = \vb{(A-id)b+(id-[A,B])b+A(id-B)A^{-1}a }
+\end{equation} 
+\end{lemma}
+
+\begin{proof}
+	$ [ \alpha, \beta ](\vb{x}) = ( \alpha \beta \alpha^{-1} \beta^{-1} ) (\vb{x})$. \\
+	Dato che $ \alpha : \vb{x} \longmapsto \vb{Ax + a}$ , allora sicuramente  $\alpha^{-1}: \vb{y} \longmapsto \vb{A^{-1}(y-a)}$.  \\
+	Allo stesso modo, dato che $ \beta : \vb{x} \longmapsto \vb{Bx + b}$ , so che $\beta^{-1}: \vb{y} \longmapsto \vb{B^{-1}(y-b)}$. 
+
+\begin{equation*}
+\begin{split}
+[ \alpha, \beta ](\vb{x}) = (\alpha \beta \alpha^{-1} \beta^{-1} ) (\vb{x})
+& = (\alpha \beta \alpha^{-1})( \vb{B^{-1}(x-b)}) = \\ 
+& = (\alpha \beta \alpha^{-1})( \vb{B^{-1}x- B^{-1}b }) = \\ 
+& = (\alpha \beta)(\vb{A^{-1}( B^{-1}x- B^{-1}b -a)})= \\
+& =  (\alpha \beta)(\vb{A^{-1} B^{-1}x- A^{-1}B^{-1}b -A^{-1}a})  = \\
+& = (\alpha)(\vb{B(A^{-1} B^{-1}x- A^{-1}B^{-1}b -A^{-1}a) +b}) = \\
+& = (\alpha)(\vb{BA^{-1} B^{-1}x-BA^{-1}B^{-1}Su questo spazio db -BA^{-1}a +b}) = \\
+& = \vb{A(BA^{-1} B^{-1}x-BA^{-1}B^{-1}b -BA^{-1}a +b) + a} = \\
+& = \vb{A(BA^{-1} B^{-1}x-BA^{-1}B^{-1}b -BA^{-1}a +b) + a} = \\
+& = \vb{ABA^{-1} B^{-1}x-ABA^{-1}B^{-1}b -ABA^{-1}a +Ab + a }
+\end{split}
+\end{equation*}
+
+Quindi ho che $ rot([ \alpha , \beta ]) = \vb{ABA^{-1} B^{-1} }$ e
+\begin{equation*}
+\begin{split}
+trans([ \alpha, \beta ]) & = \vb{-ABA^{-1}B^{-1}b -ABA^{-1}a +Ab + a }= \\
+& = \vb{Ab + a -ABA^{-1}B^{-1}b -ABA^{-1}a }= \\
+& = \vb{(A-id)b + b + a -ABA^{-1}B^{-1}b -ABA^{-1}a} = \\
+& = \vb{(A-id)b + (id-[A,B])b + a - ABA^{-1}a} = \\
+& = \vb{(A-id)b + (id-[A,B])b + (id- ABA^{-1})a }= \\
+& = \vb{(A-id)b + (id-[A,B])b + A(id- B)A^{-1}a} 
+\end{split}
+\end{equation*}
+	
+\end{proof}
+
+\begin{definition}
+Comunque preso  $  \vb{A} \in O(n) $  definisco
+\[ m(\vb{A}) = \max \bigg\{ \frac{\norm{\vb{Ax-x}}}{\norm{\vb{x}}} \bigg|  \vb{x} \in \mathbb{R}^{n}-\vb{0} \bigg\} \]
+\end{definition}
+
+\begin{lemma}
+La precedente è una buona definizione e inoltre vale la seguente uguaglianza: 
+\[ m(\vb{A}) = \max \bigg\{ \norm{\vb{Ax-x}} \bigg|  \vb{x} \in \mathbb{R}^{n} \land \norm{\vb{x}} = 1 \bigg\} \]
+\end{lemma}
+
+\begin{proof}
+$ \forall \vb{x} \in \mathbb{R}^{n}-\vb{0}$  $ \exists \vb{y} \in \mathbb{R}^{n}-\vb{0} $ tale che \\$\vb{x} = \lambda \vb{y} , \lambda \in \mathbb{R} \land \norm{\vb{y}} = 1 $. 
+
+\[ \frac{\norm{\vb{Ax-x}}}{\norm{\vb{x}}} = \frac{\norm{\vb{A}\lambda \vb{y}-\lambda \vb{y}}}{\norm{\lambda \vb{y}}} =   \frac{|\lambda| \norm{\vb{Ay-y}}}{|\lambda| \norm{\vb{ y}}} = \norm{\vb{Ay-y}} \]
+
+\[ m(\vb{A}) = \max \bigg\{ \norm{\vb{Ax-x}} \bigg|  \vb{x} \in \mathbb{R}^{n} \land \norm{\vb{x}} = 1 \bigg\}\] L'insime $\vb{x} \in \mathbb{R}^{n} \land \norm{\vb{x}} = 1 $  è un compatto in  $\mathbb{R}^{n}$, quindi per il teorema di Weierstrass esiste una $\vb{x} \in \mathbb{R}^{n} \land \norm{\vb{x}} = 1$ che mi verifica il max. 
+\end{proof}
+
+\begin{lemma}
+Comunque preso $ \vb{x} \in \mathbb{R}^{n}$  vale  \[ \norm{\vb{Ax-x}} \leq m(\vb{A}) \norm{\vb{x}} \]
+\end{lemma}
+
+\begin{proof}
+Infatti vale $\forall \vb{x} \in \mathbb{R}^{n}-\vb{0}$  e vale anche per  $\vb{x}=0$
+\end{proof}
+
+\begin{definition}
+\[ E_{\vb{A}} := \{ \vb{x} \in \mathbb{R}^{n} :  \norm{\vb{Ax - x}} = m(\vb{A}) \norm{\vb{x}}\} \]
+\end{definition}
+
+\begin{lemma}
+$E_A$ è un sottospazio di $\mathbb{R}^{n}$ non banale ed A-invariante
+\end{lemma} 
+
+\begin{proof}
+\begin{itemize}
+\item $\vb{0} \in E_{\vb{A}} $  
+\item $\forall \vb{x} \in E_{\vb{A}}, \forall \lambda \in \mathbb{R}$ \\
+$\vb{x} \in E_{\vb{A}} \Longrightarrow \norm{\vb{Ax-x}} = m(\vb{A})\norm{\vb{x}} \Longrightarrow \norm{\vb{A} \lambda \vb{x} -\lambda \vb{x}}= | \lambda | m(\vb{A}) \norm{\vb{x}}  \Longrightarrow \lambda \vb{x} \in E_{\vb{A}} $
+\item $\forall \vb{x, y} \in E_{\vb{A}} $ voglio verificare che $\vb{x+y, x-y} \in E_{\vb{A}}$ \\
+$\vb{x} \in E_{\vb{A}} \Longrightarrow \norm{\vb{Ax-x}} = m(\vb{A})\norm{\vb{x}}$ \\
+$\vb{y} \in E_{\vb{A}} \Longrightarrow \norm{\vb{Ay-y}} = m(\vb{A})\norm{\vb{y}}$ 
+
+\begin{equation} 
+\begin{split}
+& \norm{\vb{A(x+y) - (x+y)}}^2 + \norm{\vb{A(x-y) - (x-y)}}^2  = \norm{\vb{Ax - x + Ay -y}}^2 + \norm{\vb{Ax - x -(Ay -y)}}^2 = \\
+& = 2 \norm{\vb{Ax-x}}^2 + 2 \norm{\vb{Ay -y}}^2  = 2( \norm{\vb{Ax-x}}^2 + \norm{\vb{Ay-y}}^2) = 2m(\vb{A})^2(\norm{\vb{x}}^2 + \norm{\vb{y}}^2) 
+\end{split}
+\end{equation}
+Da (3) segue 
+\begin{equation} 
+\begin{split}
+2m(\vb{A})^2(\norm{\vb{x}}^2 + \norm{\vb{y}}^2) & = \norm{\vb{A(x+y) - (x+y)}}^2 + \norm{\vb{A(x-y) - (x-y)}}^2 \leq m(\vb{A})^2(\norm{\vb{x+y}}^2 + \norm{\vb{x-y}}^2) \\ 
+& = m(\vb{A})^2(\norm{\vb{x+y}}^2 + \norm{\vb{x-y}}^2)  = 2m(\vb{A})^2(\norm{\vb{x}}^2 + \norm{\vb{y}}^2)
+\end{split}
+\end{equation}
+Quindi il segno di disuguaglianza in (4) è un'uguaglianza, in particolare 
+\[   \norm{\vb{A(x+y) - (x+y)}}^2 + \norm{\vb{A(x-y) - (x-y)}}^2  = m(\vb{A})^2(\norm{\vb{x+y}}^2 + \norm{\vb{x-y}}^2)  \]
+Spostando i termini da parte a parte ottengo
+\[ \norm{\vb{A(x+y) - (x+y)}}^2 - m(\vb{A})^2 \norm{\vb{x+y}}^2=  m(\vb{A})^2 \norm{\vb{x-y}}^2 - \norm{\vb{A(x-y) - (x-y)}}^2 \]
+\begin{equation} 
+\begin{split}
+\bigg( \norm{\vb{A(x+y) - (x+y)}} & + m(\vb{A})\norm{\vb{x+y}} \bigg) \bigg( \norm{\vb{A(x+y) - (x+y)}} - m(\vb{A}) \norm{\vb{x+y}} \bigg) = \\
+& -\bigg( \norm{\vb{A(x-y) - (x-y)}} + m(\vb{A})\norm{\vb{x-y}} \bigg) \bigg( \norm{\vb{A(x-y) - (x-y)}} - m(\vb{A}) \norm{\vb{x-y}} \bigg)
+\end{split}
+\end{equation}
+Distinguiamo alcuni casi: 
+\begin{itemize}
+\item Se $\vb{A} = \vb{id} \Rightarrow m(\vb{A}) = 0 \Rightarrow E_{\vb{A}} = \mathbb{R}^{n}$  ed in quel caso ho chiuso la dimostrazione.
+\item Se $\vb{x} = \vb{y}$ o $\vb{x} = \vb{-y}$  ho già chiuso la dimostrazione per il punto precedente (rispettivamente con $\lambda = +1$ e $\lambda = -1$). 
+\item Nei restanti casi posso osservare che nell'equazione (5) il primo fattore a sinistra dell'uguaglianza è è strettamente positivo, mentre il secondo fattore è $\leq 0 $. Allo stesso modo a destra dell'uguaglianza ho un meno che mi modifica il segno del prodotto; il primo fattore è strettamente positivo ed il secondo è $\leq 0 $. \\ L'uguaglianza in (5) deve quindi per forza coincidere con $0=0$ e questo mi implica 
+\begin{equation*}
+  \left\{
+    \begin{aligned}
+      & \norm{\vb{A(x+y) - (x+y)}} = m(\vb{A})\norm{\vb{x+y}} \\
+      & \norm{\vb{A(x-y) - (x-y)}} = m(\vb{A})\norm{\vb{x-y}} 
+    \end{aligned}
+  \right.
+\end{equation*}
+
+$\Longrightarrow \vb{x+y, x-y} \in E_{\vb{A}} $ 
+\end{itemize}  
+Ho concluso la dimostrazione del fatto che $E_{\vb{A}}$ è un sottospazio vettoriale di $\mathbb{R}^n $
+
+\item Mostro che $E_{\vb{A}}$ è non banale. 
+\[ m(\vb{A}) = \max \bigg\{ \norm{\vb{Ax-x}} \bigg|  \vb{x} \in \mathbb{R}^{n} \land \norm{\vb{x}} = 1 \bigg\} \] 
+ L'insieme degli $\vb{x} \in \mathbb{R}^{n} \land \norm{\vb{x}} = 1$ è un compatto; l'applicazione $ \vb{x} \mapsto \norm{\vb{Ax-x}}$ è continua in quanto composizione di funzioni continue, quindi sicuramente esiste un $\vb{x} \in \mathbb{R}^{n} \land \norm{\vb{x}} = 1$  che mi verifica il massimo. In particolare $\vb{x} \neq \vb{0}$  (perché ha norma 1) e 
+
+\[ \norm{\vb{Ax - x}} = m(\vb{A}) = m(\vb{A})\norm{\vb{x}} \Longrightarrow \vb{x} \in E_{\vb{A}}\]
+
+
+\item Mostro che $E_{\vb{A}}$ è $\vb{A}$-invariante. \\
+$\forall \vb{x} \in E_{\vb{A}}$  voglio mostrare che $\vb{Ax} \in E_{\vb{A}}$ \\
+$\vb{x} \in E_{\vb{A}} \Longrightarrow \norm{\vb{Ax-x}} = m(\vb{A})\norm{\vb{x}} $ \\
+Dato che $\vb{A} \in O(n)$ ho la seguente catena di uguaglianze:\\
+$ \norm{\vb{A(Ax) - Ax }} =  \norm{\vb{A(Ax-x)}} = \norm{\vb{Ax - x}} = m(\vb{A})\norm{\vb{x}} = m(\vb{A})\norm{\vb{Ax}} \Longrightarrow \vb{Ax} \in E_{\vb{A}}$
+\end{itemize} 
+\end{proof}
+
+
+
+\begin{lemma}
+$E_{\vb{A}}$ sottospazio vettoriale di $\mathbb{R}^n $ non banale, quindi posso definire il suo complemento ortogonale $E^{\perp}_{\vb{A}} \neq \mathbb{R}^n$ ed anche questo è $\vb{A}$-invariante. 
+\end{lemma} 
+
+\begin{definition}
+
+\[ m^{\perp}(\vb{A}) = \begin{cases} 
+      \max \bigg\{ \frac{\norm{\vb{Ax-x}}}{\norm{\vb{x}}} \bigg|  \vb{x} \in E^{\perp}_{\vb{A}} - \vb{0} \bigg\}  &  se   E^{\perp}_{\vb{A}} \neq {\vb{0}} \\
+      0 & se   E^{\perp}_{\vb{A}} = {\vb{0}} \\
+      
+   \end{cases}
+\]
+
+\end{definition}
+
+\begin{lemma}
+$m^{\perp}(\vb{A}) < m(\vb{A})$ se $\vb{A \neq id} $\\
+$m^{\perp}(\vb{A}) = m(\vb{A}) = 0$ se $\vb{A = id}$
+
+\end{lemma}
+
+\begin{proof}
+\begin{itemize}
+\item Se $\vb{A = id} \Longrightarrow m(\vb{A}) = 0 \land E_{\vb{A}} = \mathbb{R}^n$. Quindi $E^{\perp}_{\vb{A}} = {0} \Longrightarrow m^{\perp}(\vb{A}) = 0$
+
+\item Se $\vb{A \neq id}$ \\
+\[ m(\vb{A}) = \max \bigg\{ \frac{\norm{\vb{Ax-x}}}{\norm{\vb{x}}} \bigg|  \vb{x} \in \mathbb{R}^{n}-\vb{0} \bigg\} 
+\geq \max \bigg\{ \frac{\norm{\vb{Ax-x}}}{\norm{\vb{x}}} \bigg|  \vb{x} \in E^{\perp}_{\vb{A}} - \vb{0} \bigg\} =  m^{\perp}(\vb{A}) \]
+Se valesse $m(\vb{A}) = m^{\perp}(\vb{A}) \Longrightarrow \exists \vb{x} \in E^{\perp}_{\vb{A}} - \vb{0} : \norm{\vb{Ax-x}} = m(\vb{A})\norm{\vb{x}} \Longrightarrow \vb{x} \in E_{\vb{A}}$  ma questo implica $\vb{x} \in E_{\vb{A}} \cap E^{\perp}_{\vb{E}} = {\vb{0}} \Longrightarrow \vb{x = 0} $  ma questo è assurdo perché ho imposto che $x\vb{ \neq 0}$ 
+\end{itemize}
+\end{proof}
+
+\begin{lemma}
+$\forall \vb{x} \in \mathbb{R}^n $ posso scrivere $\vb{x}$ in modo unico in decomposizione ortogonale. \\
+$\vb{x} = \vb{x}^E + \vb{x}^{\perp}$ dove $\vb{x}^E \in E_{\vb{A}}$ e $\vb{x}^{\perp} \in E^{\perp}_{\vb{A}}$ \\
+Valgono inoltre le proprietà:
+\[ \norm{\vb{Ax}^E - \vb{x} }= m(\vb{A})\norm{\vb{x}^E} \] \[\norm{\vb{Ax}^{\perp} - \vb{x}} \leq m(\vb{A}) \norm{\vb{x}^{\perp}} \]
+\end{lemma}
+
+\begin{lemma}
+ $\forall \vb{ A, B} \in O(n)$ vale la disuguaglianza $ m([\vb{A,B}]) \leq 2m(\vb{A})m(\vb{B})$ 
+\end{lemma}
+
+\begin{proof}
+
+
+
+\[ [\vb{A,B}] - \vb{id} = \vb{ABA^{-1}B^{-1} - id }= \vb{(AB -BA)A^{-1}B^{-1} }= [ \vb{ (A-id)(B-id) - (B-id)(A-id)}] \vb{A^{-1}B^{-1}} = \]
+ \[  = \vb{( A-id)(B-id) A^{-1}B^{-1} -  (B-id)(A-id) A^{-1}B^{-1}} \]
+ 
+ 
+ \begin{equation} 
+\begin{split}
+\norm{\vb{([A,B] - id )x}} & \leq \norm{\vb{ ( A-id)(B-id) A^{-1}B^{-1}x}} +  \norm{\vb{(B-id)(A-id) A^{-1}B^{-1}x}} \leq \\
+& \leq m(\vb{A}) \norm{\vb{(B-id) A^{-1}B^{-1}x}} + m(\vb{B}) \norm{\vb{(A-id) A^{-1}B^{-1}x}} \leq \\ 
+& \leq m(\vb{A})m(\vb{B})\norm{\vb{A^{-1}B^{-1}x}} + m(\vb{B})m(\vb{A}) \norm{\vb{A^{-1}B^{-1}x}}
+\end{split}
+\end{equation}
+
+Dato che $ \vb{A,B} \in O(n)$ posso scrivere $\norm{\vb{A^{-1}B^{-1}x}} = \norm{\vb{x}} $ , quindi 
+
+\begin{equation}
+  \norm{\vb{([A,B] - id )x}}  \leq 2m(\vb{A})m(\vb{B})\norm{\vb{x}}
+\end{equation} 
+Quindi segue immediatametne la tesi. 
+\end{proof}
+Si richiede, di solito, quando si parla di gruppi cristallografici, che abbiano un dominio fondamentale discreto e compatto. In particolare in questo caso utilizziamo la seguente definizione:
+
+\begin{definition}
+Un gruppo $\Gamma$ di isometrie in $\mathbb{R}^{n}$ è detto cristallografico se valgono le seguenti condizioni:
+\begin{itemize}
+	\item $ \forall t \in \mathbb{R} : t > 0 $  esistono solo un numero finito di $\alpha \in \Gamma $  tali che  $|a| \leq t$
+
+	\item $ \exists d \in \mathbb{R}: \forall \vb{x} \in \mathbb{R}^n   \exists \alpha \in \Gamma : \norm{\vb{a-x}}\leq d $
+\end{itemize}
+\end{definition}
+
+Sia ora $\Gamma$ un gruppo cristallografico in $\mathbb{R}^n$ 
+
+\begin{theorem}{Mini Bieberbach}
+ $ \forall \vb{u} \in \mathbb{R}^n : \norm{\vb{u}} = 1,   \forall \epsilon , \delta >0 $  $   \exists \beta \in \Gamma $ che soddisfa  
+\begin{itemize}
+\item $\vb{b} \neq 0$ 
+\item $ \angle (\vb{u, b}) \leq \delta $
+\item $ m(\vb{B}) \leq \epsilon$ 
+\end{itemize}
+\end{theorem}
+
+\begin{proof}
+\begin{itemize}
+
+\item  Per la seconda proprietà dei gruppi cristallografici so che $ \exists d \in \mathbb{R} : \forall k \in \mathbb{N} $ $  \exists \beta_k \in \Gamma : $ \\
+\[ \beta_k \vb{x} = \vb{B_k x + b_k}  \]
+\[ \norm{\vb{b_k - ku }} \leq d \] 
+Se $k \longrightarrow \infty$ allora sicuramente $ \norm{\vb{b_k}} \longrightarrow \infty$.  \\
+Infatti se, per assurdo, questo non fosse vero $\exists M \in \mathbb{R} : \norm{\vb{b_k}} \leq M $   $  \forall k \in \mathbb{N} $
+
+\[ d \geq \norm{\vb{b_k - ku}} \geq | \norm{\vb{b_k}} - k | \]
+Nella disequazione  precedente, se la successione è limitata allora l'ultimo termine diverge ma questo è assurdo perché è maggiorato da $d$. 
+
+\item Ho definito la successione ${ \{\beta_k \}}_{k \in \mathbb{N}}$  con  $\beta_k \vb{x = B}_k \vb{x + b}_k$   $\beta_k \in \Gamma \Longrightarrow \vb{B}_k \in O(n)$  \\
+$O(n)$  è compatto e ${ \{\vb{B}_k \} }_{k \in \mathbb{N}}$ successione in  $O(n)$  ammette quindi almeno un punto di accumulazione per il teorema di Bolzano-Weierstrass. \\
+Estraggo da ${ \{\vb{B}_k \}}_{k \in \mathbb{N}}$  una sottosuccessione  $ { \{ \vb{A}_k \} }_{k \in \mathbb{N}} = { \{ \vb{B}_k_j \} }_{j \in \mathbb{N}}$  convergente.  \\
+La funzione  $ m: O(n) \longrightarrow \mathbb{R}$  è continua in quanto composizione di funzioni continue ($ \vb{A} \mapsto \max{\norm{\vb{Ax-x}}} $), quindi con $i,j \in \mathbb{B} \longrightarrow \infty $ sicuramente $m(\vb{C}_j \vb{C}^{-1}_i) \longrightarrow m(\vb{id}) = 0 $
+
+
+\item Considero ora
+\[ \angle (\vb{u , b_k}) = \angle (\vb{ku, b_k}) = : \theta_k \]
+
+
+\[ \frac{\norm{\vb{b_k}}}{sin(\gamma_k)} = \frac{\norm{\vb{b_k} - k\vb{u}}}{sin(\theta_k)}  \leq \frac{d}{sin(\theta_k)} \]
+
+\[  sin(\theta_k) \leq \frac{sin(\gamma_k)d}{\norm{\vb{b_k}}} \longrightarrow 0 \Longrightarrow \theta_k \longrightarrow 0 \]
+
+\textit{\begin{tikzpicture}[line cap=round]
+  \coordinate (O) at (0,0);
+  \coordinate (A) at (0:4.1);
+  \coordinate (B) at ( 55:2.4);
+  \coordinate (A-B) at ($(A)-(B)$);
+  
+
+  \draw[vector,myred] (O) -- (A) node[midway,below] {$k \vb{u}$};
+  \draw[vector,myblue] (O) -- (B) node[midway,above left=-2] {$\vb{b_k}$};
+  \draw[vector,mypurple] (A) -- (B) node[above right=-3] {$\vb{b_k}-k\vb{u}$};
+  \pic[draw,"$\theta_k$",angle radius=20,angle eccentricity=1.25] {angle=A--O--B}; 
+  \pic[draw,"$\gamma_k$",angle radius=20,angle eccentricity=1.25] {angle=B--A--O};  
+\end{tikzpicture}
+}
+\[ \Longrightarrow \exists i, j \in \mathbb{N} : \angle(u, \vb{b}_j ) \leq \frac{\delta}{4} \]
+
+\end{itemize}
+
+
+
+\begin{tikzpicture}[line cap=round]
+  \coordinate (O) at (0,0);
+  \coordinate (A) at (0:10.1);
+  \coordinate (B) at ( 55:2.4);
+  \coordinate (A-B) at ($(A)-(B)$);
+  
+
+  \draw[vector,myred] (O) -- (A) node[midway,below] {$k \vb{u}$};
+  \draw[vector,myblue] (O) -- (B) node[midway,above left=-2] {$\vb{b_k}$};
+  \draw[vector,mypurple] (A) -- (B) node[above right=-3] {$\vb{b_k}-k\vb{u}$};
+  \draw (A) circle (2.4);
+  \pic[draw,"$\theta_k$",angle radius=20,angle eccentricity=1.25] {angle=A--O--B}; 
+  \pic[draw,"$\gamma_k$",angle radius=20,angle eccentricity=1.25] {angle=B--A--O};  
+\end{tikzpicture}
+
+
+
+
+
+\end{proof}
+
+\end{document}

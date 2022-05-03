@@ -1,0 +1,17 @@
+
+
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{math}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\author{Elisa Caruso}
+\begin{document}
+
+Dato $\mathcal{R}^n$ spazio euclideo con il prodotto scalare 
+\begin{equation*}
+\forall{}
+ x, y \in \mathcal{R}^n  x\dot{} y = \sum{n=1, n} x_i y_i
+\end{equation*}
+
+\end{document}
