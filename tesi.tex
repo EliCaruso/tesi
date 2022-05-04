@@ -316,9 +316,9 @@ Sia ora $\Gamma$ un gruppo cristallografico in $\mathbb{R}^n$
 \begin{theorem}{Mini Bieberbach}
  $ \forall \vb{u} \in \mathbb{R}^n : \norm{\vb{u}} = 1,   \forall \epsilon , \delta >0 $  $   \exists \beta \in \Gamma $ che soddisfa  
 \begin{itemize}
-\item $\vb{b} \neq 0$ 
-\item $ \angle (\vb{u, b}) \leq \delta $
-\item $ m(\vb{B}) \leq \epsilon$ 
+\item $\vb{a} \neq 0$ 
+\item $ \angle (\vb{u, a}) \leq \delta $
+\item $ m(\vb{A}) \leq \epsilon$ 
 \end{itemize}
 \end{theorem}
 
@@ -334,21 +334,9 @@ Infatti se, per assurdo, questo non fosse vero $\exists M \in \mathbb{R} : \norm
 \[ d \geq \norm{\vb{b_k - ku}} \geq | \norm{\vb{b_k}} - k | \]
 Nella disequazione  precedente, se la successione è limitata allora l'ultimo termine diverge ma questo è assurdo perché è maggiorato da $d$. 
 
-\item Ho definito la successione ${ \{\beta_k \}}_{k \in \mathbb{N}}$  con  $\beta_k \vb{x = B}_k \vb{x + b}_k$   $\beta_k \in \Gamma \Longrightarrow \vb{B}_k \in O(n)$  \\
-$O(n)$  è compatto e ${ \{\vb{B}_k \} }_{k \in \mathbb{N}}$ successione in  $O(n)$  ammette quindi almeno un punto di accumulazione per il teorema di Bolzano-Weierstrass. \\
-Estraggo da ${ \{\vb{B}_k \}}_{k \in \mathbb{N}}$  una sottosuccessione  $ { \{ \vb{A}_k \} }_{k \in \mathbb{N}} = { \{ \vb{B}_k_j \} }_{j \in \mathbb{N}}$  convergente.  \\
-La funzione  $ m: O(n) \longrightarrow \mathbb{R}$  è continua in quanto composizione di funzioni continue ($ \vb{A} \mapsto \max{\norm{\vb{Ax-x}}} $), quindi con $i,j \in \mathbb{B} \longrightarrow \infty $ sicuramente $m(\vb{C}_j \vb{C}^{-1}_i) \longrightarrow m(\vb{id}) = 0 $
-
-
-\item Considero ora
-\[ \angle (\vb{u , b_k}) = \angle (\vb{ku, b_k}) = : \theta_k \]
-
-
-\[ \frac{\norm{\vb{b_k}}}{sin(\gamma_k)} = \frac{\norm{\vb{b_k} - k\vb{u}}}{sin(\theta_k)}  \leq \frac{d}{sin(\theta_k)} \]
-
-\[  sin(\theta_k) \leq \frac{sin(\gamma_k)d}{\norm{\vb{b_k}}} \longrightarrow 0 \Longrightarrow \theta_k \longrightarrow 0 \]
-
-\begin{tikzpicture}[line cap=round]
+\item Considero ora \\
+\begin{minipage}{0.5\textwidth}
+    \begin{tikzpicture}[line cap=round]
   \coordinate (O) at (0,0);
   \coordinate (A) at (6, 0);
   \coordinate (B) at (5,2.4);
@@ -361,32 +349,63 @@ La funzione  $ m: O(n) \longrightarrow \mathbb{R}$  è continua in quanto compos
   \pic[draw,"$\theta_k$",angle radius=20,angle eccentricity=1.25] {angle=A--O--B}; 
   \pic[draw,"$\gamma_k$",angle radius=20,angle eccentricity=1.25] {angle=B--A--O};  
 \end{tikzpicture}
+\end{minipage}\hfill
+\begin{minipage}{0.5\textwidth}
+	\[ \angle (\vb{u , b_k}) = \angle (\vb{ku, b_k}) = : \theta_k \]
+\[ \frac{\norm{\vb{b_k}}}{sin(\gamma_k)} = \frac{\norm{\vb{b_k} - k\vb{u}}}{sin(\theta_k)}  \leq \frac{d}{sin(\theta_k)} \]
+\[  sin(\theta_k) \leq \frac{sin(\gamma_k)d}{\norm{\vb{b_k}}} \longrightarrow 0 \Longrightarrow \theta_k \longrightarrow 0 \]
+\end{minipage}
+
+
+
+
+
+
+\item Ho definito la successione ${ \{\beta_k \}}_{k \in \mathbb{N}}$  con  $\beta_k \vb{x = B}_k \vb{x + b}_k$   $\beta_k \in \Gamma \Longrightarrow \vb{B}_k \in O(n)$  \\
+$O(n)$  è compatto e ${ \{\vb{B}_k \} }_{k \in \mathbb{N}}$ successione in  $O(n)$  ammette quindi almeno un punto di accumulazione per il teorema di Bolzano-Weierstrass. \\
+Estraggo da ${ \{ \vb{B}_k \}}_{k \in \mathbb{N}}$  una sottosuccessione  $ { \{ \vb{A}_k \} }_{k \in \mathbb{N}} = { \{ \vb{B}_{k_j} \} }_{j \in \mathbb{N}}$  convergente.  \\
+La funzione  $ m: O(n) \longrightarrow \mathbb{R}$  è continua in quanto composizione di funzioni continue ($ \vb{A} \mapsto \max{\norm{\vb{Ax-x}}} $), quindi con $i,j \in \mathbb{B} \longrightarrow \infty $ sicuramente $m(\vb{A}_j \vb{A}^{-1}_i) \longrightarrow m(\vb{id}) = 0 $ \\
+Associata a questa sottosuccessione ho ovviamente una sottosuccessione di ${ \{\beta_k \}}_{k \in \mathbb{N}}$ che chiamo ${ \{\alpha_k \}}_{k \in \mathbb{N}}$ con  $\alpha_k \vb{x = A}_k \vb{x + a}_k$ 
+\item Dato che valgono tutte le proprietà di cui sopra, è immediato verificare che $\exists i,j \in \mathbb{N} $  tali che  $ i < j$  e che valgano contemporaneamente
+\[ \angle(u, \vb{a}_j ) \leq \frac{\delta}{2} \]
+\[ \norm{\vb{a}_i} \leq \frac{\delta}{4}\norm{\vb{a}_j} \]
+\[ m( \vb{A}_j \vb{A}^{-1}_i ) \leq \epsilon \]
+Considero l'isometria definita da $\alpha \in \Gamma$ come 
+\[ \alpha : x \longmapsto \alpha_j \alpha^{-1}_i \vb{x} = \vb{A}_j \vb{A}^{-1}_i \vb{x} + \vb{a}_j - \vb{A}_j \vb{A}^{-1}_i \vb{a}_i\]
+Verifico che questa isometria verifica tutte le proprietà richieste dalla tesi
+
+\begin{itemize}
+\item E' ovvio che $m(\vb{A}) = m(\vb{A}_j \vb{A}^{-1}_i) \leq \epsilon$ 
+\item Verifico  $\vb{a}= \vb{a}_j - \vb{A}_j \vb{A}^{-1}_i \vb{a}_i \neq 0$ 
+\[ \norm{\vb{a}_j - \vb{A}_j \vb{A}^{-1}_i \vb{a}_i} \geq \bigg| \norm{\vb{a}_j} - \norm{ \vb{A}_j \vb{A}^{-1}_i \vb{a}_i } \bigg| \geq \bigg| \norm{\vb{a}_j } + \norm{\vb{a}_i} \bigg| \geq \norm{\vb{a}_i} \bigg| \frac{4}{\delta} -1 \bigg| \]
+$\norm{\vb{a}_i} \neq 0 \Longrightarrow \vb{a} \neq 0$
  
-\[ \Longrightarrow \exists i, j \in \mathbb{N} : \angle(u, \vb{b}_j ) \leq \frac{\delta}{4} \]
-
-\end{itemize}
-
-
-
+\item Verifico $ \angle (\vb{u, a})  = \angle (\vb{u} , \vb{a_j - A_j A_i^{-1} a_i} ) \leq \delta $. 
+\begin{equation}
+\angle (\vb{u} , \vb{a_j - A_j A_i^{-1} a_i} ) \leq \angle (\vb{u} , \vb{a_j}) + \angle(\vb{a_j}, \vb{a_j- A_j A_i^{-1} a_i} ) 
+\end{equation}
+\begin{minipage}{0.3\textwidth}
+Dato che $ \norm{\vb{a}_i} \leq \frac{\delta}{4}\norm{\vb{a}_k}$  \\  la punta del vettore $\vb{a}_j - \vb{A_j A_i^{-1} a_i}$ cade all'interno di un cerchio di centro la punta di $\vb{a}_j$ e di raggio $r = \frac{\delta}{4}\norm{\vb{a}_k}$
+\end{minipage} \hfill 
+\begin{minipage}{0.7\textwidth}
 \begin{tikzpicture}[line cap=round]
-  
   \coordinate (O) at (0,0);
-  \coordinate (A) at (12,0);
-  \coordinate (B) at (3,2);
+  \coordinate (A) at (9,0);
+  \coordinate (B) at (1.5,1);
   \coordinate (C) at ($(O)-(B)$);
-  \coordinate (U) at (2, -3 );
+  \coordinate (U) at (1, -1.5);
   \coordinate (X) at ($(A)+(C)$);
-  
-
-  \draw[vector] (O) -- (A) node[midway,below] {$\vb{b}_j$};
-  \draw[vector] (O) -- (B) node[midway,above left = -2] {$\vb{B_j B_i^{-1} b_i}$};
-  \draw (A) circle (4);
-  \draw[vector] (O) -- (U) node[midway, below] {$ \vb{u} $};
-  \draw[vector] (A) -- (X);
-  \draw[vector] (O) -- (X);
+  \draw[vector] (O) -- (A) node[midway,above] {$\vb{a}_j$};
+  \draw[vector,red] (O) -- (B) node[above right = -2] {$\vb{A_j A_i^{-1} a_i}$};
+  \draw (A) circle (2)node[right]{$r = \frac{\delta}{4}\norm{\vb{a}_k}$};
+  \draw[vector, black] (O) -- (U) node[midway, below] {$ \vb{u} $};
+  \draw[vector,red] (A) -- (X);
+  \draw[vector] (O) -- (X)node[midway,below] {$\vb{a}_j - \vb{A_j A_i^{-1} a_i}$};
 \end{tikzpicture}
+\end{minipage}
 
-
+Considero una situaizone come quella nel disegno precedente; \\ 
+\begin{minipage}{0.6\textwidth}
 \begin{tikzpicture}
   \def\r{2} % radius
   \def\q{-7} % distance center-external point q = |OQ|
@@ -402,7 +421,46 @@ La funzione  $ m: O(n) \longrightarrow \mathbb{R}$  è continua in quanto compos
   \draw[green,thick] (O) -- (Q);
   \draw (O) -- (X);
   \draw (Q) -- (X);
+  \fill(O) circle(0.05) node[below right] {O};
+  \fill(Q) circle(0.05) node[below left] {A};
+  \fill(P) circle(0.05) node[above=3] {T};
+  \fill(X) circle(0.05) node[above=3,right=4] {P};
+  \pic [draw, angle radius=4, angle eccentricity=4] {right angle = O--P--Q};
 \end{tikzpicture}
+\end{minipage} \hfill
+\begin{minipage}{0.4\textwidth}
+$\forall \rm P$ scelto all'interno della circonferenza \\ $ \widehat{PAO} \leq \widehat{TAO} $ 
+\[ \frac{\overline{TO}}{sin( \widehat{TAO}) } = \frac{\overline{AO}}{sin( \widehat{ATO}) } \] 
+Quindi
+\[ sin(\widehat{PAO}) \leq sin( \widehat{TAO})= \frac{\overline{TO}}{\overline{AO}} = \frac{\delta}{4}\]
+\end{minipage}
+
+So quindi che 
+\begin{equation}
+sin(\angle(\vb{a_j}, \vb{a_j- A_j A_i^{-1} a_i} ) ) \leq \frac{\delta}{4} \Longrightarrow \angle(\vb{a_j}, \vb{a_j- A_j A_i^{-1} a_i} ) \leq \frac{\delta}{4} + o \bigg( \frac{\delta^2}{16} \bigg) \leq \frac{\delta}{2}
+\end{equation}
+E (9) insieme con (8) e $ \angle(\vb{u}, \vb{a}_j) \leq \frac{\delta}{2}$ implica che 
+\[ \angle (\vb{u, a}) \leq \delta \]
+
+\end{itemize}
+
+\end{itemize}
+
+\end{proof}
+
+
+\begin{theorem}
+ Comunque scelta $\alpha \in \Gamma$:  $x \longmapsto \vb{Ax +a} $  tale per cui $m(\vb{A}) \leq \frac{1}{2} $, allora questa ismoetria è una translazione pura 
+\end{theorem}
+
+\begin{proof}
+ Se $m(\vb{A}) = 0 \Longrightarrow A = id \Longrightarrow \alpha$ è una translazione pura. \\
+ Suppongo per assurdo che  $0 < m(\vb{A}) \leq \frac{1}{2} $
+\end{proof}
+
+
+
+
 
 
 \begin{tikzpicture}
@@ -417,8 +475,8 @@ La funzione  $ m: O(n) \longrightarrow \mathbb{R}$  è continua in quanto compos
   \draw[thick] (0,-2) -- (0,7)node[above] {$E_{\vb{A}}$};
   \draw[vector] (O) -- (B)node[right] {$\vb{u}$};
   \draw[vector] (O) -- (C)node[right] {$\vb{b}$};
-  \draw[blue, thick] (0,0) -- (3,7)node[right];
-  \draw[blue, thick] (0,0) -- (-3,7)node[right];
+  \draw[blue, thick] (0,0) -- (3,7)node[right] {dgfhsjsg};
+  \draw[blue, thick] (0,0) -- (-3,7)node[right]{ahsgfjdfg};
   \filldraw[black] (0,0) circle (2pt);
   \pic[draw,"$\delta$",angle radius=30,angle eccentricity=1.25] {angle=A--O--B};  
   \begin{scope}[on background layer]
@@ -428,6 +486,5 @@ La funzione  $ m: O(n) \longrightarrow \mathbb{R}$  è continua in quanto compos
 
 
 
-\end{proof}
 
 \end{document}
