@@ -1,5 +1,3 @@
-
-
 \documentclass[10pt,a4paper]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
@@ -10,6 +8,7 @@
 \usepackage{amsthm}
 \usepackage{physics}
 \usepackage{tikz}
+\usetikzlibrary{backgrounds}
 \usetikzlibrary{calc}
 \tikzset{>=latex} % for LaTeX arrow head
 \usepackage{xcolor}
@@ -349,10 +348,10 @@ La funzione  $ m: O(n) \longrightarrow \mathbb{R}$  è continua in quanto compos
 
 \[  sin(\theta_k) \leq \frac{sin(\gamma_k)d}{\norm{\vb{b_k}}} \longrightarrow 0 \Longrightarrow \theta_k \longrightarrow 0 \]
 
-\textit{\begin{tikzpicture}[line cap=round]
+\begin{tikzpicture}[line cap=round]
   \coordinate (O) at (0,0);
-  \coordinate (A) at (0:4.1);
-  \coordinate (B) at ( 55:2.4);
+  \coordinate (A) at (6, 0);
+  \coordinate (B) at (5,2.4);
   \coordinate (A-B) at ($(A)-(B)$);
   
 
@@ -362,7 +361,7 @@ La funzione  $ m: O(n) \longrightarrow \mathbb{R}$  è continua in quanto compos
   \pic[draw,"$\theta_k$",angle radius=20,angle eccentricity=1.25] {angle=A--O--B}; 
   \pic[draw,"$\gamma_k$",angle radius=20,angle eccentricity=1.25] {angle=B--A--O};  
 \end{tikzpicture}
-}
+ 
 \[ \Longrightarrow \exists i, j \in \mathbb{N} : \angle(u, \vb{b}_j ) \leq \frac{\delta}{4} \]
 
 \end{itemize}
@@ -370,21 +369,62 @@ La funzione  $ m: O(n) \longrightarrow \mathbb{R}$  è continua in quanto compos
 
 
 \begin{tikzpicture}[line cap=round]
+  
   \coordinate (O) at (0,0);
-  \coordinate (A) at (0:10.1);
-  \coordinate (B) at ( 55:2.4);
-  \coordinate (A-B) at ($(A)-(B)$);
+  \coordinate (A) at (12,0);
+  \coordinate (B) at (3,2);
+  \coordinate (C) at ($(O)-(B)$);
+  \coordinate (U) at (2, -3 );
+  \coordinate (X) at ($(A)+(C)$);
   
 
-  \draw[vector,myred] (O) -- (A) node[midway,below] {$k \vb{u}$};
-  \draw[vector,myblue] (O) -- (B) node[midway,above left=-2] {$\vb{b_k}$};
-  \draw[vector,mypurple] (A) -- (B) node[above right=-3] {$\vb{b_k}-k\vb{u}$};
-  \draw (A) circle (2.4);
-  \pic[draw,"$\theta_k$",angle radius=20,angle eccentricity=1.25] {angle=A--O--B}; 
-  \pic[draw,"$\gamma_k$",angle radius=20,angle eccentricity=1.25] {angle=B--A--O};  
+  \draw[vector] (O) -- (A) node[midway,below] {$\vb{b}_j$};
+  \draw[vector] (O) -- (B) node[midway,above left = -2] {$\vb{B_j B_i^{-1} b_i}$};
+  \draw (A) circle (4);
+  \draw[vector] (O) -- (U) node[midway, below] {$ \vb{u} $};
+  \draw[vector] (A) -- (X);
+  \draw[vector] (O) -- (X);
 \end{tikzpicture}
 
 
+\begin{tikzpicture}
+  \def\r{2} % radius
+  \def\q{-7} % distance center-external point q = |OQ|
+  \def\x{{\r^2/\q}} % Q x coordinate
+  \def\y{{\r*sqrt(1-(\r/\q)^2}} % Q y coordinate
+  \coordinate (O) at (0,0); % circle center O
+  \coordinate (Q) at (\q,0); % external point Q
+  \coordinate (P) at (\x,\y); % point of tangency, P
+  \coordinate (X) at (1, 1);
+  \draw[blue,thick] (O) circle(\r);
+  \draw[green,thick] (Q) -- (P);
+  \draw[green,thick] (P) -- (O);
+  \draw[green,thick] (O) -- (Q);
+  \draw (O) -- (X);
+  \draw (Q) -- (X);
+\end{tikzpicture}
+
+
+\begin{tikzpicture}
+  \coordinate (O) at (0,0);
+  \coordinate (A) at (3,7);
+  \coordinate (B) at (0,4);
+  \coordinate (C) at (1.5,5);
+  \draw[dashed] (-5,0) -- (5,0)node[right] {$E^{\perp}_{\vb{A}}$};
+  \draw[dashed] (1.5,0) |- (0,5);
+  \draw[vector, red, thick] (O) -- (1.5,0)node[below] {$\vb{b}^{\perp}$};
+  \draw[vector, red, thick] (O) -- (0,5)node[left] {$\vb{b}^{E}$};
+  \draw[thick] (0,-2) -- (0,7)node[above] {$E_{\vb{A}}$};
+  \draw[vector] (O) -- (B)node[right] {$\vb{u}$};
+  \draw[vector] (O) -- (C)node[right] {$\vb{b}$};
+  \draw[blue, thick] (0,0) -- (3,7)node[right];
+  \draw[blue, thick] (0,0) -- (-3,7)node[right];
+  \filldraw[black] (0,0) circle (2pt);
+  \pic[draw,"$\delta$",angle radius=30,angle eccentricity=1.25] {angle=A--O--B};  
+  \begin{scope}[on background layer]
+		\fill[blue!20] (0,0) -- (-3,7) -- (3,7) -- cycle;
+  \end{scope}
+\end{tikzpicture}
 
 
 
