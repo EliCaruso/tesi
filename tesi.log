@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2022.4.23)  4 MAY 2022 15:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2022.4.23)  5 MAY 2022 17:32
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -724,17 +724,12 @@ your preamble.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 45--48
-
- []
-
-LaTeX Font Info:    Trying to load font information for U+msa on input line 53.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 54.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 53.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 54.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -742,63 +737,100 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
-Overfull \hbox (3.9525pt too wide) detected at line 191
+Overfull \hbox (3.9525pt too wide) detected at line 206
 []
  []
 
 
-Overfull \hbox (25.00003pt too wide) detected at line 191
+Overfull \hbox (25.00003pt too wide) detected at line 206
 []
  []
 
 
-Overfull \hbox (20.86206pt too wide) detected at line 201
+Overfull \hbox (20.86206pt too wide) detected at line 216
 []
  []
 
 
-Overfull \hbox (25.00003pt too wide) detected at line 201
+Overfull \hbox (25.00003pt too wide) detected at line 216
 []
  []
 
 [3]
-Underfull \hbox (badness 10000) in paragraph at lines 262--263
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 328--329
+Underfull \hbox (badness 10000) in paragraph at lines 270--271
 
  []
 
 [4]
-Overfull \hbox (25.00003pt too wide) in paragraph at lines 337--358
+Overfull \hbox (25.00003pt too wide) in paragraph at lines 349--370
 []$ $[]$ 
  []
 
-
-Overfull \hbox (49.2217pt too wide) in paragraph at lines 386--406
+[5]
+Overfull \hbox (49.2217pt too wide) in paragraph at lines 398--418
 $[]$  $[]$ 
  []
 
 
-Overfull \hbox (49.2217pt too wide) in paragraph at lines 407--437
+Overfull \hbox (9.77307pt too wide) detected at line 424
+\OML/cmm/m/it/10 sin\OT1/cmr/m/n/10 ([]) \OMS/cmsy/m/n/10 ^^T \OML/cmm/m/it/10 
+sin\OT1/cmr/m/n/10 ([]) = [] = []
+ []
+
+
+Overfull \hbox (0.85645pt too wide) in paragraph at lines 419--449
 []$  $[]$ 
  []
 
-[5] [6] (./tesi.aux) ) 
+
+Underfull \hbox (badness 10000) in paragraph at lines 469--470
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 473--476
+
+ []
+
+! Undefined control sequence.
+<recently read> \m 
+                   
+l.479 ...} \geq \norm{\vb{a}}$, questo perché $\m
+                                                  (\vb{B}} \leq \frac{1}{8}m...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Extra }, or forgotten $.
+l.479 ...norm{\vb{a}}$, questo perché $\m(\vb{B}}
+                                                   \leq \frac{1}{8}m(\vb{A})...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+
+Overfull \hbox (17.22168pt too wide) in paragraph at lines 472--503
+[]$[]$  $[]$
+ []
+
+[6] [7] (./tesi.aux) ) 
 Here is how much of TeX's memory you used:
- 26101 strings out of 481200
- 643996 string characters out of 5914397
- 1075953 words of memory out of 5000000
- 42629 multiletter control sequences out of 15000+600000
- 410159 words of font info for 44 fonts, out of 8000000 for 9000
+ 26134 strings out of 481200
+ 644374 string characters out of 5914397
+ 1073953 words of memory out of 5000000
+ 42651 multiletter control sequences out of 15000+600000
+ 416344 words of font info for 64 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 113i,19n,116p,757b,1050s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 113i,19n,116p,757b,1048s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/lisi/.texlive2020/texmf-var/fonts/pk/ljfour/jknap
 pen/ec/tcrm1000.600pk> </home/lisi/.texlive2020/texmf-var/fonts/pk/ljfour/jknap
 pen/ec/ecti1000.600pk> </home/lisi/.texlive2020/texmf-var/fonts/pk/ljfour/jknap
 pen/ec/ecbx1000.600pk> </home/lisi/.texlive2020/texmf-var/fonts/pk/ljfour/jknap
+pen/ec/ecbx1200.600pk> </home/lisi/.texlive2020/texmf-var/fonts/pk/ljfour/jknap
 pen/ec/ecrm1000.600pk> </home/lisi/.texlive2020/texmf-var/fonts/pk/ljfour/jknap
 pen/ec/ecbx1440.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
 s/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
@@ -806,17 +838,18 @@ mbx7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.p
 fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></u
 sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/shar
 e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/amsfonts/symbols/msbm7.pfb>
-Output written on tesi.pdf (6 pages, 176354 bytes).
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+onts/symbols/msbm7.pfb>
+Output written on tesi.pdf (7 pages, 200423 bytes).
 PDF statistics:
- 240 PDF objects out of 1000 (max. 8388607)
- 76 compressed objects within 1 object stream
+ 296 PDF objects out of 1000 (max. 8388607)
+ 87 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

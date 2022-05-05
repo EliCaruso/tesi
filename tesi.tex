@@ -40,57 +40,76 @@
 
 \begin{document} 
 
-\section{Introduzione}
+\section*{Introduzione}
 
-Devo dire che è una dim geometrica\\
-Devo dire che uso la dim di Buser e faccio solo i primi due teoremi di Bieb \\
-Devo enunciare i teoremi di Bieb \\
+%Devo dire che è una dim geometrica\\
+%Devo dire che uso la dim di Buser e faccio solo i primi due teoremi di Bieb \\
+%Devo enunciare i teoremi di Bieb \\
 
 
 
 \section{Considerazioni preliminari}
-In questa sezione vengono enunciati e dimostrati gli strumenti fondamentali necessari per dare una dimostrazione geometria dei primi due teoremi di Bieberbach. \\
-Considero lo spazio vettoriale n-dimensionale $\mathbb{R}^{n}$  con il prodotto scalare definito $\forall
- \vb{x} , \vb{y} \in \mathbb{R}^{3}$ da 
+Questo capitolo contiene gli strumenti fondamentali necessari per dare una dimostrazione geometrica dei primi due teoremi di Bieberbach. \\
+Nella prima sezione definisco lo spazio euclideo n-dimensionale, il gruppo delle isometrie e descrivo una loro rappresentazione come composizione dell'applicazione di una matrice ortogonale e di una translazione; definisco poi il coniugio di due isometrie. \\
+La lunghezza e la direzzione del vettore translazione di una data isometria mi dà immediatamente informazioni su come questa translazione agisce sui punti di $\mathbb{R}^n$; più complicato è invece capire, data una matrice ortogonale, come questa trasformi lo spazio. Nella seconda sezione definisco una funzione che, data una matrice ortogonale, mi dice quanto questa si discosta dalla matrice identità; definisco poi attraverso essa una scomposizione dello spazio in due spazi ortogonali. 
 
+
+
+
+\subsection{Spazio euclideo $\mathbb{E}^n$ ed isometrie}
+Considero lo spazio vettoriale n-dimensionale $\mathbb{R}^{n}$  \\
+con il prodotto scalare  \hfill
+\begin{minipage}{0.3\textwidth}
 \[
-  \vb{x} \cdot \vb{y} =  \sum_{i=1}^{n} x_i y_i 
+  \vb{x} \cdot \vb{y} =  \sum_{i=1}^{n} x_i y_i    
 \]
-e la norma associata 
+\end{minipage} \hfill
+\begin{minipage}{0.3\textwidth}
+$ \forall \vb{x} , \vb{y} \in \mathbb{R}^{n}$
+\end{minipage} \\
+E la norma associata   \hfill             
+\begin{minipage}{0.3\textwidth}
 \[
   \norm{\vb{x}} =  \sqrt{\vb{x} \cdot \vb{x}}
 \]
-Definisco la distanza fra due vettori e l'angolo fra essi. \\
-$ \forall \vb{x}, \vb{y} \in \mathbb{R}^n $  
+\end{minipage} \hfill
+\begin{minipage}{0.3\textwidth}
+$ \forall \vb{x} \in \mathbb{R}^{n}$
+\end{minipage} \newline
+Definisco la distanza \hfill 
+\begin{minipage}{0.3\textwidth}
 \[ d(\vb{x}, \vb{y} ) = \norm{\vb{x-y}}\] 
-\[ \angle (\vb{x},\vb{y}) = arccos \big( \frac{\vb{x} \cdot \vb{y}}{\norm{\vb{x}} \norm{\vb{y}}} \big) \in [0, \pi] \]
-Imponendo una metrica sullo spazio vettoriale $\mathbb{R}^n$ ottengo lo spazio euclideo $\mathbb{E}^n$.
+\end{minipage} \hfill
+\begin{minipage}{0.3\textwidth}
+$ \forall \vb{x} , \vb{y} \in \mathbb{R}^{n}$
+\end{minipage} \\
+e l'angolo fra due vettori \hfill
+\[ \angle (\vb{x},\vb{y}) = arccos \bigg( \frac{\vb{x} \cdot \vb{y}}{\norm{\vb{x}} \norm{\vb{y}}} \bigg) \in [0, \pi] \]
+Imponendo questa metrica sullo spazio vettoriale $\mathbb{R}^n$ ottengo lo spazio euclideo $\mathbb{E}^n$. \\
+E' noto dall'algebra lineare che gli automorfismi di $\mathbb{R}^n$ (ovvero le applicazioni lineari biettive da $\mathbb{R}^n$ in sé stesso) formano il gruppo $ GL(n, \mathbb{R}) $ con l'operazione di composizione di applicazioni lineari. Se compongo tali automorfismi con translazioni di vettori in $\mathbb{R}^n$ ottengo il gruppo affine $Aff(n, \mathbb{R}) \cong \mathbb{R}^{n} \rtimes GL(n, \mathbb{R})$. 
 
 \begin{definition}
 	Un'isometria di $\mathbb{E}^n$  è un funzione $ \alpha : \mathbb{R}^{n} \longrightarrow \mathbb{R}^{n} $  tale che $\forall \vb{x,y} \in \mathbb{R}^n $ vale 
 	\[ d(\alpha(\vb{x}), \alpha(\vb{y})) = d(\vb{x} , \vb{y} )\]
-\end{definition}
-Il seguente teorema è enunciato senza dimostraione in quanto si tratta di un risultato classico dell'algebra lineare. 
-
+\end{definition} 
+Il seguente teorema è enunciato senza dimostrazione in quanto si tratta di un risultato classico dell'algebra lineare. 
 \begin{theorem}
 Data un'isometria di $\mathbb{E}^n $, questa può essere scritta in modo unico come composizione di una rotazione e di una traslazione
 \[ \alpha : \mathbb{R}^{n} \longrightarrow \mathbb{R}^{n} \]
 \[\vb{x} \longmapsto \vb{Ax + a} \]
-dove $\vb{A} = rot( \alpha ) \in O(n) $ è la componente di rotazione di $\alpha$ \\
-e $\vb{a} = trans( \alpha ) \in \mathbb{R}^{n} $ è la componente di traslazione dell'isometria. 
+dove $\vb{A} = rot( \alpha ) \in O(n) $ è detta componente di rotazione di $\alpha$ \\
+e $\vb{a} = trans( \alpha ) \in \mathbb{R}^{n} $ è detta componente di traslazione di $\alpha$. 
 \end{theorem}
-
 \begin{lemma}
-L'insieme delle isometrie di  $\mathbb{E}^{n} $  è un gruppo rispetto all'operazione di composizione di applicazioni lineari. Lo chiamiamo $Isom(n)$.
+L'insieme delle isometrie di  $\mathbb{E}^{n} $  è un gruppo rispetto all'operazione di composizione di applicazioni lineari. Lo chiamiamo $Isom(n)$ e posso dire
+\[ Isom(n) \cong \mathbb{R}^{n} \rtimes O(n) < \mathbb{R}^{n} \rtimes GL(n, \mathbb{R})
+\]
 \end{lemma}
-
-\begin{definition}
-	Comunque prese  $ \alpha , \beta \in Isom(n)$ posso scriverle come $\alpha : \vb{x} \longmapsto \vb{Ax + a}$ e $\beta : \vb{x} \longmapsto \vb{Bx + b}$ \\
-	Definisco il loro commutatore come  $ [ \alpha , \beta] = \alpha \beta \alpha^{-1} \beta^{-1}$. 
-\end{definition}
-
+All'interno di ogni gruppo è definito il commutatore di due elementi, posso quindi anche definirlo per $Isom(n)$.
 \begin{lemma}
-Comunque prese  $ \alpha , \beta \in Isom(n)$ valgono le due seguenti uguaglianze:
+	Comunque prese  $ \alpha , \beta \in Isom(n)$, posso scriverle come $\alpha : \vb{x} \longmapsto \vb{Ax + a}$ e $\beta : \vb{x} \longmapsto \vb{Bx + b}$ \\
+	Definisco il loro commutatore come  $ [ \alpha , \beta] = \alpha \beta \alpha^{-1} \beta^{-1}$. 
+Valgono le due seguenti uguaglianze:
 \begin{equation}
 rot([ \alpha	, \beta ]) = \vb{[A, B]} = \vb{ABA^{-1}B^{-1}}
 \end{equation}  
@@ -103,7 +122,6 @@ trans([ \alpha	, \beta ]) = \vb{(A-id)b+(id-[A,B])b+A(id-B)A^{-1}a }
 	$ [ \alpha, \beta ](\vb{x}) = ( \alpha \beta \alpha^{-1} \beta^{-1} ) (\vb{x})$. \\
 	Dato che $ \alpha : \vb{x} \longmapsto \vb{Ax + a}$ , allora sicuramente  $\alpha^{-1}: \vb{y} \longmapsto \vb{A^{-1}(y-a)}$.  \\
 	Allo stesso modo, dato che $ \beta : \vb{x} \longmapsto \vb{Bx + b}$ , so che $\beta^{-1}: \vb{y} \longmapsto \vb{B^{-1}(y-b)}$. 
-
 \begin{equation*}
 \begin{split}
 [ \alpha, \beta ](\vb{x}) = (\alpha \beta \alpha^{-1} \beta^{-1} ) (\vb{x})
@@ -112,13 +130,12 @@ trans([ \alpha	, \beta ]) = \vb{(A-id)b+(id-[A,B])b+A(id-B)A^{-1}a }
 & = (\alpha \beta)(\vb{A^{-1}( B^{-1}x- B^{-1}b -a)})= \\
 & =  (\alpha \beta)(\vb{A^{-1} B^{-1}x- A^{-1}B^{-1}b -A^{-1}a})  = \\
 & = (\alpha)(\vb{B(A^{-1} B^{-1}x- A^{-1}B^{-1}b -A^{-1}a) +b}) = \\
-& = (\alpha)(\vb{BA^{-1} B^{-1}x-BA^{-1}B^{-1}Su questo spazio db -BA^{-1}a +b}) = \\
+& = (\alpha)(\vb{BA^{-1} B^{-1}x-BA^{-1}B^{-1}b -BA^{-1}a +b}) = \\
 & = \vb{A(BA^{-1} B^{-1}x-BA^{-1}B^{-1}b -BA^{-1}a +b) + a} = \\
 & = \vb{A(BA^{-1} B^{-1}x-BA^{-1}B^{-1}b -BA^{-1}a +b) + a} = \\
 & = \vb{ABA^{-1} B^{-1}x-ABA^{-1}B^{-1}b -ABA^{-1}a +Ab + a }
 \end{split}
 \end{equation*}
-
 Quindi ho che $ rot([ \alpha , \beta ]) = \vb{ABA^{-1} B^{-1} }$ e
 \begin{equation*}
 \begin{split}
@@ -129,22 +146,22 @@ trans([ \alpha, \beta ]) & = \vb{-ABA^{-1}B^{-1}b -ABA^{-1}a +Ab + a }= \\
 & = \vb{(A-id)b + (id-[A,B])b + (id- ABA^{-1})a }= \\
 & = \vb{(A-id)b + (id-[A,B])b + A(id- B)A^{-1}a} 
 \end{split}
-\end{equation*}
-	
+\end{equation*}	
 \end{proof}
 
+\subsection{"Misura di rotazione"}
 \begin{definition}
 Comunque preso  $  \vb{A} \in O(n) $  definisco
 \[ m(\vb{A}) = \max \bigg\{ \frac{\norm{\vb{Ax-x}}}{\norm{\vb{x}}} \bigg|  \vb{x} \in \mathbb{R}^{n}-\vb{0} \bigg\} \]
 \end{definition}
-
+Questa funzionemi dice quanto una data matrice ortogonale si comporta in modo diverso dalla matrice identità; descrive infatti quanto al massimo un vettore unitario viene "spostato" dall'azione di tale matrice. 
 \begin{lemma}
-La precedente è una buona definizione e inoltre vale la seguente uguaglianza: 
+La precedente è una buona definizione e inoltre vale
 \[ m(\vb{A}) = \max \bigg\{ \norm{\vb{Ax-x}} \bigg|  \vb{x} \in \mathbb{R}^{n} \land \norm{\vb{x}} = 1 \bigg\} \]
 \end{lemma}
 
 \begin{proof}
-$ \forall \vb{x} \in \mathbb{R}^{n}-\vb{0}$  $ \exists \vb{y} \in \mathbb{R}^{n}-\vb{0} $ tale che \\$\vb{x} = \lambda \vb{y} , \lambda \in \mathbb{R} \land \norm{\vb{y}} = 1 $. 
+$ \forall \vb{x} \in \mathbb{R}^{n}-\vb{0}$  $ \exists \vb{y} \in \mathbb{R}^{n}-\vb{0} $ tale che \hfill $\vb{x} = \lambda \vb{y} , \lambda \in \mathbb{R} \land \norm{\vb{y}} = 1 $. 
 
 \[ \frac{\norm{\vb{Ax-x}}}{\norm{\vb{x}}} = \frac{\norm{\vb{A}\lambda \vb{y}-\lambda \vb{y}}}{\norm{\lambda \vb{y}}} =   \frac{|\lambda| \norm{\vb{Ay-y}}}{|\lambda| \norm{\vb{ y}}} = \norm{\vb{Ay-y}} \]
 
@@ -158,7 +175,7 @@ Comunque preso $ \vb{x} \in \mathbb{R}^{n}$  vale  \[ \norm{\vb{Ax-x}} \leq m(\v
 \begin{proof}
 Infatti vale $\forall \vb{x} \in \mathbb{R}^{n}-\vb{0}$  e vale anche per  $\vb{x}=0$
 \end{proof}
-
+Una volta defiinta la funzione $m$ posso definire il sottoinsieme di $\mathbb{R}^n$ che contiene tutti e soli i vettori che realizzano il massimo nella sua definizione. 
 \begin{definition}
 \[ E_{\vb{A}} := \{ \vb{x} \in \mathbb{R}^{n} :  \norm{\vb{Ax - x}} = m(\vb{A}) \norm{\vb{x}}\} \]
 \end{definition}
@@ -166,7 +183,6 @@ Infatti vale $\forall \vb{x} \in \mathbb{R}^{n}-\vb{0}$  e vale anche per  $\vb{
 \begin{lemma}
 $E_A$ è un sottospazio di $\mathbb{R}^{n}$ non banale ed A-invariante
 \end{lemma} 
-
 \begin{proof}
 \begin{itemize}
 \item $\vb{0} \in E_{\vb{A}} $  
@@ -175,7 +191,6 @@ $\vb{x} \in E_{\vb{A}} \Longrightarrow \norm{\vb{Ax-x}} = m(\vb{A})\norm{\vb{x}}
 \item $\forall \vb{x, y} \in E_{\vb{A}} $ voglio verificare che $\vb{x+y, x-y} \in E_{\vb{A}}$ \\
 $\vb{x} \in E_{\vb{A}} \Longrightarrow \norm{\vb{Ax-x}} = m(\vb{A})\norm{\vb{x}}$ \\
 $\vb{y} \in E_{\vb{A}} \Longrightarrow \norm{\vb{Ay-y}} = m(\vb{A})\norm{\vb{y}}$ 
-
 \begin{equation} 
 \begin{split}
 & \norm{\vb{A(x+y) - (x+y)}}^2 + \norm{\vb{A(x-y) - (x-y)}}^2  = \norm{\vb{Ax - x + Ay -y}}^2 + \norm{\vb{Ax - x -(Ay -y)}}^2 = \\
@@ -203,7 +218,7 @@ Distinguiamo alcuni casi:
 \begin{itemize}
 \item Se $\vb{A} = \vb{id} \Rightarrow m(\vb{A}) = 0 \Rightarrow E_{\vb{A}} = \mathbb{R}^{n}$  ed in quel caso ho chiuso la dimostrazione.
 \item Se $\vb{x} = \vb{y}$ o $\vb{x} = \vb{-y}$  ho già chiuso la dimostrazione per il punto precedente (rispettivamente con $\lambda = +1$ e $\lambda = -1$). 
-\item Nei restanti casi posso osservare che nell'equazione (5) il primo fattore a sinistra dell'uguaglianza è è strettamente positivo, mentre il secondo fattore è $\leq 0 $. Allo stesso modo a destra dell'uguaglianza ho un meno che mi modifica il segno del prodotto; il primo fattore è strettamente positivo ed il secondo è $\leq 0 $. \\ L'uguaglianza in (5) deve quindi per forza coincidere con $0=0$ e questo mi implica 
+\item Nei restanti casi posso osservare che nell'equazione (5) il primo fattore a sinistra dell'uguaglianza è strettamente positivo, mentre il secondo fattore è $\leq 0 $. Allo stesso modo a destra dell'uguaglianza ho un meno che mi modifica il segno del prodotto; il primo fattore è strettamente positivo ed il secondo è $\leq 0 $. \\ L'uguaglianza in (5) deve quindi per forza coincidere con $0=0$ e questo mi implica 
 \begin{equation*}
   \left\{
     \begin{aligned}
@@ -216,14 +231,10 @@ Distinguiamo alcuni casi:
 $\Longrightarrow \vb{x+y, x-y} \in E_{\vb{A}} $ 
 \end{itemize}  
 Ho concluso la dimostrazione del fatto che $E_{\vb{A}}$ è un sottospazio vettoriale di $\mathbb{R}^n $
-
 \item Mostro che $E_{\vb{A}}$ è non banale. 
 \[ m(\vb{A}) = \max \bigg\{ \norm{\vb{Ax-x}} \bigg|  \vb{x} \in \mathbb{R}^{n} \land \norm{\vb{x}} = 1 \bigg\} \] 
  L'insieme degli $\vb{x} \in \mathbb{R}^{n} \land \norm{\vb{x}} = 1$ è un compatto; l'applicazione $ \vb{x} \mapsto \norm{\vb{Ax-x}}$ è continua in quanto composizione di funzioni continue, quindi sicuramente esiste un $\vb{x} \in \mathbb{R}^{n} \land \norm{\vb{x}} = 1$  che mi verifica il massimo. In particolare $\vb{x} \neq \vb{0}$  (perché ha norma 1) e 
-
 \[ \norm{\vb{Ax - x}} = m(\vb{A}) = m(\vb{A})\norm{\vb{x}} \Longrightarrow \vb{x} \in E_{\vb{A}}\]
-
-
 \item Mostro che $E_{\vb{A}}$ è $\vb{A}$-invariante. \\
 $\forall \vb{x} \in E_{\vb{A}}$  voglio mostrare che $\vb{Ax} \in E_{\vb{A}}$ \\
 $\vb{x} \in E_{\vb{A}} \Longrightarrow \norm{\vb{Ax-x}} = m(\vb{A})\norm{\vb{x}} $ \\
@@ -231,9 +242,6 @@ Dato che $\vb{A} \in O(n)$ ho la seguente catena di uguaglianze:\\
 $ \norm{\vb{A(Ax) - Ax }} =  \norm{\vb{A(Ax-x)}} = \norm{\vb{Ax - x}} = m(\vb{A})\norm{\vb{x}} = m(\vb{A})\norm{\vb{Ax}} \Longrightarrow \vb{Ax} \in E_{\vb{A}}$
 \end{itemize} 
 \end{proof}
-
-
-
 \begin{lemma}
 $E_{\vb{A}}$ sottospazio vettoriale di $\mathbb{R}^n $ non banale, quindi posso definire il suo complemento ortogonale $E^{\perp}_{\vb{A}} \neq \mathbb{R}^n$ ed anche questo è $\vb{A}$-invariante. 
 \end{lemma} 
@@ -262,7 +270,7 @@ $m^{\perp}(\vb{A}) = m(\vb{A}) = 0$ se $\vb{A = id}$
 \item Se $\vb{A \neq id}$ \\
 \[ m(\vb{A}) = \max \bigg\{ \frac{\norm{\vb{Ax-x}}}{\norm{\vb{x}}} \bigg|  \vb{x} \in \mathbb{R}^{n}-\vb{0} \bigg\} 
 \geq \max \bigg\{ \frac{\norm{\vb{Ax-x}}}{\norm{\vb{x}}} \bigg|  \vb{x} \in E^{\perp}_{\vb{A}} - \vb{0} \bigg\} =  m^{\perp}(\vb{A}) \]
-Se valesse $m(\vb{A}) = m^{\perp}(\vb{A}) \Longrightarrow \exists \vb{x} \in E^{\perp}_{\vb{A}} - \vb{0} : \norm{\vb{Ax-x}} = m(\vb{A})\norm{\vb{x}} \Longrightarrow \vb{x} \in E_{\vb{A}}$  ma questo implica $\vb{x} \in E_{\vb{A}} \cap E^{\perp}_{\vb{E}} = {\vb{0}} \Longrightarrow \vb{x = 0} $  ma questo è assurdo perché ho imposto che $x\vb{ \neq 0}$ 
+Se valesse $m(\vb{A}) = m^{\perp}(\vb{A}) \Longrightarrow \exists \vb{x} \in E^{\perp}_{\vb{A}} - \vb{0} : \norm{\vb{Ax-x}} = m(\vb{A})\norm{\vb{x}} \Longrightarrow \vb{x} \in E_{\vb{A}}$  ma questo implica $\vb{x} \in E_{\vb{A}} \cap E^{\perp}_{\vb{E}} = {\vb{0}} \Longrightarrow \vb{x = 0} $;  questo è però assurdo perché ho imposto che $x\vb{ \neq 0}$ 
 \end{itemize}
 \end{proof}
 
@@ -298,43 +306,47 @@ Dato che $ \vb{A,B} \in O(n)$ posso scrivere $\norm{\vb{A^{-1}B^{-1}x}} = \norm{
 \begin{equation}
   \norm{\vb{([A,B] - id )x}}  \leq 2m(\vb{A})m(\vb{B})\norm{\vb{x}}
 \end{equation} 
-Quindi segue immediatametne la tesi. 
+Quindi segue immediatamente la tesi. 
 \end{proof}
-Si richiede, di solito, quando si parla di gruppi cristallografici, che abbiano un dominio fondamentale discreto e compatto. In particolare in questo caso utilizziamo la seguente definizione:
-
+\pagebreak
+\section{Primo teorema di Bieberbach}
+\subsection{Gruppi cristallografici}
+In questo elaborato utilizzo la seguente definizione di gruppo cristallografico:
 \begin{definition}
-Un gruppo $\Gamma$ di isometrie in $\mathbb{R}^{n}$ è detto cristallografico se valgono le seguenti condizioni:
-\begin{itemize}
+Sia $\Gamma$ un sottogrupo di $Isom(n)$, dico che è un gruppo cristallografico se valgono le seguenti condizioni:
+\begin{enumerate}
 	\item $ \forall t \in \mathbb{R} : t > 0 $  esistono solo un numero finito di $\alpha \in \Gamma $  tali che  $|a| \leq t$
 
 	\item $ \exists d \in \mathbb{R}: \forall \vb{x} \in \mathbb{R}^n   \exists \alpha \in \Gamma : \norm{\vb{a-x}}\leq d $
-\end{itemize}
+\end{enumerate}
 \end{definition}
+Dato uno spazio topologico $X$ ed un gruppo $G$ che agisce su di esso, un dominio fondamentale è un sottoinsieme di $X$ che contiene uno ed un solo punto di ogni orbita dell'azione. Se considero lo spazio topologico $\mathbb{R}^n$ con la metrica data dalla distanza euclidea ed un gruppo di isometrie che agisce su di esso, la condizione 1. implica che agisce in modo propriamente discontinuo, mentre la condizione 2. significa che ha dominio fondamentale limitato. 
 
-Sia ora $\Gamma$ un gruppo cristallografico in $\mathbb{R}^n$ 
-
-\begin{theorem}{Mini Bieberbach}
- $ \forall \vb{u} \in \mathbb{R}^n : \norm{\vb{u}} = 1,   \forall \epsilon , \delta >0 $  $   \exists \beta \in \Gamma $ che soddisfa  
-\begin{itemize}
+\subsection{Mini Bieberbach} 
+\begin{theorem}{Mini Bieberbach.}
+Sia $\Gamma$ un gruppo cristallografico di $\mathbb{E}^n$ \\
+$ \forall \vb{u} \in \mathbb{R}^n : \norm{\vb{u}} = 1,   \forall \epsilon , \delta >0 $ \hfill  $   \exists \beta \in \Gamma $ che soddisfa \hfill
+\begin{minipage}{0.3\textwidth} 
+\begin{enumerate}
 \item $\vb{a} \neq 0$ 
 \item $ \angle (\vb{u, a}) \leq \delta $
 \item $ m(\vb{A}) \leq \epsilon$ 
-\end{itemize}
+\end{enumerate}
+\end{minipage}
 \end{theorem}
 
 \begin{proof}
 \begin{itemize}
-
 \item  Per la seconda proprietà dei gruppi cristallografici so che $ \exists d \in \mathbb{R} : \forall k \in \mathbb{N} $ $  \exists \beta_k \in \Gamma : $ \\
-\[ \beta_k \vb{x} = \vb{B_k x + b_k}  \]
-\[ \norm{\vb{b_k - ku }} \leq d \] 
+$ \; \beta_k \vb{x} = \vb{B_k x + b_k}  \; \; \land \; \;\norm{\vb{b_k - ku }} \leq d $ 
+\\
 Se $k \longrightarrow \infty$ allora sicuramente $ \norm{\vb{b_k}} \longrightarrow \infty$.  \\
 Infatti se, per assurdo, questo non fosse vero $\exists M \in \mathbb{R} : \norm{\vb{b_k}} \leq M $   $  \forall k \in \mathbb{N} $
 
 \[ d \geq \norm{\vb{b_k - ku}} \geq | \norm{\vb{b_k}} - k | \]
 Nella disequazione  precedente, se la successione è limitata allora l'ultimo termine diverge ma questo è assurdo perché è maggiorato da $d$. 
 
-\item Considero ora \\
+\item Considero ora la successione degli angoli fra il vettore $\vb{u}$ e $\vb{b}_k$, voglio mostrare che la loro ampiezza tende a 0. 
 \begin{minipage}{0.5\textwidth}
     \begin{tikzpicture}[line cap=round]
   \coordinate (O) at (0,0);
@@ -375,7 +387,7 @@ Considero l'isometria definita da $\alpha \in \Gamma$ come
 Verifico che questa isometria verifica tutte le proprietà richieste dalla tesi
 
 \begin{itemize}
-\item E' ovvio che $m(\vb{A}) = m(\vb{A}_j \vb{A}^{-1}_i) \leq \epsilon$ 
+\item \'E ovvio che $m(\vb{A}) = m(\vb{A}_j \vb{A}^{-1}_i) \leq \epsilon$ 
 \item Verifico  $\vb{a}= \vb{a}_j - \vb{A}_j \vb{A}^{-1}_i \vb{a}_i \neq 0$ 
 \[ \norm{\vb{a}_j - \vb{A}_j \vb{A}^{-1}_i \vb{a}_i} \geq \bigg| \norm{\vb{a}_j} - \norm{ \vb{A}_j \vb{A}^{-1}_i \vb{a}_i } \bigg| \geq \bigg| \norm{\vb{a}_j } + \norm{\vb{a}_i} \bigg| \geq \norm{\vb{a}_i} \bigg| \frac{4}{\delta} -1 \bigg| \]
 $\norm{\vb{a}_i} \neq 0 \Longrightarrow \vb{a} \neq 0$
@@ -385,7 +397,7 @@ $\norm{\vb{a}_i} \neq 0 \Longrightarrow \vb{a} \neq 0$
 \angle (\vb{u} , \vb{a_j - A_j A_i^{-1} a_i} ) \leq \angle (\vb{u} , \vb{a_j}) + \angle(\vb{a_j}, \vb{a_j- A_j A_i^{-1} a_i} ) 
 \end{equation}
 \begin{minipage}{0.3\textwidth}
-Dato che $ \norm{\vb{a}_i} \leq \frac{\delta}{4}\norm{\vb{a}_k}$  \\  la punta del vettore $\vb{a}_j - \vb{A_j A_i^{-1} a_i}$ cade all'interno di un cerchio di centro la punta di $\vb{a}_j$ e di raggio $r = \frac{\delta}{4}\norm{\vb{a}_k}$
+Dato che $ \norm{\vb{a}_i} \leq \frac{\delta}{4}\norm{\vb{a}_k}$  \\  la punta del vettore $\vb{a}_j - \vb{A_j A_i^{-1} a_i}$ cade all'interno di un cerchio che ha come centro la punta di $\vb{a}_j$ e raggio $r = \frac{\delta}{4}\norm{\vb{a}_k}$
 \end{minipage} \hfill 
 \begin{minipage}{0.7\textwidth}
 \begin{tikzpicture}[line cap=round]
@@ -405,6 +417,12 @@ Dato che $ \norm{\vb{a}_i} \leq \frac{\delta}{4}\norm{\vb{a}_k}$  \\  la punta d
 \end{minipage}
 
 Considero una situaizone come quella nel disegno precedente; \\ 
+\begin{minipage}{0.3\textwidth}
+$\forall \rm P$ scelto all'interno della circonferenza \\ $ \widehat{PAO} \leq \widehat{TAO} $ 
+\[ \frac{\overline{TO}}{sin( \widehat{TAO}) } = \frac{\overline{AO}}{sin( \widehat{ATO}) } \] 
+Quindi
+\[ sin(\widehat{PAO}) \leq sin( \widehat{TAO})= \frac{\overline{TO}}{\overline{AO}} = \frac{\delta}{4}\]
+\end{minipage} \hfill
 \begin{minipage}{0.6\textwidth}
 \begin{tikzpicture}
   \def\r{2} % radius
@@ -427,12 +445,6 @@ Considero una situaizone come quella nel disegno precedente; \\
   \fill(X) circle(0.05) node[above=3,right=4] {P};
   \pic [draw, angle radius=4, angle eccentricity=4] {right angle = O--P--Q};
 \end{tikzpicture}
-\end{minipage} \hfill
-\begin{minipage}{0.4\textwidth}
-$\forall \rm P$ scelto all'interno della circonferenza \\ $ \widehat{PAO} \leq \widehat{TAO} $ 
-\[ \frac{\overline{TO}}{sin( \widehat{TAO}) } = \frac{\overline{AO}}{sin( \widehat{ATO}) } \] 
-Quindi
-\[ sin(\widehat{PAO}) \leq sin( \widehat{TAO})= \frac{\overline{TO}}{\overline{AO}} = \frac{\delta}{4}\]
 \end{minipage}
 
 So quindi che 
@@ -450,12 +462,44 @@ E (9) insieme con (8) e $ \angle(\vb{u}, \vb{a}_j) \leq \frac{\delta}{2}$ implic
 
 
 \begin{theorem}
- Comunque scelta $\alpha \in \Gamma$:  $x \longmapsto \vb{Ax +a} $  tale per cui $m(\vb{A}) \leq \frac{1}{2} $, allora questa ismoetria è una translazione pura 
+ Comunque scelta $\alpha \in \Gamma$:  $x \longmapsto \vb{Ax +a} $  tale per cui $m(\vb{A}) \leq \frac{1}{2} $, questa isometria è una traslazione pura 
 \end{theorem}
 
 \begin{proof}
- Se $m(\vb{A}) = 0 \Longrightarrow A = id \Longrightarrow \alpha$ è una translazione pura. \\
- Suppongo per assurdo che  $0 < m(\vb{A}) \leq \frac{1}{2} $
+ Se $m(\vb{A}) = 0 \Longrightarrow A = id \Longrightarrow \alpha$ è una traslazione pura. \\
+ 
+ 
+\begin{minipage}{0.5\textwidth}
+Fra le isometrie in $\Gamma$ che soddisfano la condizione  $ 0 < m(\vb{A}) \leq \frac{1}{2}$  scelgo quella che ha $\norm{\vb{a}}$ minimo (posso farlo perché vale la condizione (1) sugli elementi di un gruppo cristallografico). \\
+ So che $m(\vb{A}) > m^{\perp}(\vb{A})$ se  $\vb{A} \neq id$. \\
+ $\forall \vb{u} \in E_{\vb{A}}$ vettore unitario, \\ $\epsilon := \frac{1}{8} \bigg( m(\vb{A}) - m^{\perp}(\vb{A}) \bigg)$  \\ed applico il teorema Mini Bieberbach. \\
+\[ \exists \beta \in \Gamma : m(\vb{B}) \leq \epsilon ; \vb{b} \neq 0 ; \angle(\vb{u, b})  \leq \delta \]
+Scelgo $\delta $ in modo da avere $\norm{\vb{b}^{\perp}} \leq \norm{\vb{b}^E}$ come da figura. \\
+Fra questi $\beta$ scelgo quello per cui $\norm{\vb{b}}$ è minimo ($\neq 0$, posso farlo per la prima proprietà dei gruppi cristallografici). \\
+Osservo che, se $\beta$ non è una traslazione, allora $ \norm{\vb{b}} \geq \norm{\vb{a}}$, questo perché $\m(\vb{B}} \leq \frac{1}{8}m(\vb{A}) \leq \frac{1}{4}$ e $\alpha$ è stato scelto fra le isometrie in $\Gamma$ con in modo da minimizzare il modulo della componente traslatoria a 
+\end{minipage} \hfill
+\begin{minipage}{0.5\textwidth}
+\begin{tikzpicture}
+  \coordinate (O) at (0,0);
+  \coordinate (A) at (3,5);
+  \coordinate (B) at (0,4);
+  \coordinate (C) at (1.5,5);
+  \draw[dashed] (-3,0) -- (3,0)node[right] {$E^{\perp}_{\vb{A}}$};
+  \draw[dashed] (1.5,0) |- (0,5);
+  \draw[vector, red, thick] (O) -- (1.5,0)node[below] {$\vb{b}^{\perp}$};
+  \draw[vector, red, thick] (O) -- (0,5)node[left] {$\vb{b}^{E}$};
+  \draw[thick] (0,-2) -- (0,5.5)node[above] {$E_{\vb{A}}$};
+  \draw[vector] (O) -- (B)node[right] {$\vb{u}$};
+  \draw[vector] (O) -- (C)node[right] {$\vb{b}$};
+  \draw[blue, thick] (0,0) -- (3,5);
+  \draw[blue, thick] (0,0) -- (-3,5);
+  \filldraw[black] (0,0) circle (2pt);
+  \pic[draw,"$\delta$",angle radius=30,angle eccentricity=1.25] {angle=A--O--B};  
+  \begin{scope}[on background layer]
+		\fill[blue!20] (0,0) -- (-3,5) -- (3,5) -- cycle;
+  \end{scope}
+\end{tikzpicture}
+\end{minipage}
 \end{proof}
 
 
@@ -463,26 +507,7 @@ E (9) insieme con (8) e $ \angle(\vb{u}, \vb{a}_j) \leq \frac{\delta}{2}$ implic
 
 
 
-\begin{tikzpicture}
-  \coordinate (O) at (0,0);
-  \coordinate (A) at (3,7);
-  \coordinate (B) at (0,4);
-  \coordinate (C) at (1.5,5);
-  \draw[dashed] (-5,0) -- (5,0)node[right] {$E^{\perp}_{\vb{A}}$};
-  \draw[dashed] (1.5,0) |- (0,5);
-  \draw[vector, red, thick] (O) -- (1.5,0)node[below] {$\vb{b}^{\perp}$};
-  \draw[vector, red, thick] (O) -- (0,5)node[left] {$\vb{b}^{E}$};
-  \draw[thick] (0,-2) -- (0,7)node[above] {$E_{\vb{A}}$};
-  \draw[vector] (O) -- (B)node[right] {$\vb{u}$};
-  \draw[vector] (O) -- (C)node[right] {$\vb{b}$};
-  \draw[blue, thick] (0,0) -- (3,7)node[right] {dgfhsjsg};
-  \draw[blue, thick] (0,0) -- (-3,7)node[right]{ahsgfjdfg};
-  \filldraw[black] (0,0) circle (2pt);
-  \pic[draw,"$\delta$",angle radius=30,angle eccentricity=1.25] {angle=A--O--B};  
-  \begin{scope}[on background layer]
-		\fill[blue!20] (0,0) -- (-3,7) -- (3,7) -- cycle;
-  \end{scope}
-\end{tikzpicture}
+
 
 
 
