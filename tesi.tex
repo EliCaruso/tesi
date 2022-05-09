@@ -40,7 +40,7 @@
 
 \begin{document} 
 
-\section*{Introduzione}
+\section{Introduzione}
 
 %Devo dire che è una dim geometrica\\
 %Devo dire che uso la dim di Buser e faccio solo i primi due teoremi di Bieb \\
@@ -56,7 +56,7 @@ La lunghezza e la direzzione del vettore translazione di una data isometria mi d
 
 
 
-\subsection{Spazio euclideo $\mathbb{E}^n$ ed isometrie}
+\section{Spazio euclideo $\mathbb{E}^n$ ed isometrie}
 Considero lo spazio vettoriale n-dimensionale $\mathbb{R}^{n}$  \\
 con il prodotto scalare  \hfill
 \begin{minipage}{0.3\textwidth}
@@ -149,7 +149,7 @@ trans([ \alpha, \beta ]) & = \vb{-ABA^{-1}B^{-1}b -ABA^{-1}a +Ab + a }= \\
 \end{equation*}	
 \end{proof}
 
-\subsection{"Misura di rotazione"}
+\section{"Misura di rotazione"}
 \begin{definition}
 Comunque preso  $  \vb{A} \in O(n) $  definisco
 \[ m(\vb{A}) = \max \bigg\{ \frac{\norm{\vb{Ax-x}}}{\norm{\vb{x}}} \bigg|  \vb{x} \in \mathbb{R}^{n}-\vb{0} \bigg\} \]
@@ -310,19 +310,27 @@ Quindi segue immediatamente la tesi.
 \end{proof}
 \pagebreak
 \section{Primo teorema di Bieberbach}
-\subsection{Gruppi cristallografici}
+\begin{theorem}
+Dato un gruppo discreto di isometrie di $\mathbb{R}^n$ a dominio fondamentale compatto, questo contiene $n$ translazioni linearmente indipendenti. 
+\end{theorem}
 In questo elaborato utilizzo la seguente definizione di gruppo cristallografico:
 \begin{definition}
-Sia $\Gamma$ un sottogrupo di $Isom(n)$, dico che è un gruppo cristallografico se valgono le seguenti condizioni:
+Sia $\Gamma$ un sottogrupo di $Isom(n)$, dico che è un gruppo cristallografico $n$-dimensionale se valgono le seguenti condizioni:
 \begin{enumerate}
 	\item $ \forall t \in \mathbb{R} : t > 0 $  esistono solo un numero finito di $\alpha \in \Gamma $  tali che  $|a| \leq t$
 
 	\item $ \exists d \in \mathbb{R}: \forall \vb{x} \in \mathbb{R}^n   \exists \alpha \in \Gamma : \norm{\vb{a-x}}\leq d $
 \end{enumerate}
 \end{definition}
-Se considero lo spazio topologico $\mathbb{R}^n$ con la metrica data dalla distanza euclidea ed un gruppo di isometrie che agisce su di esso, la condizione 1. implica che agisce in modo propriamente discontinuo, mentre la condizione 2. significa che ha dominio fondamentale limitato. Dato uno spazio topologico $X$ ed un gruppo $G$ che agisce su di esso, un dominio fondamentale è un sottoinsieme di $X$ che contiene uno ed un solo punto di ogni orbita dell'azione.
+Se considero lo spazio topologico $\mathbb{R}^n$ con la metrica data dalla distanza euclidea ed un gruppo di isometrie che agisce su di esso, la condizione 1. implica che agisce in modo propriamente discontinuo, mentre la condizione 2. significa che ha dominio fondamentale limitato. Dato uno spazio topologico $X$ ed un gruppo $G$ che agisce su di esso, un dominio fondamentale è un sottoinsieme di $X$ che contiene uno ed un solo punto di ogni orbita dell'azione.\\
 
-\subsection{Mini Bieberbach} 
+Posso quindi rifrasare il primo teorema di Bieberbach come 
+
+\begin{theorem}
+Ogni gruppo gristallografico $n$-dimensionale contiene $n$ translazioni linearmente indipendenti
+\end{theorem}
+
+\section{Mini Bieberbach} 
 \begin{theorem}{Mini Bieberbach.}
 Sia $\Gamma$ un gruppo cristallografico di $\mathbb{E}^n$ \\
 $ \forall \vb{u} \in \mathbb{R}^n : \norm{\vb{u}} = 1,   \forall \epsilon , \delta >0 $ \hfill  $   \exists \beta \in \Gamma $ che soddisfa \hfill
@@ -505,21 +513,71 @@ Con $\vb{r} = \vb{(id-\tilde{B})b + A(id-B)A^{-1}a}$ e $\tilde{\vb{b}}^{\perp} =
 \begin{itemize}
 \item Se $\beta$  è una translazione $\Longrightarrow \vb{B = id = \tilde{B}} \Longrightarrow \vb{r} = 0$. 
 \item Se $\beta$ non è una translazione $\Longrightarrow \norm{\vb{b}} \geq \norm{\vb{a}}$  e quindi \\
-\[ \norm{\vb{r}} \leq m(\tilde{\vb{B}}) \norm{\vb{b}} + m(\vb{B}) \norm{\vb{a}} \leq \big( m(\tilde{\vb{B}}) + m(\vb{B}) \big) \norm{\vb{b}} \leq 2m(\vb{B})(\vb{b^{E}+ b^{\perp}}) < 4 m(\vb{B}) \norm{\vb{b}^{E}} \leq \frac{1}{2} \big( m(\vb{A}) - m(\vb{A}^{\perp}) \big)\norm{\vb{b}^{E}} \]
-Ottengo quindi
-\[ \norm{\tilde{\vb{b}}^{\perp}} \leq  m(\vb{A}) \norm{\vb{b}^{\perp}} + \norm{\vb{r}} < m(\vb{A}) \norm{\vb{b}^{\perp}} + \frac{1}{2} \big( m(\vb{A}) - m(\vb{A}^{\perp}) \big)\norm{\vb{b}^{E}} < m(\vb{A})  \bigg(  \bigg)  \] 
+\[ \norm{\vb{r}} \leq m(\tilde{\vb{B}}) \norm{\vb{b}} + m(\vb{B}) \norm{\vb{a}} \leq \big( m(\tilde{\vb{B}}) + m(\vb{B}) \big) \norm{\vb{b}} \leq 2m(\vb{B})(\vb{b^{E}+ b^{\perp}}) < 4 m(\vb{B}) \norm{\vb{b}^{E}} \leq \frac{1}{2} \big( m(\vb{A}) - m^{\perp}(\vb{A}) \big)\norm{\vb{b}^{E}} \]
 \end{itemize}
+In entrambi i casi ho che $\norm{\vb{r}} < \frac{1}{2} \big( m(\vb{A}) - m^{\perp}(\vb{A}) \big)\norm{\vb{b}^{E}}$. \\
+Posso scrivere 
+\[ \tilde{\vb{b}}^{E} -(\vb{A-id) b}^{E} - \vb{r}^{E} = (\vb{A-id) b}^{\perp} + \vb{r}^{\perp} - \tilde{\vb{b}}^{\perp} = 0 \]
+Usando la caratterizzazione $\norm{\vb{b}^{\perp}} \leq \norm{\vb{b}^E}$  ottengo
+\[ \norm{\tilde{\vb{b}}^{\perp}} \leq  m^{\perp}(\vb{A}) \norm{\vb{b}^{\perp}} + \norm{\vb{r}^{\perp}} < m^{\perp}(\vb{A}) \norm{\vb{b}^{E}} + \frac{1}{2} \big( m(\vb{A}) - m(\vb{A}^{\perp}) \big)\norm{\vb{b}^{E}}  \] 
+Sommando a destra ottengo
+\[ \norm{\tilde{\vb{b}}^{\perp}} < \frac{1}{2} \big( m(\vb{A}) + m(\vb{A}^{\perp}) \big) \]
+D'altro canto, utilizzanzo la disuguaglianza triangolare inversa, posso scrivere
+\[ \norm{\vb{b}^{E}} = \norm{(\vb{A-id) b}^{E} + \vb{r}^{E}} \geq \bigg| m(A) \norm{\vb{b}^E} - \norm{\vb{r}}\bigg| > m(\vb{A}) \norm{\vb{b}^E} - \frac{1}{2} \bigg( m(\vb{A}) - m^{\perp}(\vb{A})\bigg)\norm{\vb{b}^E} =  \frac{1}{2} \big( m(\vb{A}) + m(\vb{A}^{\perp}) \big)\]
+In particolare quindi 
+\[ \norm{\vb{b}^{E}} > \norm{\vb{b}^{\perp}}\]
+So inoltre che 
+\[ \norm{\tilde{\vb{b}}} \leq m(\vb{A}) \norm{\vb{b}} + \norm{\vb{r}} < m(\vb{A})\norm{\vb{b}} + \frac{1}{2} \big( m(\vb{A}) - m^{\perp}(\vb{A}) \big)\norm{\vb{b}^{E}} \leq  \norm{\vb{b}} \bigg( \frac{1}{2} + \frac{1}{4}\bigg) < \norm{\vb{b}} \]
+Ho un assurdo perché $\beta$ era stato scelto fra tutti quelli che soddisfavano le condizioni in modo da minimizzare la norma di $b$.
+
 
 \end{proof}
 
+\section{Dimostrazione}
 
 
+FINIRE DIMOSTRAZIONE DEL PRIMO TEO DI BIEB
 
+\section{Secondo teorema di Bieberbach}
 
+\begin{definition}
+Un reticolo $L$ è un gruppo cristallografico che contiene solo translazioni. \\
+Gli elementi di $L$ possono essere identificati con i vettori di $\mathbb{R}^n$ corrispondenti alla propria componenete di translazione e vengono chiamati punti di reticolo. 
+\end{definition}
 
+Dato un elemento $\omega \in L$, per abuso di notazione scriveremo $\omega = trans(\omega) = \vb{w}$. 
+Enuncio il seguente risultato senza dimostrarlo.
+\begin{lemma}
+Ogni reticolo $L$ di dimensione $n$ è isomorfo a $\mathbb{Z}^n$. \\
+Di conseguenza $L$ è abeliano e la distanza minima fra due punti di reticolo coincide con la lunghezza del minimo vettore non nullo in $L$.  
+\end{lemma}
 
+\begin{lemma}
+Sia $L$ un reticolo in $\mathbb{E}^n$ i cui vettori abbiano distanza a coppie $\geq 1$. \\
+Sia $\rho >0$, chiamo $N(\rho)$ il numero di punti di reticolo in $L$ con distanza dall'origine $\leq \rho$. 
+\[ N(\rho) \leq (2 \rho +1)^n\]
+\end{lemma}
+\begin{proof}
+Per ogni punto di reticolo a distanza inferiore o uguale di $\rho$ dall'origine posso considerare una palla aperta $n$-dimensionale centrata in esso e di raggio $\frac{1}{2}$. Queste palle sono sicuramente disgiunte in quanto la distanzza fra due punti del reticolo è superiore al doppio dei raggi; sono inoltre tutte contenute nella palla $n$-dimensionale centrata nell'orgine di raggio $ \rho + \frac{1}{2}$. 
+Il volume della palla centrata nell'origine è sicuramente superiore alla somma dei volumi delle singole palle di raggio $\frac{1}{2}$, confrontando i volumi ottengo
 
+\[ N(\rho) \bigg(  \frac{1}{2} \bigg) \leq \bigg( \rho + \frac{1}{2} \bigg) \]
+\[ N(\rho) \leq \bigg( 2 \rho + 1 \bigg)\]
+\end{proof}
 
+\begin{lemma}
+Sia $L$ un reticolo in $\mathbb{E}^n$ i cui vettori abbiano distanza a coppie $\geq 1$. \\; consideriamo un sottospazio lineare di $\mathbb{R}^n$ generato da $k$ vettori $\vb{w}_i \in L$ con $i = 1,... ,k$. \\
+Se un punto di reticolo $\vb{w} \in L$ non è contenuto in $E$, allora la sua componenete in $E^{\perp}$ è tale che 
+\[ \norm{\vb{w}^{\perp}} \geq \bigg( 3 +  \sum_{i = 1}^{k} \norm{\vb{w}_i} \bigg)^{-n} \]
+\end{lemma}
 
+\begin{proof}
+Sia \hfill \[ N = \left\lfloor
+\bigg( 3 +  \sum_{i = 1}^{k} \norm{\vb{w}_i} \bigg)^{n}
+\right\rfloor\]. \\
+Suppongo per assurdo che $0 < \norm{\vb{w}^{\perp}}  < \frac{1}{N}$. \\
+In questa situazione ho che i vettori $j \vb{w}$ con $j = 0, ..., N$ hanno distanze da $E$ inferiori a 1. 
+Aggiungendo ad ognuno di questi vettori una combinazione lineare di $\vb{w}_k$ posso 
+\end{proof}
 
 \end{document}
