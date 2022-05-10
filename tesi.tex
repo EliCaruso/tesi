@@ -1,4 +1,4 @@
-\documentclass[10pt,a4paper]{article}
+\documentclass[10pt,a4paper]{book}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[italian]{babel}
@@ -40,7 +40,7 @@
 
 \begin{document} 
 
-\section{Introduzione}
+\chapter*{Introduzione e motivazioni}
 
 %Devo dire che è una dim geometrica\\
 %Devo dire che uso la dim di Buser e faccio solo i primi due teoremi di Bieb \\
@@ -48,15 +48,20 @@
 
 
 
-\section{Considerazioni preliminari}
-Questo capitolo contiene gli strumenti fondamentali necessari per dare una dimostrazione geometrica dei primi due teoremi di Bieberbach. \\
-Nella prima sezione definisco lo spazio euclideo n-dimensionale, il gruppo delle isometrie e descrivo una loro rappresentazione come composizione dell'applicazione di una matrice ortogonale e di una translazione; definisco poi il coniugio di due isometrie. \\
-La lunghezza e la direzzione del vettore translazione di una data isometria mi danno immediatamente informazioni su come questa translazione agisce sui punti di $\mathbb{R}^n$; più complicato è invece capire, data una matrice ortogonale, come questa trasformi lo spazio. Nella seconda sezione definisco una funzione che mi dice quanto questa si discosta dalla matrice identità; definisco poi attraverso essa una scomposizione dello spazio in due spazi ortogonali. 
+\chapter{Primo teorema di Bieberbach}
+Questo capitolo contiene gli strumenti fondamentali necessari per dare una dimostrazione geometrica del primo teorema di Bieberbach e la dimostrazione stessa. \\
 
 
+\section{Preliminari}
+In questa sezione si enunciano alcune definizioni e risultati fondamentali per approcciare la dimostrazoine (che si trova nella sezione successiva). In particolare in questa sezione sono contenute informazioni che esulano dalla definizione di gruppo cristallografico e dall'enunciato del primo teorema di Bieberbach. \\
+
+Nella prima parte riprendo la definizione di spazio euclideo $n$-dimensionale e del suo gruppo di isometrie, descrivo una loro rappresentazione come composizione dell'applicazione di una matrice ortogonale e di una translazione; definisco poi il coniugio di due isometrie. \\
+
+La lunghezza e la direzzione del vettore translazione di una data isometria mi danno immediatamente informazioni su come questa translazione agisce sui punti di $\mathbb{R}^n$; più complicato è invece capire, data una matrice ortogonale, come questa trasformi lo spazio. \\
+Nella seconda sezione definisco quindi una funzione che stima per eccesso di quanto ogni matrice ortogonale si discosta dalla matrice identità; definisco poi attraverso essa una scomposizione dello spazio in due spazi ortogonali. Infine dimostro un teorema che mi da una stima della "misura" del commutatore di due matrici a partire dalle loro "misure".  
 
 
-\section{Spazio euclideo $\mathbb{E}^n$ ed isometrie}
+\subsection{Spazio euclideo $\mathbb{E}^n$ ed isometrie}
 Considero lo spazio vettoriale n-dimensionale $\mathbb{R}^{n}$  \\
 con il prodotto scalare  \hfill
 \begin{minipage}{0.3\textwidth}
@@ -149,7 +154,7 @@ trans([ \alpha, \beta ]) & = \vb{-ABA^{-1}B^{-1}b -ABA^{-1}a +Ab + a }= \\
 \end{equation*}	
 \end{proof}
 
-\section{"Misura di rotazione"}
+\subsection{"Misura di rotazione"}
 \begin{definition}
 Comunque preso  $  \vb{A} \in O(n) $  definisco
 \[ m(\vb{A}) = \max \bigg\{ \frac{\norm{\vb{Ax-x}}}{\norm{\vb{x}}} \bigg|  \vb{x} \in \mathbb{R}^{n}-\vb{0} \bigg\} \]
@@ -308,8 +313,14 @@ Dato che $ \vb{A,B} \in O(n)$ posso scrivere $\norm{\vb{A^{-1}B^{-1}x}} = \norm{
 \end{equation} 
 Quindi segue immediatamente la tesi. 
 \end{proof}
-\pagebreak
+
 \section{Primo teorema di Bieberbach}
+
+In questa sezione viene dimostrato il primo teorema di Bieberbach. Si da prima di tutto una definizione precisa di gruppo cristallografico e viene esplicitato il contenuto del teorema nella forma in cui verrà dimostrato. 
+Per dimostrare effettivamente il teorema, bisogna passare attraverso un paio di teoremi preliminari che verranno esposti nella seconda parte. Infine nella sottosezione finale verrà data la dimostrazione.  \\
+
+\subsection{Enunciati}
+
 \begin{theorem}
 Dato un gruppo discreto di isometrie di $\mathbb{R}^n$ a dominio fondamentale compatto, questo contiene $n$ translazioni linearmente indipendenti. 
 \end{theorem}
@@ -330,7 +341,7 @@ Posso quindi rifrasare il primo teorema di Bieberbach come
 Ogni gruppo gristallografico $n$-dimensionale contiene $n$ translazioni linearmente indipendenti
 \end{theorem}
 
-\section{Mini Bieberbach} 
+\subsection{Mini Bieberbach e teorema di caratterizzazione delle translazioni} 
 \begin{theorem}{Mini Bieberbach.}
 Sia $\Gamma$ un gruppo cristallografico di $\mathbb{E}^n$ \\
 $ \forall \vb{u} \in \mathbb{R}^n : \norm{\vb{u}} = 1,   \forall \epsilon , \delta >0 $ \hfill  $   \exists \beta \in \Gamma $ che soddisfa \hfill
@@ -533,12 +544,17 @@ Ho un assurdo perché $\beta$ era stato scelto fra tutti quelli che soddisfavano
 
 \end{proof}
 
-\section{Dimostrazione}
+\subsection{Dimostrazione del primo teorema di Bieberbach}
 
+Posso quindi concludere la dimostrazione del primo teorema di Bieberbach.
 
-FINIRE DIMOSTRAZIONE DEL PRIMO TEO DI BIEB
+\begin{proof}
+Considero la base standard di $\mathbb{R}^N$; se applico ad ognuno dei vettori di tale base il teorema Mini Bieberbach con $\epsilon = \frac{1}{2}$ e $\delta = 1/N \forall N \in \mathbb{N}$, ottengo $n$ successioni di elementi in $\Gamma$ che sono translazioni pure (per il teorema 6.2). 
+Se passo al limite per $N \longrightarrow \infty$ so che ognuna di queste successioni converge ad un elemento in $\Gamma$ \\
+ (NON è VEROOOOOOOO!!! come faccio qui? devo far vedere che converge ad una direzione, ma non saprei come farlo. Inoltre come faccio a dire che se tot vettori distano ognuno meno di $\delta $ da un vettore della base standard, allora questi sono linearmente indipendenti? posso fare il limite per n --> infinito? non convergono necessariamente i moduli)
+\end{proof}
 
-\section{Secondo teorema di Bieberbach}
+\chapter{Secondo teorema di Bieberbach}
 
 \begin{definition}
 Un reticolo $L$ è un gruppo cristallografico che contiene solo translazioni. \\
@@ -554,19 +570,19 @@ Di conseguenza $L$ è abeliano e la distanza minima fra due punti di reticolo co
 
 \begin{lemma}
 Sia $L$ un reticolo in $\mathbb{E}^n$ i cui vettori abbiano distanza a coppie $\geq 1$. \\
-Sia $\rho >0$, chiamo $N(\rho)$ il numero di punti di reticolo in $L$ con distanza dall'origine $\leq \rho$. 
-\[ N(\rho) \leq (2 \rho +1)^n\]
+Sia $\rho >0$, chiamo $P(\rho)$ il numero di punti di reticolo in $L$ con distanza dall'origine $\leq \rho$. 
+\[ P(\rho) \leq (2 \rho +1)^n\]
 \end{lemma}
 \begin{proof}
 Per ogni punto di reticolo a distanza inferiore o uguale di $\rho$ dall'origine posso considerare una palla aperta $n$-dimensionale centrata in esso e di raggio $\frac{1}{2}$. Queste palle sono sicuramente disgiunte in quanto la distanzza fra due punti del reticolo è superiore al doppio dei raggi; sono inoltre tutte contenute nella palla $n$-dimensionale centrata nell'orgine di raggio $ \rho + \frac{1}{2}$. 
 Il volume della palla centrata nell'origine è sicuramente superiore alla somma dei volumi delle singole palle di raggio $\frac{1}{2}$, confrontando i volumi ottengo
 
-\[ N(\rho) \bigg(  \frac{1}{2} \bigg) \leq \bigg( \rho + \frac{1}{2} \bigg) \]
-\[ N(\rho) \leq \bigg( 2 \rho + 1 \bigg)\]
+\[ P(\rho) \bigg(  \frac{1}{2} \bigg) \leq \bigg( \rho + \frac{1}{2} \bigg) \]
+\[ P(\rho) \leq \bigg( 2 \rho + 1 \bigg)\]
 \end{proof}
 
 \begin{lemma}
-Sia $L$ un reticolo in $\mathbb{E}^n$ i cui vettori abbiano distanza a coppie $\geq 1$. \\; consideriamo un sottospazio lineare di $\mathbb{R}^n$ generato da $k$ vettori $\vb{w}_i \in L$ con $i = 1,... ,k$. \\
+Sia $L$ un reticolo in $\mathbb{E}^n$ i cui vettori abbiano distanza a coppie $\geq 1$. \\ Consideriamo un sottospazio lineare di $\mathbb{R}^n$ generato da $k$ vettori $\vb{w}_i \in L$ con $i = 1,... ,k$. \\
 Se un punto di reticolo $\vb{w} \in L$ non è contenuto in $E$, allora la sua componenete in $E^{\perp}$ è tale che 
 \[ \norm{\vb{w}^{\perp}} \geq \bigg( 3 +  \sum_{i = 1}^{k} \norm{\vb{w}_i} \bigg)^{-n} \]
 \end{lemma}
@@ -574,10 +590,19 @@ Se un punto di reticolo $\vb{w} \in L$ non è contenuto in $E$, allora la sua co
 \begin{proof}
 Sia \hfill \[ N = \left\lfloor
 \bigg( 3 +  \sum_{i = 1}^{k} \norm{\vb{w}_i} \bigg)^{n}
-\right\rfloor\]. \\
+\right\rfloor\] \\
 Suppongo per assurdo che $0 < \norm{\vb{w}^{\perp}}  < \frac{1}{N}$. \\
-In questa situazione ho che i vettori $j \vb{w}$ con $j = 0, ..., N$ hanno distanze da $E$ inferiori a 1. 
-Aggiungendo ad ognuno di questi vettori una combinazione lineare di $\vb{w}_k$ posso 
+In questa situazione i vettori $j \vb{w}$ con $j = 0, ..., N$ hanno distanze da $E$ inferiori a 1. \\
+Aggiungendo ad ognuno di questi una combinazione lineare di ${\{\vb{w}_i\}}_{1 \leq i \leq k }$ posso modificarne la componenete in $E$ senza andare a toccare la componente perpendicolare. \\
+In particolare scelgo la combinazione in modo che $j \vb{w}^{E} \leq \frac{1}{2} \bigg( \sum_{i = 1}^{k} \norm{\vb{w}_i} \bigg)$     $\forall j = 0, ..., N$. 
+Posso farlo in quanto (???????????????????????????????????????? devo rimanere nel reticolo, quindi dovrei fare combinazioni lineari intere, se fossero combinazioni lineari generiche sarebbe immediato; come lo faccio vedere?). \\
+Questi $N+1$ punti di reticolo hanno quindi una distanza dall'origine inferiore a alla somma delle loro distanze da $E$ ed $E^{\perp}$, in quanto l'origine appartiene ad entrambi i sottospazi.
+\[ d(j\vb{w}, \underline{0} ) \leq 1 + \frac{1}{2} \bigg( \sum_{i = 1}^{k} \norm{\vb{w}_i} \bigg) \]
+Questa è una contraddizione al lemma (8.2) in quanto ho 
+\[ N+1 \leq P \Bigg( 1 + \frac{1}{2} \bigg( \sum_{i = 1}^{k} \norm{\vb{w}_i} \bigg) \Bigg)  \leq \Bigg( 3 +  \sum_{i = 1}^{k} \norm{\vb{w}_i} \Bigg)^{-n} \leq  \frac{1}{N} \]
+E non esistono $N \in \mathbb{N}^{+}$ che mi soddisfino questa disequazione.
 \end{proof}
+
+
 
 \end{document}
