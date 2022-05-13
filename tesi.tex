@@ -8,6 +8,7 @@
 \usepackage{amsthm}
 \usepackage{physics}
 \usepackage{tikz}
+\usepackage{ wasysym }
 \usetikzlibrary{backgrounds}
 \usetikzlibrary{calc}
 \tikzset{>=latex} % for LaTeX arrow head
@@ -37,6 +38,9 @@
 \newtheorem{lemma}[theorem]{Lemma}
 
 \newcommand\normh[1]{\left\lVert#1\right\rVert}
+
+
+\newcommand*\quot[2]{{^{\textstyle #1}\big/_{\textstyle #2}}}
 
 \begin{document} 
 
@@ -604,5 +608,89 @@ E non esistono $N \in \mathbb{N}^{+}$ che mi soddisfino questa disequazione.
 \end{proof}
 
 
+\begin{definition}
+Sia $\Gamma$ un gruppo cristallografico $n$-dimensionale, definisco $L(\Gamma)<G$ come il sottogruppo che contiene tutte e sole le translazioni in $\Gamma$.
+\end{definition}
+
+La precedente è una buona definizione in quanto la composizione di due translazioni è una translazione. 
+
+\begin{lemma}
+Comunque scelte $\alpha \in \Gamma$ e $\vb{w} \in L(\Gamma) \Longrightarrow \vb{Aw} \in L(\Gamma)$ 
+\end{lemma}
+
+\begin{proof}
+$w = trans(\omega)$ con $\omega \in L(\Gamma)$.
+Considero $\alpha \omega \alpha^{-1} \in \Gamma$; questa è una translazione di vettore $\vb{Aw}$. Quindi $\vb{Aw} \in L(\Gamma)$
+\end{proof}
+
+\begin{definition}
+Un gruppo cristallografico $\Gamma$ è detto normale se:
+\begin{enumerate}
+\item i vettori che sono contenuti in $L(\Gamma)$ hanno distanze a coppie $\geq 1$
+\item $L(\Gamma)$ contiene $n$ vettori unitari linearmente indipendenti
+\end{enumerate}
+\end{definition}
+
+\begin{theorem}
+Ogni gruppo cristallografico $\Gamma$ è isomorfo ad un gruppo cristallografico normale
+\end{theorem}
+
+\begin{proof}
+Per la proprietà (1) dei gruppi cristallografici so che esiste un vettore in $L(\Gamma)$ di lunghezza minima. Scalo per omotetia tutti i vettori in $\Gamma$ in modo da avere tale vettore di norma $1$. \\
+Suppongo per induzione che $L(\Gamma)$ soddisfi la condizione (1) e che $\exists \vb{w}_i \in L(\Gamma)$ con $1 \leq i \leq k < n $ linearmente indipendenti tali che $\norm{\vb{w}_i} = 1 $.  
+Chiamo $E$ il sottospazio vettoriale di dimensione $k$ di $\mathbb{R}^n$ generato da essi.\\
+Voglio dimostrare che esiste un gruppo $\Gamma ' \cong \Gamma$ tale che $L(\Gamma')$ soddisfi la condizione (1) e che contenga $k+1$ vettori linearmente indipendenti. \\
+\begin{itemize}
+\item Se $\exists \alpha \in \Gamma $ e $1 \leq i \leq k: \vb{Aw}_i \notin E$ allora, grazie al lemma 2.0.4 so che $\vb{Aw}_i \in L(\Gamma)$, inoltre $\norm{\vb{Aw}_i} = 1$ dato che $A \in O(n)$, quindi $\vb{Aw}_i$ è già il $k+1$-esimo vettore cercato.
+\item Se, al contrario, tutte le componenti di rotazione delle isometrie in $\Gamma$ lasciano $E$ invariato, allora queste lasciano invariato anche $E^{\perp}$. \\
+Definisco la trasformazione affine 
+\[ \Phi_{\nu} (x^E + x^{\perp} )=  x^E + \nu x^{\perp} , \; \nu > 0  \; \forall x \in \mathbb{R}^n\]
+Scelto comunque $\alpha$ con componente rotatoria $\vb{A}$, dato che le componenti rotatorie di $\Gamma$ lasciano invariate $E$ ed $E^{\perp}$ vale
+\[ ( \Phi_{\nu}  \circ \vb{A})(\vb{x}) = \Phi_{\nu} (\vb{Ax})  = \Phi_{\nu} (\vb{Ax}^E +\vb{Ax }^{\perp})  = \vb{Ax}^E +\nu \vb{Ax }^{\perp} = \vb{Ax}^E +\vb{A(\nu x) }^{\perp} = \vb{A} ( \vb{x}^E +\nu \vb{x }^{\perp})  = ( \vb{A} \circ \Phi_{\nu} ) (x)\]
+Quindi la funzione affine $\Phi_{\nu}$ commuta con la parte rotazionale delle isometrie in $\Gamma$. \\
+Definisco il gruppo $\Gamma_{\nu} := \Phi_{\nu} \Gamma \Phi_{\nu}^{-1} < Aff(\mathbb{R}^n)$. Questo è coniugato a $\Gamma$ nel gruppo affine (ed è quindi isomorfo a $\Gamma$), ma è effettivamente anche un gruppo di isometrie in quanto 
+\[ \forall \alpha_{\nu} \in \Gamma_{\nu} \; \exists \alpha \in \Gamma : \; \; \alpha_{\nu} =  \Phi_{\nu} \alpha \Phi_{\nu}^{-1}  \]
+\[ rot( \alpha_{\nu}) = rot(\Phi_{\nu} \alpha \Phi_{\nu}^{-1}) = rot(\alpha) \in O(n)\]
+
+Se $\beta_{\nu} \in L(\Gamma_{\nu}) $ con  $ \beta_{\nu} = \Phi_{\nu} \beta \Phi_{\nu}^{-1} \Longrightarrow rot(\beta_{\nu}) = rot(\Phi_{\nu} \beta \Phi_{\nu}^{-1}) = rot(\beta) = \vb{id}  \Longrightarrow \beta \in L(\Gamma)$. \\ Scrivo $\beta \vb{x} = \vb{x} + \vb{b}  $. 
+\[\beta_{\nu} \vb{x} = (\Phi_{\nu} \beta \Phi_{\nu}^{-1})(\vb{x}) = (\Phi_{\nu} \beta \Phi_{\nu}^{-1})(\vb{x}^E + \vb{x}^{\perp}) =  
+ (\Phi_{\nu} \beta)(\vb{x}^E + \frac{1}{\nu}\vb{x}^{\perp}) =  \Phi_{\nu}(\vb{x}^E + \frac{1}{\nu}\vb{x}^{\perp} + \vb{b}) = \vb{x}^E + \vb{x}^{\perp} + \Phi_{\nu}(\vb{b}) \] 
+Quindi  $L(\Gamma_{\nu})  = L(\Phi_{\nu} \Gamma \Phi_{\nu}^{-1}) = \Phi_{\nu}(L(\Gamma))$. \\
+A questo punto se io considero $\nu >0 $ e suppongo che i vettori in  $L(\Gamma_{\nu})$ abbiano distanze a coppie $\geq 1$, posso applicare il teorema 2.0.3 utilizzando il sottospazio $E$. So quindi che $\forall \vb{w}_{\nu} = \in L(\Gamma_{\nu})$ tale che $\vb{w}_{\nu}^{\perp} \neq \vb{0}$ vale 
+\[ \norm{\vb{w}_{\nu}^{\perp}} \geq (3 + k)^{-n}\]
+So inoltre che $\exists \vb{w} \in \mathbb{R}^n : \vb{w}_{\nu} = \Phi_{\nu}(\vb{w})$, quindi posso scrivere
+\[ \norm{\vb{w}_{\nu}^{\perp}} = \norm{\Phi_{\nu}(\vb{w})^{\perp}} = \norm{ (\vb{w}^{E} + \nu \vb{w}^{\perp})^{\perp}} = \norm{\nu \vb{w}^{\perp}} = \nu \norm{\vb{w}^{\perp}}\geq \frac{1}{(3 + k)^{n}} \]
+Se scelgo $\nu$ molto piccolo, la disuguaglianza precedente non vale più, e di conseguenza non è vero che i vettori in  $L(\Gamma_{\nu})$ hanno distanze a coppie $\geq 1$. Esiste quindi un $\nu' > 0 $ minimo tale che la condizione (1) della definizione di gruppo cristallografico normale vale in $\Gamma_{\nu '}$.  \\
+Dato che la trasformazione affine $\Phi_{\nu '}$ mantiene fissi tutti gli elementi $E$, il vettore più corto che si trova in $L(\Gamma_{\nu'}) - E  = \Phi_{\nu'}(L(\Gamma)) - E = \Phi_{\nu'}(L(\Gamma) - E)$ ha norma $1$ (PERCHé????????????????) \\
+\end{itemize}
+Quindi ho trovato  $\Gamma_{\nu'} \cong \Gamma$ che contiene $k+1$ vettori unitari linearmente indipendenti ed ho mostrato che $\Gamma_{\nu'}$ è un gruppo cristallografico normale.  \\
+La dimostrazione si conclude per induzione. 
+\end{proof}
+
+\begin{theorem}
+Ogni gruppo cristallografico normale è unicamente caratterizzato da una tabella di gruppo 
+\end{theorem}
+
+\begin{proof}
+Sia $\Gamma$ il grupo cristallografico normale, siano fissati $n$ vettori $\vb{w}_1, ... \vb{w}_n \in L(\Gamma) $ tali che siano linearmente indipendenti e $\norm{\vb{w}_i} = 1  \; \; \forall i = 1, ..., n$.  \\
+Considero il sottoreticolo  di $L(\Gamma)$
+\[ L = \bigg\{ \sum_{i = 1}^{n} m_i \vb{w}_i \bigg| m_i \in \mathbb{Z}, i = 1, ..., n \bigg\} \]
+$L$ è ovviamente un sottogruppo di $\Gamma$, faccio il quoziente $\quot{\Gamma}{L} $; da ognuno degli elementi di questo quoziente scelgo un rappresentante $\omega$ la cui componente translazionale $\vb{w} $ sia tale che 
+\[ \norm{\vb{w}} \leq \frac{1}{2} \bigg( \sum_{i = 1}^{n} \norm{ \vb{w}_i)} \bigg) = \frac{n}{2}\]  
+Per la prima proprietà dei gruppi cristallografici esistono solo un numero finito di questi rappresentanti, li chiamo $\omega_{n+1}, ... , \omega_N$. \\
+Adesso $\forall \alpha \in \Gamma$, questo può essere scritto come 
+\[ \alpha = \bigg( \sum_{i = 1}^{n} m_i \vb{w}_i \bigg) \omega_{\nu} \; \; \; \; n+1 \leq \nu \leq N\]
+Se considero $\omega_i \in \Gamma$ con $i=1, ...,n$ come le translazioni di vettori $w_i \; \; i=1, ...,n$, posso caratterizzare unicamente la struttura di gruppo di $\Gamma$ a meno di isomorfismo come 
+\begin{equation}
+	 \omega_j \omega_k = \bigg( \sum_{i = 1}^{n} m_{ijk} \vb{w}_i\bigg) \omega_{\nu (j,k)}      \; \; \; \forall j,k =1, ...,N 
+\end{equation}
+$\Gamma$  è quindi unicamente determinato (a meno di isomorfismo) da $N, \omega_{\nu (j,k)}$ e $m_{ijk} \in \mathbb{Z}$.
+
+\end{proof}
+
+\begin{theorem}
+I valori assoluti di $N, \omega_{\nu (j,k)}$ e $m_{ijk}$ sono maggiorati da un intero che dipende solo dalla dimensione $n$ dello spazio euclideo.
+\end{theorem}
+	
 
 \end{document}
