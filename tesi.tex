@@ -9,6 +9,7 @@
 \usepackage{physics}
 \usepackage{tikz}
 \usepackage{ wasysym }
+\usepackage{caption}
 \usepackage[justification=centering]{caption}
 \usetikzlibrary{backgrounds}
 \usetikzlibrary{calc}
@@ -56,7 +57,6 @@
 In questo capitolo enunciamo alcune definizioni e risultati fondamentali per approcciare la dimostrazione geometrica dei primi due teoremi di Bieberbach.  \\
 
 Nella prima sezione riprendiamo la definizione di spazio euclideo $n$-dimensionale e del suo gruppo di isometrie, descriviamo una loro rappresentazione come composizione dell'applicazione di una matrice ortogonale e di una translazione; definiamo poi poi il coniugio di due isometrie. \\
-
 La lunghezza e la direzzione del vettore translazione di una data isometria danno immediatamente informazioni su come questa agisce sui punti di $\mathbb{R}^n$; più complicato è invece capire, data una matrice ortogonale, come questa trasformi lo spazio. \\
 Nella seconda sezione viene defnita quindi una funzione che stima per eccesso di quanto ogni matrice ortogonale si discosta dalla matrice identità; viene poi definita attraverso essa una scomposizione dello spazio in due spazi ortogonali; infine si dimostra un teorema che stima la "misura" del commutatore di due matrici a partire dalle loro "misure".  
 
@@ -278,7 +278,7 @@ m^{\perp}(\vb{A})  & < m(\vb{A}) \; \; \; \; \; \; \; \; \; se \; \vb{A \neq id}
 \begin{itemize}
 \item Se $\vb{A = id} \Longrightarrow m(\vb{A}) = 0 \land E_{\vb{A}} = \mathbb{R}^n \Longrightarrow E^{\perp}_{\vb{A}} = {0} \Longrightarrow m^{\perp}(\vb{A}) = 0$
 
-\item Se $\vb{A \neq id}$ \\
+\item Se $\vb{A \neq id}$ 
 \[ m(\vb{A}) = \max \bigg\{ \frac{\norm{\vb{Ax-x}}}{\norm{\vb{x}}} \bigg|  \vb{x} \in \mathbb{R}^{n}-\vb{0} \bigg\} 
 \geq \max \bigg\{ \frac{\norm{\vb{Ax-x}}}{\norm{\vb{x}}} \bigg|  \vb{x} \in E^{\perp}_{\vb{A}} - \vb{0} \bigg\} =  m^{\perp}(\vb{A}) \]
 Se valesse $m(\vb{A}) = m^{\perp}(\vb{A}) \Longrightarrow \exists \vb{x} \in E^{\perp}_{\vb{A}} - \vb{0} : \norm{\vb{Ax-x}} = m(\vb{A})\norm{\vb{x}} \Longrightarrow \vb{x} \in E_{\vb{A}}$  ma questo implica $\vb{x} \in E_{\vb{A}} \cap E^{\perp}_{\vb{E}} = {\vb{0}} \Longrightarrow \vb{x = 0} $;  \\
@@ -287,7 +287,7 @@ questo è però assurdo perché abbiamo imposto che $x\vb{ \neq 0}$
 \end{proof}
 
 \begin{lemma}
-$\forall \vb{x} \in \mathbb{R}^n $ posso scrivere $\vb{x}$ in modo unico in decomposizione ortogonale. \\
+$\forall \vb{x} \in \mathbb{R}^n $ posso scrivere $\vb{x}$ in modo unico in decomposizione ortogonale. 
 \[ \vb{x} = \vb{x}^E + \vb{x}^{\perp} \; \mathit{dove} \; \vb{x}^E \in E_{\vb{A}} \; \mathit{e} \; \vb{x}^{\perp} \in E^{\perp}_{\vb{A}} \]
 \'E inoltre immediato verificare le seguenti proprietà:
 \[ \norm{\vb{Ax}^E - \vb{x}^E }= m(\vb{A})\norm{\vb{x}^E} \] \[\norm{\vb{Ax}^{\perp} - \vb{x}^{\perp}} \leq m(\vb{A}) \norm{\vb{x}^{\perp}} \]
@@ -380,41 +380,41 @@ Consideriamo ora la successione degli angoli fra i vettori $\vb{u}$ e $\vb{b}_k$
 \end{tikzpicture}
 \centering
 \caption{I vettori $k \vb{u}$, $\vb{b_k}$ e $\vb{b_k}-k\vb{u}$ formano un triangolo. \\ Chiamo $\gamma_k$ l'angolo contenuto fra $k \vb{u}$ e $\vb{b_k}-k\vb{u}$}
-\end{figure}
-
-
-\[ \angle (\vb{u , b_k}) = \angle (\vb{ku, b_k}) = : \theta_k \]
+\end{figure} \\
+Possiamo applicare il teorema dei seni al triangolo in figura ~\ref{fig:trangolo1}
 \[ \frac{\norm{\vb{b_k}}}{sin(\gamma_k)} = \frac{\norm{\vb{b_k} - k\vb{u}}}{sin(\theta_k)}  \leq \frac{d}{sin(\theta_k)} \]
+Si può ora riscrivere la disequazione in modo da ottenere
 \[  sin(\theta_k) \leq \frac{sin(\gamma_k)d}{\norm{\vb{b_k}}} \longrightarrow 0 \Longrightarrow \theta_k \longrightarrow 0 \]
 
-Ho definito la successione ${ \{\beta_k \}}_{k \in \mathbb{N}}$  con  $\beta_k \vb{x = B}_k \vb{x + b}_k$   $\beta_k \in \Gamma \Longrightarrow \vb{B}_k \in O(n)$  \\
-$O(n)$  è compatto e ${ \{\vb{B}_k \} }_{k \in \mathbb{N}}$ successione in  $O(n)$  ammette quindi almeno un punto di accumulazione per il teorema di Bolzano-Weierstrass. \\
-Estraggo da ${ \{ \vb{B}_k \}}_{k \in \mathbb{N}}$  una sottosuccessione  $ { \{ \vb{A}_k \} }_{k \in \mathbb{N}} = { \{ \vb{B}_{k_j} \} }_{j \in \mathbb{N}}$  convergente.  \\
-La funzione  $ m: O(n) \longrightarrow \mathbb{R}$  è continua in quanto composizione di funzioni continue ($ \vb{A} \mapsto \max{\norm{\vb{Ax-x}}} $), quindi con $i,j \in \mathbb{B} \longrightarrow \infty $ sicuramente $m(\vb{A}_j \vb{A}^{-1}_i) \longrightarrow m(\vb{id}) = 0 $ \\
-Associata a questa sottosuccessione ho ovviamente una sottosuccessione di ${ \{\beta_k \}}_{k \in \mathbb{N}}$ che chiamo ${ \{\alpha_k \}}_{k \in \mathbb{N}}$ con  $\alpha_k \vb{x = A}_k \vb{x + a}_k$ \\
+$O(n)$  è compatto e ${ \{\vb{B}_k \} }_{k \in \mathbb{N}}$ successione in  $O(n)$  ammette quindi almeno un punto di accumulazione per il teorema di Bolzano-Weierstrass. Si può quindi estarrre da ${ \{ \vb{B}_k \}}_{k \in \mathbb{N}}$  una sottosuccessione  convergente: $ { \{ \vb{A}_k \} }_{k \in \mathbb{N}} = { \{ \vb{B}_{k_j} \} }_{j \in \mathbb{N}}$ .  \\
+\newpage
+La funzione  $ m: O(n) \longrightarrow \mathbb{R}$  è continua in quanto composizione di funzioni continue ($ \vb{A} \mapsto \max{\norm{\vb{Ax-x}}} $), quindi con $i,j \in \mathbb{R} \longrightarrow \infty $ sicuramente $m(\vb{A}_j \vb{A}^{-1}_i) \longrightarrow m(\vb{id}) = 0 $ \\
+Associata a questa sottosuccessione ho ovviamente una sottosuccessione di ${ \{\beta_k \}}_{k \in \mathbb{N}}$ che chiamo ${ \{\alpha_k \}}_{k \in \mathbb{N}} = \{ (\vb{A}_k , \vb{a}_k ) \}_{k \in \mathbb{N}}$. \\
 
 
-Dato che valgono tutte le proprietà di cui sopra, è immediato verificare che $\exists i,j \in \mathbb{N} $  tali che  $ i < j$  e che valgano contemporaneamente
+Dato che valgono tutte le proprietà appena dimostrate, è immediato verificare che $\exists i,j \in \mathbb{N} $  tali che  $ i < j$  e che valgano contemporaneamente
 \[ \begin{cases} \angle(u, \vb{a}_j ) \leq \frac{\delta}{2} \\
 \norm{\vb{a}_i} \leq \frac{\delta}{4}\norm{\vb{a}_j} \\
 m( \vb{A}_j \vb{A}^{-1}_i ) \leq \epsilon  \end{cases} \]
 Considero l'isometria definita da $\alpha \in \Gamma$ come 
-\[ \alpha : x \longmapsto \alpha_j \alpha^{-1}_i \vb{x} = \vb{A}_j \vb{A}^{-1}_i \vb{x} + \vb{a}_j - \vb{A}_j \vb{A}^{-1}_i \vb{a}_i\]
+\[ \alpha = (\vb{A, a})  : x \longmapsto \alpha_j \alpha^{-1}_i \vb{x} = \vb{A}_j \vb{A}^{-1}_i \vb{x} + \vb{a}_j - \vb{A}_j \vb{A}^{-1}_i \vb{a}_i\]
 Questa isometria verifica tutte le proprietà richieste dalla tesi
 
 \begin{itemize}
-\item \'E ovvio che $m(\vb{A}) = m(\vb{A}_j \vb{A}^{-1}_i) \leq \epsilon$ 
-\item Verifico  $\vb{a}= \vb{a}_j - \vb{A}_j \vb{A}^{-1}_i \vb{a}_i \neq 0$ 
+\item $m(\vb{A}) = m(\vb{A}_j \vb{A}^{-1}_i) \leq \epsilon$ vero per precedente dimostrazione
+\item Verifichiamo  $\vb{a}= \vb{a}_j - \vb{A}_j \vb{A}^{-1}_i \vb{a}_i \neq 0$ 
 \[ \norm{\vb{a}_j - \vb{A}_j \vb{A}^{-1}_i \vb{a}_i} \geq \bigg| \norm{\vb{a}_j} - \norm{ \vb{A}_j \vb{A}^{-1}_i \vb{a}_i } \bigg| \geq \bigg| \norm{\vb{a}_j } + \norm{\vb{a}_i} \bigg| \geq \norm{\vb{a}_i} \bigg| \frac{4}{\delta} -1 \bigg| \]
 $\norm{\vb{a}_i} \neq 0 \Longrightarrow \vb{a} \neq 0$
  
-\item Verifico $ \angle (\vb{u, a})  = \angle (\vb{u} , \vb{a_j - A_j A_i^{-1} a_i} ) \leq \delta $. 
+\item Verifichiamo $ \angle (\vb{u, a})  = \angle (\vb{u} , \vb{a_j - A_j A_i^{-1} a_i} ) \leq \delta $. Applicando la disuguaglianza triangolare sugli angoli si può scrivere
 \begin{equation}
 \angle (\vb{u} , \vb{a_j - A_j A_i^{-1} a_i} ) \leq \angle (\vb{u} , \vb{a_j}) + \angle(\vb{a_j}, \vb{a_j- A_j A_i^{-1} a_i} ) 
 \end{equation}
 
-Dato che $ \norm{\vb{a}_i} \leq \frac{\delta}{4}\norm{\vb{a}_k}$, la punta del vettore $\vb{a}_j - \vb{A_j A_i^{-1} a_i}$ cade all'interno du una palla n-dimensionale che ha come centro la punta di $\vb{a}_j$ e raggio $r = \frac{\delta}{4}\norm{\vb{a}_k}$\\
-\begin{center}
+Dato che $ \norm{\vb{a}_i} \leq \frac{\delta}{4}\norm{\vb{a}_j}$, la punta del vettore $\vb{a}_j - \vb{A_j A_i^{-1} a_i}$ cade all'interno di una palla n-dimensionale che ha come centro la punta di $\vb{a}_j$ e raggio $r = \frac{\delta}{4}\norm{\vb{a}_j}$\\
+\begin{figure}[!h]
+\centering
+\label{fig:triangolo2}
 \begin{tikzpicture}[line cap=round]
   \coordinate (O) at (0,0);
   \coordinate (A) at (9,0);
@@ -424,14 +424,14 @@ Dato che $ \norm{\vb{a}_i} \leq \frac{\delta}{4}\norm{\vb{a}_k}$, la punta del v
   \coordinate (X) at ($(A)+(C)$);
   \draw[vector] (O) -- (A) node[midway,above] {$\vb{a}_j$};
   \draw[vector,red] (O) -- (B) node[above right = -2] {$\vb{A_j A_i^{-1} a_i}$};
-  \draw (A) circle (2)node[right]{$r = \frac{\delta}{4}\norm{\vb{a}_k}$};
+  \draw (A) circle (2)node[right]{$r = \frac{\delta}{4}\norm{\vb{a}_j}$};
   \draw[vector, black] (O) -- (U) node[midway, below] {$ \vb{u} $};
   \draw[vector,red] (A) -- (X);
   \draw[vector] (O) -- (X)node[midway,below] {$\vb{a}_j - \vb{A_j A_i^{-1} a_i}$};
 \end{tikzpicture}
-\end{center} 
+\caption{AGGIUNGERE UNA CAPTION SENSATA}
+\end{figure} 
 
-Considero una situaizone come quella nel disegno precedente; \\ 
 \begin{minipage}{0.3\textwidth}
 $\forall \rm P$ scelto all'interno della circonferenza \\ $ \widehat{PAO} \leq \widehat{TAO} $ 
 \[ \frac{\overline{TO}}{sin( \widehat{TAO}) } = \frac{\overline{AO}}{sin( \widehat{ATO}) } \] 
