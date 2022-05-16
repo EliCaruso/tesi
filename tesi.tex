@@ -1,4 +1,4 @@
-\documentclass[10pt,a4paper]{book}
+\documentclass[12pt,a4paper]{book}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[italian]{babel}
@@ -9,6 +9,7 @@
 \usepackage{physics}
 \usepackage{tikz}
 \usepackage{ wasysym }
+\usepackage[justification=centering]{caption}
 \usetikzlibrary{backgrounds}
 \usetikzlibrary{calc}
 \tikzset{>=latex} % for LaTeX arrow head
@@ -51,73 +52,64 @@
 %Devo enunciare i teoremi di Bieb \\
 
 
+\chapter{Risultati preliminari}
+In questo capitolo enunciamo alcune definizioni e risultati fondamentali per approcciare la dimostrazione geometrica dei primi due teoremi di Bieberbach.  \\
 
-\chapter{Primo teorema di Bieberbach}
-Questo capitolo contiene gli strumenti fondamentali necessari per dare una dimostrazione geometrica del primo teorema di Bieberbach e la dimostrazione stessa. \\
+Nella prima sezione riprendiamo la definizione di spazio euclideo $n$-dimensionale e del suo gruppo di isometrie, descriviamo una loro rappresentazione come composizione dell'applicazione di una matrice ortogonale e di una translazione; definiamo poi poi il coniugio di due isometrie. \\
 
-
-\section{Preliminari}
-In questa sezione si enunciano alcune definizioni e risultati fondamentali per approcciare la dimostrazoine (che si trova nella sezione successiva). In particolare in questa sezione sono contenute informazioni che esulano dalla definizione di gruppo cristallografico e dall'enunciato del primo teorema di Bieberbach. \\
-
-Nella prima parte riprendo la definizione di spazio euclideo $n$-dimensionale e del suo gruppo di isometrie, descrivo una loro rappresentazione come composizione dell'applicazione di una matrice ortogonale e di una translazione; definisco poi il coniugio di due isometrie. \\
-
-La lunghezza e la direzzione del vettore translazione di una data isometria mi danno immediatamente informazioni su come questa translazione agisce sui punti di $\mathbb{R}^n$; più complicato è invece capire, data una matrice ortogonale, come questa trasformi lo spazio. \\
-Nella seconda sezione definisco quindi una funzione che stima per eccesso di quanto ogni matrice ortogonale si discosta dalla matrice identità; definisco poi attraverso essa una scomposizione dello spazio in due spazi ortogonali. Infine dimostro un teorema che mi da una stima della "misura" del commutatore di due matrici a partire dalle loro "misure".  
+La lunghezza e la direzzione del vettore translazione di una data isometria danno immediatamente informazioni su come questa agisce sui punti di $\mathbb{R}^n$; più complicato è invece capire, data una matrice ortogonale, come questa trasformi lo spazio. \\
+Nella seconda sezione viene defnita quindi una funzione che stima per eccesso di quanto ogni matrice ortogonale si discosta dalla matrice identità; viene poi definita attraverso essa una scomposizione dello spazio in due spazi ortogonali; infine si dimostra un teorema che stima la "misura" del commutatore di due matrici a partire dalle loro "misure".  
 
 
-\subsection{Spazio euclideo $\mathbb{E}^n$ ed isometrie}
-Considero lo spazio vettoriale n-dimensionale $\mathbb{R}^{n}$  \\
-con il prodotto scalare  \hfill
-\begin{minipage}{0.3\textwidth}
+\section{Spazio euclideo $\mathbb{E}^n$ ed isometrie}
+Consideriamo lo spazio vettoriale n-dimensionale $\mathbb{R}^{n}$  con il prodotto scalare dato da 
 \[
-  \vb{x} \cdot \vb{y} =  \sum_{i=1}^{n} x_i y_i    
+  \vb{x} \cdot \vb{y} =  \sum_{i=1}^{n} x_i y_i    \; \; \; \forall \vb{x} , \vb{y} \in \mathbb{R}^{n}
 \]
-\end{minipage} \hfill
-\begin{minipage}{0.3\textwidth}
-$ \forall \vb{x} , \vb{y} \in \mathbb{R}^{n}$
-\end{minipage} \\
-E la norma associata   \hfill             
-\begin{minipage}{0.3\textwidth}
+e la norma ad esso associata              
 \[
-  \norm{\vb{x}} =  \sqrt{\vb{x} \cdot \vb{x}}
+  \norm{\vb{x}} =  \sqrt{\vb{x} \cdot \vb{x}}     \; \; \; \; \; \forall \vb{x} , \vb{y} \in \mathbb{R}^{n}.
 \]
-\end{minipage} \hfill
-\begin{minipage}{0.3\textwidth}
-$ \forall \vb{x} \in \mathbb{R}^{n}$
-\end{minipage} \newline
-Definisco la distanza \hfill 
-\begin{minipage}{0.3\textwidth}
-\[ d(\vb{x}, \vb{y} ) = \norm{\vb{x-y}}\] 
-\end{minipage} \hfill
-\begin{minipage}{0.3\textwidth}
-$ \forall \vb{x} , \vb{y} \in \mathbb{R}^{n}$
-\end{minipage} \\
-e l'angolo fra due vettori \hfill
+Imponiamo sullo spazio la distanza associata al prodotto scalare 
+\[ d(\vb{x}, \vb{y} ) = \norm{\vb{x-y}}           \; \; \; \forall \vb{x} , \vb{y} \in \mathbb{R}^{n}\] 
+Imponendo questa metrica sullo spazio vettoriale $\mathbb{R}^n$ ottengo lo spazio euclideo $\mathbb{E}^n$. 
+\begin{definition}
+Dati $\vb{x, y} \in \mathbb{R}^n$ definisco l'angolo fra di essi $\angle (\vb{x},\vb{y})$ come 
 \[ \angle (\vb{x},\vb{y}) = arccos \bigg( \frac{\vb{x} \cdot \vb{y}}{\norm{\vb{x}} \norm{\vb{y}}} \bigg) \in [0, \pi] \]
-Imponendo questa metrica sullo spazio vettoriale $\mathbb{R}^n$ ottengo lo spazio euclideo $\mathbb{E}^n$. \\
-E' noto dall'algebra lineare che gli automorfismi di $\mathbb{R}^n$ (ovvero le applicazioni lineari biettive da $\mathbb{R}^n$ in sé stesso) formano il gruppo $ GL(n, \mathbb{R}) $ con l'operazione di composizione di applicazioni lineari. Se compongo tali automorfismi con translazioni di vettori in $\mathbb{R}^n$ ottengo il gruppo affine $Aff(n, \mathbb{R}) \cong \mathbb{R}^{n} \rtimes GL(n, \mathbb{R})$. 
-
+\end{definition} 
+\'E noto che gli automorfismi di $\mathbb{R}^n$ (ovvero le applicazioni lineari biettive da $\mathbb{R}^n$ in sé stesso) formano un gruppo con l'operazione di composizione di applicazioni lineari isomorfo  a $ GL(n, \mathbb{R}) $, il gruppo delle matrici quadrate $n-$dimensionali con determinante non nullo. 
+Se si considerano invece le mappe affini da $\mathbb{R}^n$ in sé stesso con il prodotto dato dalla composizione, si ottinene il gruppo affine $Aff(n, \mathbb{R})$; esso può essere rappresentato come il prodotto demidiretto 
+\[  \mathbb{R}^{n} \rtimes GL(n, \mathbb{R})   \]
+con l'operazione di composizione data da 
+\[ (\vb{A, a}) \cdot (\vb{B, b}) = (\vb{ a + Ab, AB})  \; \; \forall \vb{A, B}  \in  GL(n, \mathbb{R}) \; \forall \vb{a, b} \in \mathbb{R}^n. \]
+I teoremi di Bieberbach trattano in particolare i gruppi cristallograici, che sono dei particolari tipi di sottogruppi del gruppo delle isometrie.
 \begin{definition}
 	Un'isometria di $\mathbb{E}^n$  è un funzione $ \alpha : \mathbb{R}^{n} \longrightarrow \mathbb{R}^{n} $  tale che $\forall \vb{x,y} \in \mathbb{R}^n $ vale 
 	\[ d(\alpha(\vb{x}), \alpha(\vb{y})) = d(\vb{x} , \vb{y} )\]
 \end{definition} 
-Il seguente teorema è enunciato senza dimostrazione in quanto si tratta di un risultato classico dell'algebra lineare. 
+Il seguente teorema è enunciato senza dimostrazione in quanto si tratta di un risultato classico. 
 \begin{theorem}
-Data un'isometria di $\mathbb{E}^n $, questa può essere scritta in modo unico come composizione di una rotazione e di una traslazione
+Data un'isometria di $\mathbb{E}^n $, questa può essere scritta in modo unico come composizione di una rotazione e di una traslazione rispetto alla base standard di $\mathbb{R}^n$
 \[ \alpha : \mathbb{R}^{n} \longrightarrow \mathbb{R}^{n} \]
 \[\vb{x} \longmapsto \vb{Ax + a} \]
 dove $\vb{A} = rot( \alpha ) \in O(n) $ è detta componente di rotazione di $\alpha$ \\
 e $\vb{a} = trans( \alpha ) \in \mathbb{R}^{n} $ è detta componente di traslazione di $\alpha$. 
 \end{theorem}
+In questa trattazione indicheremo spesso le isometrie secondo la rappresentazione fornita dal teorema precedente. In particolare scriveremo $\alpha = ( \vb{A, a})  $ per indicare che l'isometria $\alpha$ ha come componente di rotazione la matrice $\vb{A}$ e come componente di translazione il vettore $\vb{a}$. \\
+Indichiamo l'insieme delle isometrie di  $\mathbb{E}^{n} $ come $Isom(n)$
 \begin{lemma}
-L'insieme delle isometrie di  $\mathbb{E}^{n} $  è un gruppo rispetto all'operazione di composizione di applicazioni lineari. Lo chiamiamo $Isom(n)$ e posso dire
-\[ Isom(n) \cong \mathbb{R}^{n} \rtimes O(n) < \mathbb{R}^{n} \rtimes GL(n, \mathbb{R})
+$Isom(n)$ è un gruppo con operazione di composizione di applicazioni; in particolare è un sottogruppo del gruppo affine e come tale può essere scritto come prodotto semidiretto nella forma
+\[ Isom(n) \cong   O(n) \rtimes \mathbb{R}^{n} <  GL(n, \mathbb{R}) \rtimes\mathbb{R}^{n} 
 \]
+dove $O(n)$ indica il gruppo delle matrici ortogonali $n-$dimensionali, in particolare 
+\[ O(n) = \{ \vb{A} \in GL(n, \mathbb{R}) \big| \vb{A A^{T}} = \vb{A^{T} A} = \vb{id} \}\]
 \end{lemma}
+\'E noto che le matrici ortogonali hanno la proprietà
+\[ \norm{\vb{Ax}} = \norm{\vb{x}}   \; \; \; \; \forall x \in \mathbb{R}^n \; \forall A \in O(n)\]
 All'interno di ogni gruppo è definito il commutatore di due elementi, posso quindi anche definirlo per $Isom(n)$.
 \begin{lemma}
-	Comunque prese  $ \alpha , \beta \in Isom(n)$, posso scriverle come $\alpha : \vb{x} \longmapsto \vb{Ax + a}$ e $\beta : \vb{x} \longmapsto \vb{Bx + b}$ \\
-	Definisco il loro commutatore come  $ [ \alpha , \beta] = \alpha \beta \alpha^{-1} \beta^{-1}$. 
+	Comunque prese  $ \alpha = (\vb{A,a}), \beta = (\vb{B,b}) \in Isom(n)$\\
+	definisco il loro commutatore come  $ [ \alpha , \beta] = \alpha \beta \alpha^{-1} \beta^{-1}$. \\
 Valgono le due seguenti uguaglianze:
 \begin{equation}
 rot([ \alpha	, \beta ]) = \vb{[A, B]} = \vb{ABA^{-1}B^{-1}}
@@ -145,7 +137,7 @@ trans([ \alpha	, \beta ]) = \vb{(A-id)b+(id-[A,B])b+A(id-B)A^{-1}a }
 & = \vb{ABA^{-1} B^{-1}x-ABA^{-1}B^{-1}b -ABA^{-1}a +Ab + a }
 \end{split}
 \end{equation*}
-Quindi ho che $ rot([ \alpha , \beta ]) = \vb{ABA^{-1} B^{-1} }$ e
+Quindi $ rot([ \alpha , \beta ]) = \vb{ABA^{-1} B^{-1} }$ e
 \begin{equation*}
 \begin{split}
 trans([ \alpha, \beta ]) & = \vb{-ABA^{-1}B^{-1}b -ABA^{-1}a +Ab + a }= \\
@@ -158,23 +150,23 @@ trans([ \alpha, \beta ]) & = \vb{-ABA^{-1}B^{-1}b -ABA^{-1}a +Ab + a }= \\
 \end{equation*}	
 \end{proof}
 
-\subsection{"Misura di rotazione"}
+\section{"Misura" della componente di rotazione}
 \begin{definition}
 Comunque preso  $  \vb{A} \in O(n) $  definisco
 \[ m(\vb{A}) = \max \bigg\{ \frac{\norm{\vb{Ax-x}}}{\norm{\vb{x}}} \bigg|  \vb{x} \in \mathbb{R}^{n}-\vb{0} \bigg\} \]
 \end{definition}
-Questa funzionemi dice quanto una data matrice ortogonale si comporta in modo diverso dalla matrice identità; descrive infatti quanto al massimo un vettore unitario viene "spostato" dall'azione di tale matrice. 
+Questa funzione stima quanto una data matrice ortogonale si comporta in modo diverso dalla matrice identità; descrive infatti quanto al massimo un vettore unitario viene "spostato" dall'azione di tale matrice. 
 \begin{lemma}
 La precedente è una buona definizione e inoltre vale
 \[ m(\vb{A}) = \max \bigg\{ \norm{\vb{Ax-x}} \bigg|  \vb{x} \in \mathbb{R}^{n} \land \norm{\vb{x}} = 1 \bigg\} \]
 \end{lemma}
 
 \begin{proof}
-$ \forall \vb{x} \in \mathbb{R}^{n}-\vb{0}$  $ \exists \vb{y} \in \mathbb{R}^{n}-\vb{0} $ tale che \hfill $\vb{x} = \lambda \vb{y} , \lambda \in \mathbb{R} \land \norm{\vb{y}} = 1 $. 
+$ \forall \vb{x} \in \mathbb{R}^{n}-\vb{0}$  $ \exists \vb{y} \in \mathbb{R}^{n}-\vb{0} $ tale che $\; \; \vb{x} = \lambda \vb{y} , \lambda \in \mathbb{R} \land \norm{\vb{y}} = 1 $. 
 
 \[ \frac{\norm{\vb{Ax-x}}}{\norm{\vb{x}}} = \frac{\norm{\vb{A}\lambda \vb{y}-\lambda \vb{y}}}{\norm{\lambda \vb{y}}} =   \frac{|\lambda| \norm{\vb{Ay-y}}}{|\lambda| \norm{\vb{ y}}} = \norm{\vb{Ay-y}} \]
 
-\[ m(\vb{A}) = \max \bigg\{ \norm{\vb{Ax-x}} \bigg|  \vb{x} \in \mathbb{R}^{n} \land \norm{\vb{x}} = 1 \bigg\}\] L'insime $\vb{x} \in \mathbb{R}^{n} \land \norm{\vb{x}} = 1 $  è un compatto in  $\mathbb{R}^{n}$, quindi per il teorema di Weierstrass esiste una $\vb{x} \in \mathbb{R}^{n} \land \norm{\vb{x}} = 1$ che mi verifica il max. 
+L'insime $\vb{x} \in \mathbb{R}^{n} \land \norm{\vb{x}} = 1 $  è un compatto in  $\mathbb{R}^{n}$, quindi per il teorema di Weierstrass esiste una $\vb{x} \in \mathbb{R}^{n} : \norm{\vb{x}} = 1$ che mi verifica il max. 
 \end{proof}
 
 \begin{lemma}
@@ -184,7 +176,7 @@ Comunque preso $ \vb{x} \in \mathbb{R}^{n}$  vale  \[ \norm{\vb{Ax-x}} \leq m(\v
 \begin{proof}
 Infatti vale $\forall \vb{x} \in \mathbb{R}^{n}-\vb{0}$  e vale anche per  $\vb{x}=0$
 \end{proof}
-Una volta defiinta la funzione $m$ posso definire il sottoinsieme di $\mathbb{R}^n$ che contiene tutti e soli i vettori che realizzano il massimo nella sua definizione. 
+Una volta defiinta la funzione $m$, è possibile definire il sottoinsieme di $\mathbb{R}^n$ che contiene tutti e soli i vettori che realizzano il massimo nella sua definizione. 
 \begin{definition}
 \[ E_{\vb{A}} := \{ \vb{x} \in \mathbb{R}^{n} :  \norm{\vb{Ax - x}} = m(\vb{A}) \norm{\vb{x}}\} \]
 \end{definition}
@@ -197,37 +189,42 @@ $E_A$ è un sottospazio di $\mathbb{R}^{n}$ non banale ed A-invariante
 \item $\vb{0} \in E_{\vb{A}} $  
 \item $\forall \vb{x} \in E_{\vb{A}}, \forall \lambda \in \mathbb{R}$ \\
 $\vb{x} \in E_{\vb{A}} \Longrightarrow \norm{\vb{Ax-x}} = m(\vb{A})\norm{\vb{x}} \Longrightarrow \norm{\vb{A} \lambda \vb{x} -\lambda \vb{x}}= | \lambda | m(\vb{A}) \norm{\vb{x}}  \Longrightarrow \lambda \vb{x} \in E_{\vb{A}} $
-\item $\forall \vb{x, y} \in E_{\vb{A}} $ voglio verificare che $\vb{x+y, x-y} \in E_{\vb{A}}$ \\
+\item $\forall \vb{x, y} \in E_{\vb{A}} $ si vuole verificare che $\vb{x+y, x-y} \in E_{\vb{A}}$ \\
 $\vb{x} \in E_{\vb{A}} \Longrightarrow \norm{\vb{Ax-x}} = m(\vb{A})\norm{\vb{x}}$ \\
 $\vb{y} \in E_{\vb{A}} \Longrightarrow \norm{\vb{Ay-y}} = m(\vb{A})\norm{\vb{y}}$ 
 \begin{equation} 
 \begin{split}
-& \norm{\vb{A(x+y) - (x+y)}}^2 + \norm{\vb{A(x-y) - (x-y)}}^2  = \norm{\vb{Ax - x + Ay -y}}^2 + \norm{\vb{Ax - x -(Ay -y)}}^2 = \\
-& = 2 \norm{\vb{Ax-x}}^2 + 2 \norm{\vb{Ay -y}}^2  = 2( \norm{\vb{Ax-x}}^2 + \norm{\vb{Ay-y}}^2) = 2m(\vb{A})^2(\norm{\vb{x}}^2 + \norm{\vb{y}}^2) 
+& \norm{\vb{A(x+y) - (x+y)}}^2 + \norm{\vb{A(x-y) - (x-y)}}^2  = \\
+& = \norm{\vb{Ax - x + Ay -y}}^2 + \norm{\vb{Ax - x -(Ay -y)}}^2 = \\
+& = 2 \norm{\vb{Ax-x}}^2 + 2 \norm{\vb{Ay -y}}^2  = 2( \norm{\vb{Ax-x}}^2 + \norm{\vb{Ay-y}}^2) = \\
+& = 2m(\vb{A})^2(\norm{\vb{x}}^2 + \norm{\vb{y}}^2) 
 \end{split}
 \end{equation}
-Da (3) segue 
+Dalla precedente catena di uguaglianze segue
 \begin{equation} 
 \begin{split}
-2m(\vb{A})^2(\norm{\vb{x}}^2 + \norm{\vb{y}}^2) & = \norm{\vb{A(x+y) - (x+y)}}^2 + \norm{\vb{A(x-y) - (x-y)}}^2 \leq m(\vb{A})^2(\norm{\vb{x+y}}^2 + \norm{\vb{x-y}}^2) \\ 
-& = m(\vb{A})^2(\norm{\vb{x+y}}^2 + \norm{\vb{x-y}}^2)  = 2m(\vb{A})^2(\norm{\vb{x}}^2 + \norm{\vb{y}}^2)
+2m(\vb{A})^2(\norm{\vb{x}}^2 + \norm{\vb{y}}^2) & = \norm{\vb{A(x+y) - (x+y)}}^2 + \norm{\vb{A(x-y) - (x-y)}}^2 \leq \\
+& \leq m(\vb{A})^2(\norm{\vb{x+y}}^2 + \norm{\vb{x-y}}^2) = \\ 
+& = m(\vb{A})^2(\norm{\vb{x+y}}^2 + \norm{\vb{x-y}}^2)  = \\
+& = 2m(\vb{A})^2(\norm{\vb{x}}^2 + \norm{\vb{y}}^2)
 \end{split}
 \end{equation}
 Quindi il segno di disuguaglianza in (4) è un'uguaglianza, in particolare 
 \[   \norm{\vb{A(x+y) - (x+y)}}^2 + \norm{\vb{A(x-y) - (x-y)}}^2  = m(\vb{A})^2(\norm{\vb{x+y}}^2 + \norm{\vb{x-y}}^2)  \]
 Spostando i termini da parte a parte ottengo
 \[ \norm{\vb{A(x+y) - (x+y)}}^2 - m(\vb{A})^2 \norm{\vb{x+y}}^2=  m(\vb{A})^2 \norm{\vb{x-y}}^2 - \norm{\vb{A(x-y) - (x-y)}}^2 \]
+E' possibile poi scomporre le differenze di quadrati a sinistra e destra dell'uguaglianza ottenendo
 \begin{equation} 
 \begin{split}
-\bigg( \norm{\vb{A(x+y) - (x+y)}} & + m(\vb{A})\norm{\vb{x+y}} \bigg) \bigg( \norm{\vb{A(x+y) - (x+y)}} - m(\vb{A}) \norm{\vb{x+y}} \bigg) = \\
-& -\bigg( \norm{\vb{A(x-y) - (x-y)}} + m(\vb{A})\norm{\vb{x-y}} \bigg) \bigg( \norm{\vb{A(x-y) - (x-y)}} - m(\vb{A}) \norm{\vb{x-y}} \bigg)
+\big( & \norm{\vb{A(x+y) - (x+y)}}  + m(\vb{A})\norm{\vb{x+y}} \big) \big( \norm{\vb{A(x+y) - (x+y)}} - m(\vb{A}) \norm{\vb{x+y}} \big) = \\
+& -\big( \norm{\vb{A(x-y) - (x-y)}} + m(\vb{A})\norm{\vb{x-y}} \big) \big( \norm{\vb{A(x-y) - (x-y)}} - m(\vb{A}) \norm{\vb{x-y}} \big).
 \end{split}
 \end{equation}
 Distinguiamo alcuni casi: 
 \begin{itemize}
-\item Se $\vb{A} = \vb{id} \Rightarrow m(\vb{A}) = 0 \Rightarrow E_{\vb{A}} = \mathbb{R}^{n}$  ed in quel caso ho chiuso la dimostrazione.
-\item Se $\vb{x} = \vb{y}$ o $\vb{x} = \vb{-y}$  ho già chiuso la dimostrazione per il punto precedente (rispettivamente con $\lambda = +1$ e $\lambda = -1$). 
-\item Nei restanti casi posso osservare che nell'equazione (5) il primo fattore a sinistra dell'uguaglianza è strettamente positivo, mentre il secondo fattore è $\leq 0 $. Allo stesso modo a destra dell'uguaglianza ho un meno che mi modifica il segno del prodotto; il primo fattore è strettamente positivo ed il secondo è $\leq 0 $. \\ L'uguaglianza in (5) deve quindi per forza coincidere con $0=0$ e questo mi implica 
+\item Se $\vb{A} = \vb{id} \Rightarrow m(\vb{A}) = 0 \Rightarrow E_{\vb{A}} = \mathbb{R}^{n}$  ed in quel caso la dimostrazione è conclusa.
+\item Se $\vb{x} = \vb{y}$ o $\vb{x} = \vb{-y}$  la dimostrazione è conclusa per il punto precedente (rispettivamente con $\lambda = +1$ e $\lambda = -1$). 
+\item Nei restanti casi si osserva che nell'equazione (5) il primo fattore a sinistra dell'uguaglianza è strettamente positivo, mentre il secondo fattore è $\leq 0 $. Allo stesso modo a destra dell'uguaglianza è presente un meno che modifica il segno del prodotto; il primo fattore è strettamente positivo ed il secondo è $\leq 0 $. \\ L'uguaglianza in (5) deve quindi per forza coincidere con $0=0$ e questo implica 
 \begin{equation*}
   \left\{
     \begin{aligned}
@@ -239,20 +236,20 @@ Distinguiamo alcuni casi:
 
 $\Longrightarrow \vb{x+y, x-y} \in E_{\vb{A}} $ 
 \end{itemize}  
-Ho concluso la dimostrazione del fatto che $E_{\vb{A}}$ è un sottospazio vettoriale di $\mathbb{R}^n $
-\item Mostro che $E_{\vb{A}}$ è non banale. 
-\[ m(\vb{A}) = \max \bigg\{ \norm{\vb{Ax-x}} \bigg|  \vb{x} \in \mathbb{R}^{n} \land \norm{\vb{x}} = 1 \bigg\} \] 
- L'insieme degli $\vb{x} \in \mathbb{R}^{n} \land \norm{\vb{x}} = 1$ è un compatto; l'applicazione $ \vb{x} \mapsto \norm{\vb{Ax-x}}$ è continua in quanto composizione di funzioni continue, quindi sicuramente esiste un $\vb{x} \in \mathbb{R}^{n} \land \norm{\vb{x}} = 1$  che mi verifica il massimo. In particolare $\vb{x} \neq \vb{0}$  (perché ha norma 1) e 
+La dimostrazione del fatto che $E_{\vb{A}}$ è un sottospazio vettoriale di $\mathbb{R}^n $ è così conclusa.
+\item Mostriamo che $E_{\vb{A}}$ è non banale.\\
+L'insieme degli $\vb{x} \in \mathbb{R}^{n} \land \norm{\vb{x}} = 1$ è un compatto; l'applicazione $ \vb{x} \mapsto \norm{\vb{Ax-x}}$ è continua in quanto composizione di funzioni continue, quindi sicuramente esiste un \\ $\vb{x} \in \mathbb{R}^{n} \land \norm{\vb{x}} = 1$  che  verifica il massimo. \\
+In particolare $\vb{x} \neq \vb{0}$  (perché ha norma 1) e 
 \[ \norm{\vb{Ax - x}} = m(\vb{A}) = m(\vb{A})\norm{\vb{x}} \Longrightarrow \vb{x} \in E_{\vb{A}}\]
-\item Mostro che $E_{\vb{A}}$ è $\vb{A}$-invariante. \\
-$\forall \vb{x} \in E_{\vb{A}}$  voglio mostrare che $\vb{Ax} \in E_{\vb{A}}$ \\
+\item Mostriamo che $E_{\vb{A}}$ è $\vb{A}$-invariante, ovvero che  $\forall \vb{x} \in E_{\vb{A}} \Longrightarrow \vb{Ax} \in E_{\vb{A}}$ \\
 $\vb{x} \in E_{\vb{A}} \Longrightarrow \norm{\vb{Ax-x}} = m(\vb{A})\norm{\vb{x}} $ \\
-Dato che $\vb{A} \in O(n)$ ho la seguente catena di uguaglianze:\\
+Dato che $\vb{A} \in O(n)$ vale la seguente catena di uguaglianze:\\
 $ \norm{\vb{A(Ax) - Ax }} =  \norm{\vb{A(Ax-x)}} = \norm{\vb{Ax - x}} = m(\vb{A})\norm{\vb{x}} = m(\vb{A})\norm{\vb{Ax}} \Longrightarrow \vb{Ax} \in E_{\vb{A}}$
 \end{itemize} 
 \end{proof}
+Il seguente lemma è un noto risultato relativo alle scomposizioni ortogonali di spazi vettoriali. 
 \begin{lemma}
-$E_{\vb{A}}$ sottospazio vettoriale di $\mathbb{R}^n $ non banale, quindi posso definire il suo complemento ortogonale $E^{\perp}_{\vb{A}} \neq \mathbb{R}^n$ ed anche questo è $\vb{A}$-invariante. 
+$E_{\vb{A}}$ sottospazio vettoriale di $\mathbb{R}^n $ non banale, è possibile quindi definire il suo complemento ortogonale $E^{\perp}_{\vb{A}} \neq \mathbb{R}^n$ ed anche questo è $\vb{A}$-invariante. 
 \end{lemma} 
 
 \begin{definition}
@@ -267,130 +264,128 @@ $E_{\vb{A}}$ sottospazio vettoriale di $\mathbb{R}^n $ non banale, quindi posso 
 \end{definition}
 
 \begin{lemma}
-$m^{\perp}(\vb{A}) < m(\vb{A})$ se $\vb{A \neq id} $\\
-$m^{\perp}(\vb{A}) = m(\vb{A}) = 0$ se $\vb{A = id}$
+
+\begin{equation}
+\begin{split}
+m^{\perp}(\vb{A})  & < m(\vb{A}) \; \; \; \; \; \; \; \; \; se \; \vb{A \neq id}  \\
+ m^{\perp}(\vb{A})  & = m(\vb{A}) = 0 \; \; \;  se \; \vb{A = id}
+\end{split}
+\end{equation}
 
 \end{lemma}
 
 \begin{proof}
 \begin{itemize}
-\item Se $\vb{A = id} \Longrightarrow m(\vb{A}) = 0 \land E_{\vb{A}} = \mathbb{R}^n$. Quindi $E^{\perp}_{\vb{A}} = {0} \Longrightarrow m^{\perp}(\vb{A}) = 0$
+\item Se $\vb{A = id} \Longrightarrow m(\vb{A}) = 0 \land E_{\vb{A}} = \mathbb{R}^n \Longrightarrow E^{\perp}_{\vb{A}} = {0} \Longrightarrow m^{\perp}(\vb{A}) = 0$
 
 \item Se $\vb{A \neq id}$ \\
 \[ m(\vb{A}) = \max \bigg\{ \frac{\norm{\vb{Ax-x}}}{\norm{\vb{x}}} \bigg|  \vb{x} \in \mathbb{R}^{n}-\vb{0} \bigg\} 
 \geq \max \bigg\{ \frac{\norm{\vb{Ax-x}}}{\norm{\vb{x}}} \bigg|  \vb{x} \in E^{\perp}_{\vb{A}} - \vb{0} \bigg\} =  m^{\perp}(\vb{A}) \]
-Se valesse $m(\vb{A}) = m^{\perp}(\vb{A}) \Longrightarrow \exists \vb{x} \in E^{\perp}_{\vb{A}} - \vb{0} : \norm{\vb{Ax-x}} = m(\vb{A})\norm{\vb{x}} \Longrightarrow \vb{x} \in E_{\vb{A}}$  ma questo implica $\vb{x} \in E_{\vb{A}} \cap E^{\perp}_{\vb{E}} = {\vb{0}} \Longrightarrow \vb{x = 0} $;  questo è però assurdo perché ho imposto che $x\vb{ \neq 0}$ 
+Se valesse $m(\vb{A}) = m^{\perp}(\vb{A}) \Longrightarrow \exists \vb{x} \in E^{\perp}_{\vb{A}} - \vb{0} : \norm{\vb{Ax-x}} = m(\vb{A})\norm{\vb{x}} \Longrightarrow \vb{x} \in E_{\vb{A}}$  ma questo implica $\vb{x} \in E_{\vb{A}} \cap E^{\perp}_{\vb{E}} = {\vb{0}} \Longrightarrow \vb{x = 0} $;  \\
+questo è però assurdo perché abbiamo imposto che $x\vb{ \neq 0}$ 
 \end{itemize}
 \end{proof}
 
 \begin{lemma}
 $\forall \vb{x} \in \mathbb{R}^n $ posso scrivere $\vb{x}$ in modo unico in decomposizione ortogonale. \\
-$\vb{x} = \vb{x}^E + \vb{x}^{\perp}$ dove $\vb{x}^E \in E_{\vb{A}}$ e $\vb{x}^{\perp} \in E^{\perp}_{\vb{A}}$ \\
-Valgono inoltre le proprietà:
-\[ \norm{\vb{Ax}^E - \vb{x} }= m(\vb{A})\norm{\vb{x}^E} \] \[\norm{\vb{Ax}^{\perp} - \vb{x}} \leq m(\vb{A}) \norm{\vb{x}^{\perp}} \]
+\[ \vb{x} = \vb{x}^E + \vb{x}^{\perp} \; \mathit{dove} \; \vb{x}^E \in E_{\vb{A}} \; \mathit{e} \; \vb{x}^{\perp} \in E^{\perp}_{\vb{A}} \]
+\'E inoltre immediato verificare le seguenti proprietà:
+\[ \norm{\vb{Ax}^E - \vb{x}^E }= m(\vb{A})\norm{\vb{x}^E} \] \[\norm{\vb{Ax}^{\perp} - \vb{x}^{\perp}} \leq m(\vb{A}) \norm{\vb{x}^{\perp}} \]
 \end{lemma}
 
+Il seguente risultato ci permette di stimare la "misura" del commutatore di due matrici a partire dalla misura delle stesse. 
 \begin{lemma}
- $\forall \vb{ A, B} \in O(n)$ vale la disuguaglianza $ m([\vb{A,B}]) \leq 2m(\vb{A})m(\vb{B})$ 
+ $\forall \vb{ A, B} \in O(n)$ vale la disuguaglianza 
+ \[ m([\vb{A,B}]) \leq 2m(\vb{A})m(\vb{B}) \]
 \end{lemma}
 
 \begin{proof}
-
-
-
-\[ [\vb{A,B}] - \vb{id} = \vb{ABA^{-1}B^{-1} - id }= \vb{(AB -BA)A^{-1}B^{-1} }= [ \vb{ (A-id)(B-id) - (B-id)(A-id)}] \vb{A^{-1}B^{-1}} = \]
- \[  = \vb{( A-id)(B-id) A^{-1}B^{-1} -  (B-id)(A-id) A^{-1}B^{-1}} \]
- 
- 
- \begin{equation} 
+\begin{equation*}
+\begin{split}
+[\vb{A,B}] - \vb{id} & = \vb{ABA^{-1}B^{-1} - id } = \\
+& = \vb{(AB -BA)A^{-1}B^{-1} } = \\
+& = [ \vb{ (A-id)(B-id) - (B-id)(A-id)}] \vb{A^{-1}B^{-1}} \\
+& = \vb{( A-id)(B-id) A^{-1}B^{-1} -  (B-id)(A-id) A^{-1}B^{-1}}
+\end{split}
+\end{equation*}  
+Dalla precedente catena di uguaglianze segue, scelto comunque $\vb{x} \in \mathbb{R}^n $
+ \begin{equation*} 
 \begin{split}
 \norm{\vb{([A,B] - id )x}} & \leq \norm{\vb{ ( A-id)(B-id) A^{-1}B^{-1}x}} +  \norm{\vb{(B-id)(A-id) A^{-1}B^{-1}x}} \leq \\
 & \leq m(\vb{A}) \norm{\vb{(B-id) A^{-1}B^{-1}x}} + m(\vb{B}) \norm{\vb{(A-id) A^{-1}B^{-1}x}} \leq \\ 
 & \leq m(\vb{A})m(\vb{B})\norm{\vb{A^{-1}B^{-1}x}} + m(\vb{B})m(\vb{A}) \norm{\vb{A^{-1}B^{-1}x}}
 \end{split}
-\end{equation}
-
-Dato che $ \vb{A,B} \in O(n)$ posso scrivere $\norm{\vb{A^{-1}B^{-1}x}} = \norm{\vb{x}} $ , quindi 
-
-\begin{equation}
+\end{equation*}
+Dato che $ \vb{A,B} \in O(n)$ è possibile scrivere $\norm{\vb{A^{-1}B^{-1}x}} = \norm{\vb{x}} $ , quindi 
+\begin{equation*}
   \norm{\vb{([A,B] - id )x}}  \leq 2m(\vb{A})m(\vb{B})\norm{\vb{x}}
-\end{equation} 
+\end{equation*} 
 Quindi segue immediatamente la tesi. 
 \end{proof}
 
-\section{Primo teorema di Bieberbach}
+\chapter{Primo teorema di Bieberbach}
+In questo capitolo sezione viene dimostrato il primo teorema di Bieberbach. \\
+Nella prima sezione si dà la definizione precisa di gruppo cristallografico e viene esplicitato il contenuto del teorema nella forma in cui verrà dimostrato. \\
+Nella seconda sezione sono presentati e dimostrati alcuni sottoteoremi che concorrono alla dimostrazione del primo teorema di Bieberbach. \\ 
+Infine nella sezione finale verranno connesse le varie proposizioni in una dimostrazione del teorema vero e proprio.  \\
 
-In questa sezione viene dimostrato il primo teorema di Bieberbach. Si da prima di tutto una definizione precisa di gruppo cristallografico e viene esplicitato il contenuto del teorema nella forma in cui verrà dimostrato. 
-Per dimostrare effettivamente il teorema, bisogna passare attraverso un paio di teoremi preliminari che verranno esposti nella seconda parte. Infine nella sottosezione finale verrà data la dimostrazione.  \\
-
-\subsection{Enunciati}
-
-\begin{theorem}
-Dato un gruppo discreto di isometrie di $\mathbb{R}^n$ a dominio fondamentale compatto, questo contiene $n$ translazioni linearmente indipendenti. 
-\end{theorem}
+\section{Enunciati}
 In questo elaborato utilizzo la seguente definizione di gruppo cristallografico:
 \begin{definition}
 Sia $\Gamma$ un sottogrupo di $Isom(n)$, dico che è un gruppo cristallografico $n$-dimensionale se valgono le seguenti condizioni:
 \begin{enumerate}
-	\item $ \forall t \in \mathbb{R} : t > 0 $  esistono solo un numero finito di $\alpha \in \Gamma $  tali che  $|a| \leq t$
-
-	\item $ \exists d \in \mathbb{R}: \forall \vb{x} \in \mathbb{R}^n   \exists \alpha \in \Gamma : \norm{\vb{a-x}}\leq d $
+	\item $ \forall t \in \mathbb{R} : t > 0 $  esistono solo un numero finito di $\alpha = \vb{(A, a)} \in \Gamma $  tali che  $\norm{a} \leq t$
+	\item $ \exists d \in \mathbb{R}: \forall \vb{x} \in \mathbb{R}^n   \exists \alpha = \vb{(A,a)} \in \Gamma : \norm{\vb{a-x}}\leq d $
 \end{enumerate}
 \end{definition}
-Se considero lo spazio topologico $\mathbb{R}^n$ con la metrica data dalla distanza euclidea ed un gruppo di isometrie che agisce su di esso, la condizione 1. implica che agisce in modo propriamente discontinuo, mentre la condizione 2. significa che ha dominio fondamentale limitato. Dato uno spazio topologico $X$ ed un gruppo $G$ che agisce su di esso, un dominio fondamentale è un sottoinsieme di $X$ che contiene uno ed un solo punto di ogni orbita dell'azione.\\
-
-Posso quindi rifrasare il primo teorema di Bieberbach come 
-
+La condizione 1. implica che il gruppo agisce in modo propriamente discontinuo sullo spazio topologico dato da $\mathbb{R}^n$ con la topologia euclidea, mentre la condizione 2. significa che l'azione di $\Gamma$ ha dominio fondamentale limitato. Ricoridamo che, dato uno spazio topologico $X$ ed un gruppo $G$ che agisce su di esso, un dominio fondamentale è un sottoinsieme di $X$ che contiene uno ed un solo punto di ogni orbita dell'azione.\\
 \begin{theorem}
-Ogni gruppo gristallografico $n$-dimensionale contiene $n$ translazioni linearmente indipendenti
+Ogni gruppo cristallografico $n-$dimensionale contiene $n$ translazioni linearmente indipendenti
 \end{theorem}
-
-\subsection{Mini Bieberbach e teorema di caratterizzazione delle translazioni} 
-\begin{theorem}{Mini Bieberbach.}
-Sia $\Gamma$ un gruppo cristallografico di $\mathbb{E}^n$ \\
-$ \forall \vb{u} \in \mathbb{R}^n : \norm{\vb{u}} = 1,   \forall \epsilon , \delta >0 $ \hfill  $   \exists \beta \in \Gamma $ che soddisfa \hfill
-\begin{minipage}{0.3\textwidth} 
+\newpage 
+\section{Mini Bieberbach e caratterizzazione delle translazioni} 
+\begin{theorem}{Mini Bieberbach.} \\
+Sia $\Gamma$ un gruppo cristallografico di $\mathbb{E}^n$. Comunque scelto $ \vb{u} \in \mathbb{R}^n : \norm{\vb{u}} = 1$ ,\\
+$  \forall \epsilon ,\delta >0 $ $   \exists \alpha = \vb{(A,a)} \in \Gamma $ che soddisfa 
 \begin{enumerate}
 \item $\vb{a} \neq 0$ 
 \item $ \angle (\vb{u, a}) \leq \delta $
 \item $ m(\vb{A}) \leq \epsilon$ 
 \end{enumerate}
-\end{minipage}
 \end{theorem}
 
 \begin{proof}
-Per la seconda proprietà dei gruppi cristallografici so che $ \exists d \in \mathbb{R} : \forall k \in \mathbb{N} $ $  \exists \beta_k \in \Gamma : $ \\
-$ \; \beta_k \vb{x} = \vb{B_k x + b_k}  \; \; \land \; \;\norm{\vb{b_k - ku }} \leq d $ 
-\\
+Per la seconda proprietà dei gruppi cristallografici sappiamo che \\
+$ \exists d \in \mathbb{R} : \forall k \in \mathbb{N} $ $  \exists \beta_k = \vb{( B_k, b_k)} \in \Gamma  $ tale che 
+\[  \norm{\vb{b_k - ku }} \leq d \]
 Se $k \longrightarrow \infty$ allora sicuramente $ \norm{\vb{b_k}} \longrightarrow \infty$.  \\
 Infatti se, per assurdo, questo non fosse vero $\exists M \in \mathbb{R} : \norm{\vb{b_k}} \leq M $   $  \forall k \in \mathbb{N} $
 \[ d \geq \norm{\vb{b_k - ku}} \geq | \norm{\vb{b_k}} - k | \]
 Nella disequazione  precedente, se la successione è limitata allora l'ultimo termine diverge ma questo è assurdo perché è maggiorato da $d$. \\
-
-
-
-Considero ora la successione degli angoli fra il vettore $\vb{u}$ e $\vb{b}_k$, voglio mostrare che la loro ampiezza tende a 0. 
-\begin{minipage}{0.5\textwidth}
-    \begin{tikzpicture}[line cap=round]
+Consideriamo ora la successione degli angoli fra i vettori $\vb{u}$ e $\vb{b}_k$, vogliamo mostrare che l'ampiezza tende a 0. 
+\[ \angle (\vb{u , b_k}) = \angle (\vb{ku, b_k}) = : \theta_k \]
+\begin{figure}[!h]
+\centering
+\label{fig:trangolo1}
+\begin{tikzpicture}[line cap=round]
   \coordinate (O) at (0,0);
   \coordinate (A) at (6, 0);
   \coordinate (B) at (5,2.4);
   \coordinate (A-B) at ($(A)-(B)$);
-  
-
   \draw[vector,myred] (O) -- (A) node[midway,below] {$k \vb{u}$};
   \draw[vector,myblue] (O) -- (B) node[midway,above left=-2] {$\vb{b_k}$};
   \draw[vector,mypurple] (A) -- (B) node[above right=-3] {$\vb{b_k}-k\vb{u}$};
   \pic[draw,"$\theta_k$",angle radius=20,angle eccentricity=1.25] {angle=A--O--B}; 
   \pic[draw,"$\gamma_k$",angle radius=20,angle eccentricity=1.25] {angle=B--A--O};  
 \end{tikzpicture}
-\end{minipage}\hfill
-\begin{minipage}{0.5\textwidth}
-	\[ \angle (\vb{u , b_k}) = \angle (\vb{ku, b_k}) = : \theta_k \]
+\centering
+\caption{I vettori $k \vb{u}$, $\vb{b_k}$ e $\vb{b_k}-k\vb{u}$ formano un triangolo. \\ Chiamo $\gamma_k$ l'angolo contenuto fra $k \vb{u}$ e $\vb{b_k}-k\vb{u}$}
+\end{figure}
+
+
+\[ \angle (\vb{u , b_k}) = \angle (\vb{ku, b_k}) = : \theta_k \]
 \[ \frac{\norm{\vb{b_k}}}{sin(\gamma_k)} = \frac{\norm{\vb{b_k} - k\vb{u}}}{sin(\theta_k)}  \leq \frac{d}{sin(\theta_k)} \]
 \[  sin(\theta_k) \leq \frac{sin(\gamma_k)d}{\norm{\vb{b_k}}} \longrightarrow 0 \Longrightarrow \theta_k \longrightarrow 0 \]
-\end{minipage}\\
-
 
 Ho definito la successione ${ \{\beta_k \}}_{k \in \mathbb{N}}$  con  $\beta_k \vb{x = B}_k \vb{x + b}_k$   $\beta_k \in \Gamma \Longrightarrow \vb{B}_k \in O(n)$  \\
 $O(n)$  è compatto e ${ \{\vb{B}_k \} }_{k \in \mathbb{N}}$ successione in  $O(n)$  ammette quindi almeno un punto di accumulazione per il teorema di Bolzano-Weierstrass. \\
@@ -548,7 +543,7 @@ Ho un assurdo perché $\beta$ era stato scelto fra tutti quelli che soddisfavano
 
 \end{proof}
 
-\subsection{Dimostrazione del primo teorema di Bieberbach}
+\section{Dimostrazione del primo teorema di Bieberbach}
 
 Posso quindi concludere la dimostrazione del primo teorema di Bieberbach.
 
@@ -566,7 +561,7 @@ Gli elementi di $L$ possono essere identificati con i vettori di $\mathbb{R}^n$ 
 \end{definition}
 
 Dato un elemento $\omega \in L$, per abuso di notazione scriveremo $\omega = trans(\omega) = \vb{w}$. 
-Enuncio il seguente risultato senza dimostrarlo.
+Enuncio il seguente risultato senza disubmostrarlo.
 \begin{lemma}
 Ogni reticolo $L$ di dimensione $n$ è isomorfo a $\mathbb{Z}^n$. \\
 Di conseguenza $L$ è abeliano e la distanza minima fra due punti di reticolo coincide con la lunghezza del minimo vettore non nullo in $L$.  

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2022.4.23)  13 MAY 2022 15:00
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2022.4.23)  16 MAY 2022 17:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -8,8 +8,8 @@ LaTeX2e <2020-10-01> patch level 4
 L3 programming layer <2021-01-09> xparse <2020-03-03>
 (/usr/share/texlive/texmf-dist/tex/latex/base/book.cls
 Document Class: book 2020/04/10 v1.4m Standard LaTeX document class
-(/usr/share/texlive/texmf-dist/tex/latex/base/bk10.clo
-File: bk10.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
+(/usr/share/texlive/texmf-dist/tex/latex/base/bk12.clo
+File: bk12.clo 2020/04/10 v1.4m Standard LaTeX file (size option)
 )
 \c@part=\count177
 \c@chapter=\count178
@@ -467,6 +467,23 @@ Package: wasysym 2020/01/19 v2.4 Wasy-2 symbol support package
 LaTeX Font Info:    Overwriting symbol font `wasy' in version `bold'
 (Font)                  U/wasy/m/n --> U/wasy/b/n on input line 93.
 )
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2020/10/26 v3.5g Customizing captions (AR)
+
+(/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
+\captionmargin=\dimen257
+\captionmargin@=\dimen258
+\captionwidth=\dimen259
+\caption@tempdima=\dimen260
+\caption@indent=\dimen261
+\caption@parindent=\dimen262
+\caption@hangindent=\dimen263
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count292
+\c@continuedfloat=\count293
+)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
 zlibrarybackgrounds.code.tex
 File: tikzlibrarybackgrounds.code.tex 2020/12/27 v3.1.8b (3.1.8b)
@@ -486,9 +503,9 @@ Package: pgfplots 2020/02/29 v1.17 Data Visualization (1.17)
 \t@pgfplots@toka=\toks41
 \t@pgfplots@tokb=\toks42
 \t@pgfplots@tokc=\toks43
-\pgfplots@tmpa=\dimen257
-\c@pgfplots@coordindex=\count292
-\c@pgfplots@scanlineindex=\count293
+\pgfplots@tmpa=\dimen264
+\c@pgfplots@coordindex=\count294
+\c@pgfplots@scanlineindex=\count295
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/sys/pgfplotssysgeneric.code
 .tex))
@@ -505,13 +522,13 @@ tructure.code.tex)
 tructureext.code.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsarray
 .code.tex
-\c@pgfplotsarray@tmp=\count294
+\c@pgfplotsarray@tmp=\count296
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsmatri
 x.code.tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/numtable/pgfplotstableshare
 d.code.tex
-\c@pgfplotstable@counta=\count295
+\c@pgfplotstable@counta=\count297
 \t@pgfplotstable@a=\toks44
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/liststructure/pgfplotsdeque
@@ -524,7 +541,7 @@ de.tex))
 .tex)
 (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/libs/pgflibrarypgfplots.sur
 fshading.code.tex
-\c@pgfplotslibrarysurf@no=\count296
+\c@pgfplotslibrarysurf@no=\count298
 
 (/usr/share/texlive/texmf-dist/tex/generic/pgfplots/sys/pgflibrarypgfplots.surf
 shading.pgfsys-pdftex.def)))
@@ -551,14 +568,14 @@ e.tex)
 zlibrarydecorations.code.tex
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.cod
 e.tex
-\pgfdecoratedcompleteddistance=\dimen258
-\pgfdecoratedremainingdistance=\dimen259
-\pgfdecoratedinputsegmentcompleteddistance=\dimen260
-\pgfdecoratedinputsegmentremainingdistance=\dimen261
-\pgf@decorate@distancetomove=\dimen262
-\pgf@decorate@repeatstate=\count297
-\pgfdecorationsegmentamplitude=\dimen263
-\pgfdecorationsegmentlength=\dimen264
+\pgfdecoratedcompleteddistance=\dimen265
+\pgfdecoratedremainingdistance=\dimen266
+\pgfdecoratedinputsegmentcompleteddistance=\dimen267
+\pgfdecoratedinputsegmentremainingdistance=\dimen268
+\pgf@decorate@distancetomove=\dimen269
+\pgf@decorate@repeatstate=\count299
+\pgfdecorationsegmentamplitude=\dimen270
+\pgfdecorationsegmentlength=\dimen271
 )
 \tikz@lib@dec@box=\box63
 )
@@ -570,13 +587,13 @@ decorations.pathmorphing.code.tex))
 zlibrarydecorations.pathreplacing.code.tex
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrary
 decorations.pathreplacing.code.tex))
-\pgfplots@numplots=\count298
-\pgfplots@xmin@reg=\dimen265
-\pgfplots@xmax@reg=\dimen266
-\pgfplots@ymin@reg=\dimen267
-\pgfplots@ymax@reg=\dimen268
-\pgfplots@zmin@reg=\dimen269
-\pgfplots@zmax@reg=\dimen270
+\pgfplots@numplots=\count300
+\pgfplots@xmin@reg=\dimen272
+\pgfplots@xmax@reg=\dimen273
+\pgfplots@ymin@reg=\dimen274
+\pgfplots@ymax@reg=\dimen275
+\pgfplots@zmin@reg=\dimen276
+\pgfplots@zmax@reg=\dimen277
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
 zlibraryplotmarks.code.tex
@@ -597,10 +614,10 @@ File: tikzlibraryquotes.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.meta.
 code.tex
 File: pgflibraryarrows.meta.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgfarrowinset=\dimen271
-\pgfarrowlength=\dimen272
-\pgfarrowwidth=\dimen273
-\pgfarrowlinewidth=\dimen274
+\pgfarrowinset=\dimen278
+\pgfarrowlength=\dimen279
+\pgfarrowwidth=\dimen280
+\pgfarrowlinewidth=\dimen281
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tik
 zlibrarybending.code.tex
@@ -613,18 +630,18 @@ File: pgfmodulebending.code.tex 2020/12/27 v3.1.8b (3.1.8b)
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulenonlineartransf
 ormations.code.tex
 File: pgfmodulenonlineartransformations.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgftransformnonlinearflatness=\dimen275
+\pgftransformnonlinearflatness=\dimen282
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibrarycurvilinear.
 code.tex
 File: pgflibrarycurvilinear.code.tex 2020/12/27 v3.1.8b (3.1.8b)
-\pgf@curvilinear@time@a=\dimen276
-\pgf@curvilinear@length@a=\dimen277
-\pgf@curvilinear@length@b=\dimen278
-\pgf@curvilinear@length@c=\dimen279
-\pgf@curvilinear@length@d=\dimen280
+\pgf@curvilinear@time@a=\dimen283
+\pgf@curvilinear@length@a=\dimen284
+\pgf@curvilinear@length@b=\dimen285
+\pgf@curvilinear@length@c=\dimen286
+\pgf@curvilinear@length@d=\dimen287
 )
-\pgf@arrows@the@rigidity=\dimen281
+\pgf@arrows@the@rigidity=\dimen288
 )) (/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
 
@@ -634,53 +651,53 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 (/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
 Package: iftex 2020/03/06 v1.0d TeX engine tests
 ))
-\Gm@cnth=\count299
-\Gm@cntv=\count300
-\c@Gm@tempcnt=\count301
-\Gm@bindingoffset=\dimen282
-\Gm@wd@mp=\dimen283
-\Gm@odd@mp=\dimen284
-\Gm@even@mp=\dimen285
-\Gm@layoutwidth=\dimen286
-\Gm@layoutheight=\dimen287
-\Gm@layouthoffset=\dimen288
-\Gm@layoutvoffset=\dimen289
+\Gm@cnth=\count301
+\Gm@cntv=\count302
+\c@Gm@tempcnt=\count303
+\Gm@bindingoffset=\dimen289
+\Gm@wd@mp=\dimen290
+\Gm@odd@mp=\dimen291
+\Gm@even@mp=\dimen292
+\Gm@layoutwidth=\dimen293
+\Gm@layoutheight=\dimen294
+\Gm@layouthoffset=\dimen295
+\Gm@layoutvoffset=\dimen296
 \Gm@dimlist=\toks45
 )
-\c@definition=\count302
-\c@theorem=\count303
+\c@definition=\count304
+\c@theorem=\count305
  (./tesi.aux)
 \openout1 = `tesi.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 45.
-LaTeX Font Info:    ... okay on input line 45.
-LaTeX Info: Redefining \it@ocap on input line 45.
-LaTeX Info: Redefining \it@ccap on input line 45.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 46.
+LaTeX Font Info:    ... okay on input line 46.
+LaTeX Info: Redefining \it@ocap on input line 46.
+LaTeX Info: Redefining \it@ccap on input line 46.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count304
-\scratchdimen=\dimen290
+\scratchcounter=\count306
+\scratchdimen=\dimen297
 \scratchbox=\box64
-\nofMPsegments=\count305
-\nofMParguments=\count306
+\nofMPsegments=\count307
+\nofMParguments=\count308
 \everyMPshowfont=\toks46
-\MPscratchCnt=\count307
-\MPscratchDim=\dimen291
-\MPnumerator=\count308
-\makeMPintoPDFobject=\count309
+\MPscratchCnt=\count309
+\MPscratchDim=\dimen298
+\MPnumerator=\count310
+\makeMPintoPDFobject=\count311
 \everyMPtoPDFconversion=\toks47
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -691,11 +708,14 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+
 
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
 ick labels; missing features). Consider writing \pgfplotsset{compat=1.17} into 
 your preamble.
- on input line 45.
+ on input line 46.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -713,15 +733,15 @@ your preamble.
 * \textheight=731.23584pt
 * \oddsidemargin=-15.36449pt
 * \evensidemargin=-15.36449pt
-* \topmargin=-45.43198pt
+* \topmargin=-47.23828pt
 * \headheight=12.0pt
-* \headsep=18.06749pt
-* \topskip=10.0pt
-* \footskip=25.29494pt
-* \marginparwidth=115.0pt
+* \headsep=19.8738pt
+* \topskip=12.0pt
+* \footskip=30.0pt
+* \marginparwidth=88.0pt
 * \marginparsep=7.0pt
 * \columnsep=10.0pt
-* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
@@ -743,194 +763,197 @@ Underfull \hbox (badness 10000) in paragraph at lines 56--57
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 60--61
-
- []
-
-LaTeX Font Info:    Trying to load font information for U+msa on input line 62.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 58.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 62.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 58.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+wasy on input line 62
+LaTeX Font Info:    Trying to load font information for U+wasy on input line 58
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/wasysym/uwasy.fd
 File: uwasy.fd 2020/01/19 v2.4 Wasy-2 symbol font definitions
 )
-Underfull \hbox (badness 10000) in paragraph at lines 62--63
+Underfull \hbox (badness 10000) in paragraph at lines 58--59
 
  []
 
-[3] [4]
-Overfull \hbox (3.9525pt too wide) detected at line 215
-[]
- []
-
-
-Overfull \hbox (25.00003pt too wide) detected at line 215
-[]
- []
-
-
-Overfull \hbox (20.86206pt too wide) detected at line 225
-[]
- []
-
-
-Overfull \hbox (25.00003pt too wide) detected at line 225
-[]
- []
-
-[5]
-Underfull \hbox (badness 10000) in paragraph at lines 279--280
-
- []
-
-[6]
-Underfull \hbox (badness 10000) in paragraph at lines 323--325
+[3] [4] [5] [6]
+Underfull \hbox (badness 10000) in paragraph at lines 281--282
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 340--341
+Underfull \hbox (badness 10000) in paragraph at lines 290--291
+
+ []
+
+[7] [8]
+Capitolo 2.
+
+Underfull \hbox (badness 10000) in paragraph at lines 327--331
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 367--369
+Underfull \hbox (badness 10000) in paragraph at lines 341--342
+
+ []
+
+[9
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 390--395
+
+ []
+
+[10]
+Underfull \hbox (badness 10000) in paragraph at lines 416--417
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 372--393
-
- []
-
-[7]
-Underfull \hbox (badness 10000) in paragraph at lines 395--400
-
+Underfull \hbox (badness 1320) in paragraph at lines 436--437
+[]$\OMS/cmsy/m/n/12 8\OT1/cmr/m/n/12 P$ \T1/cmr/m/n/12 scel-to al-l'in-ter-no d
+el-la
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 421--422
-
+Overfull \hbox (36.63335pt too wide) detected at line 439
+\OML/cmm/m/it/12 sin\OT1/cmr/m/n/12 ([]) \OMS/cmsy/m/n/12 ^^T \OML/cmm/m/it/12 
+sin\OT1/cmr/m/n/12 ([]) = [] = []
  []
 
-
-Overfull \hbox (9.77307pt too wide) detected at line 444
-\OML/cmm/m/it/10 sin\OT1/cmr/m/n/10 ([]) \OMS/cmsy/m/n/10 ^^T \OML/cmm/m/it/10 
-sin\OT1/cmr/m/n/10 ([]) = [] = []
- []
-
-[8]
-Underfull \hbox (badness 10000) in paragraph at lines 487--488
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 482--483
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 491--492
+Underfull \hbox (badness 10000) in paragraph at lines 486--487
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 493--495
+Underfull \hbox (badness 10000) in paragraph at lines 488--490
 
  []
 
 
-Overfull \hbox (17.22168pt too wide) in paragraph at lines 490--525
+Overfull \hbox (20.2353pt too wide) in paragraph at lines 485--520
 []$[]$  $[]$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 530--531
+Underfull \hbox (badness 10000) in paragraph at lines 525--526
 
  []
 
 
-Overfull \hbox (30.27559pt too wide) detected at line 531
-[] \OMS/cmsy/m/n/10 ^^T \OML/cmm/m/it/10 m\OT1/cmr/m/n/10 ([])[] + \OML/cmm/m/i
-t/10 m\OT1/cmr/m/n/10 (\OT1/cmr/bx/n/10 B\OT1/cmr/m/n/10 )[] \OMS/cmsy/m/n/10 ^
-^T []\OML/cmm/m/it/10 m\OT1/cmr/m/n/10 ([]) + \OML/cmm/m/it/10 m\OT1/cmr/m/n/10
- (\OT1/cmr/bx/n/10 B\OT1/cmr/m/n/10 )[][] \OMS/cmsy/m/n/10 ^^T \OT1/cmr/m/n/10 
-2\OML/cmm/m/it/10 m\OT1/cmr/m/n/10 (\OT1/cmr/bx/n/10 B\OT1/cmr/m/n/10 )([]) \OM
-L/cmm/m/it/10 < \OT1/cmr/m/n/10 4\OML/cmm/m/it/10 m\OT1/cmr/m/n/10 (\OT1/cmr/bx
-/n/10 B\OT1/cmr/m/n/10 )[] \OMS/cmsy/m/n/10 ^^T [][]\OML/cmm/m/it/10 m\OT1/cmr/
-m/n/10 (\OT1/cmr/bx/n/10 A\OT1/cmr/m/n/10 ) \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/
-10 m[]\OT1/cmr/m/n/10 (\OT1/cmr/bx/n/10 A\OT1/cmr/m/n/10 )[][]
- []
-
-[9]
-Overfull \hbox (7.92796pt too wide) detected at line 541
-[] \OT1/cmr/m/n/10 = [] \OMS/cmsy/m/n/10 ^^U []\OML/cmm/m/it/10 m\OT1/cmr/m/n/1
-0 (\OML/cmm/m/it/10 A\OT1/cmr/m/n/10 )[] \OMS/cmsy/m/n/10 ^^@ [][] \OML/cmm/m/i
-t/10 > m\OT1/cmr/m/n/10 (\OT1/cmr/bx/n/10 A\OT1/cmr/m/n/10 )[] \OMS/cmsy/m/n/10
- ^^@ [][]\OML/cmm/m/it/10 m\OT1/cmr/m/n/10 (\OT1/cmr/bx/n/10 A\OT1/cmr/m/n/10 )
- \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 m[]\OT1/cmr/m/n/10 (\OT1/cmr/bx/n/10 A\O
-T1/cmr/m/n/10 )[][] = [][]\OML/cmm/m/it/10 m\OT1/cmr/m/n/10 (\OT1/cmr/bx/n/10 A
-\OT1/cmr/m/n/10 ) + \OML/cmm/m/it/10 m\OT1/cmr/m/n/10 (\OT1/cmr/bx/n/10 A[]\OT1
-/cmr/m/n/10 )[]
- []
-
-[10]
-Capitolo 2.
-[11
-
-]
-Underfull \hbox (badness 10000) in paragraph at lines 639--643
-
+Overfull \hbox (119.27719pt too wide) detected at line 526
+[] \OMS/cmsy/m/n/12 ^^T \OML/cmm/m/it/12 m\OT1/cmr/m/n/12 ([])[] + \OML/cmm/m/i
+t/12 m\OT1/cmr/m/n/12 (\OT1/cmr/bx/n/12 B\OT1/cmr/m/n/12 )[] \OMS/cmsy/m/n/12 ^
+^T []\OML/cmm/m/it/12 m\OT1/cmr/m/n/12 ([]) + \OML/cmm/m/it/12 m\OT1/cmr/m/n/12
+ (\OT1/cmr/bx/n/12 B\OT1/cmr/m/n/12 )[][] \OMS/cmsy/m/n/12 ^^T \OT1/cmr/m/n/12 
+2\OML/cmm/m/it/12 m\OT1/cmr/m/n/12 (\OT1/cmr/bx/n/12 B\OT1/cmr/m/n/12 )([]) \OM
+L/cmm/m/it/12 < \OT1/cmr/m/n/12 4\OML/cmm/m/it/12 m\OT1/cmr/m/n/12 (\OT1/cmr/bx
+/n/12 B\OT1/cmr/m/n/12 )[] \OMS/cmsy/m/n/12 ^^T [][]\OML/cmm/m/it/12 m\OT1/cmr/
+m/n/12 (\OT1/cmr/bx/n/12 A\OT1/cmr/m/n/12 ) \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/
+12 m[]\OT1/cmr/m/n/12 (\OT1/cmr/bx/n/12 A\OT1/cmr/m/n/12 )[][]
  []
 
 [12]
-Underfull \hbox (badness 10000) in paragraph at lines 662--665
+Overfull \hbox (90.56003pt too wide) detected at line 536
+[] \OT1/cmr/m/n/12 = [] \OMS/cmsy/m/n/12 ^^U []\OML/cmm/m/it/12 m\OT1/cmr/m/n/1
+2 (\OML/cmm/m/it/12 A\OT1/cmr/m/n/12 )[] \OMS/cmsy/m/n/12 ^^@ [][] \OML/cmm/m/i
+t/12 > m\OT1/cmr/m/n/12 (\OT1/cmr/bx/n/12 A\OT1/cmr/m/n/12 )[] \OMS/cmsy/m/n/12
+ ^^@ [][]\OML/cmm/m/it/12 m\OT1/cmr/m/n/12 (\OT1/cmr/bx/n/12 A\OT1/cmr/m/n/12 )
+ \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 m[]\OT1/cmr/m/n/12 (\OT1/cmr/bx/n/12 A\O
+T1/cmr/m/n/12 )[][] = [][]\OML/cmm/m/it/12 m\OT1/cmr/m/n/12 (\OT1/cmr/bx/n/12 A
+\OT1/cmr/m/n/12 ) + \OML/cmm/m/it/12 m\OT1/cmr/m/n/12 (\OT1/cmr/bx/n/12 A[]\OT1
+/cmr/m/n/12 )[]
+ []
+
+[13] [14
+
+]
+Capitolo 3.
+[15]
+Underfull \hbox (badness 10000) in paragraph at lines 634--638
 
  []
 
-[13] (./tesi.aux) ) 
+[16]
+Overfull \hbox (73.64044pt too wide) detected at line 644
+\OT1/cmr/m/n/12 (^^H[] \OMS/cmsy/m/n/12 ^^N \OT1/cmr/bx/n/12 A\OT1/cmr/m/n/12 )
+(\OT1/cmr/bx/n/12 x\OT1/cmr/m/n/12 ) = ^^H[]([]) = ^^H[]([][] + [][]) = [][] + 
+\OML/cmm/m/it/12 ^^W[][] \OT1/cmr/m/n/12 = [][] + [][] = \OT1/cmr/bx/n/12 A\OT1
+/cmr/m/n/12 (\OT1/cmr/bx/n/12 x[] \OT1/cmr/m/n/12 + \OML/cmm/m/it/12 ^^W\OT1/cm
+r/bx/n/12 x[]\OT1/cmr/m/n/12 ) = (\OT1/cmr/bx/n/12 A \OMS/cmsy/m/n/12 ^^N \OT1/
+cmr/m/n/12 ^^H[])(\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 )
+ []
+
+
+Overfull \hbox (55.84111pt too wide) detected at line 652
+\OML/cmm/m/it/12 ^^L[]\OT1/cmr/bx/n/12 x \OT1/cmr/m/n/12 = (^^H[]\OML/cmm/m/it/
+12 ^^L\OT1/cmr/m/n/12 ^^H[])(\OT1/cmr/bx/n/12 x\OT1/cmr/m/n/12 ) = (^^H[]\OML/c
+mm/m/it/12 ^^L\OT1/cmr/m/n/12 ^^H[])(\OT1/cmr/bx/n/12 x[] \OT1/cmr/m/n/12 + \OT
+1/cmr/bx/n/12 x[]\OT1/cmr/m/n/12 ) = (^^H[]\OML/cmm/m/it/12 ^^L\OT1/cmr/m/n/12 
+)(\OT1/cmr/bx/n/12 x[] \OT1/cmr/m/n/12 + []\OT1/cmr/bx/n/12 x[]\OT1/cmr/m/n/12 
+) = ^^H[](\OT1/cmr/bx/n/12 x[] \OT1/cmr/m/n/12 + []\OT1/cmr/bx/n/12 x[] \OT1/cm
+r/m/n/12 + \OT1/cmr/bx/n/12 b\OT1/cmr/m/n/12 ) = \OT1/cmr/bx/n/12 x[] \OT1/cmr/
+m/n/12 + \OT1/cmr/bx/n/12 x[] \OT1/cmr/m/n/12 + ^^H[](\OT1/cmr/bx/n/12 b\OT1/cm
+r/m/n/12 )
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 657--660
+
+ []
+
+[17] [18] (./tesi.aux)
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 26391 strings out of 481200
- 647044 string characters out of 5914397
- 1076262 words of memory out of 5000000
- 42891 multiletter control sequences out of 15000+600000
- 421574 words of font info for 75 fonts, out of 8000000 for 9000
+ 27617 strings out of 481200
+ 670912 string characters out of 5914397
+ 1094694 words of memory out of 5000000
+ 44115 multiletter control sequences out of 15000+600000
+ 419573 words of font info for 73 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 113i,19n,116p,757b,987s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/lisi/.texlive2020/texmf-var/fonts/pk/ljfour/jknappen
-/ec/tcrm1000.600pk> </home/lisi/.texlive2020/texmf-var/fonts/pk/ljfour/jknappen
-/ec/ecsl1000.600pk> </home/lisi/.texlive2020/texmf-var/fonts/pk/ljfour/jknappen
-/ec/ecti1000.600pk> </home/lisi/.texlive2020/texmf-var/fonts/pk/ljfour/jknappen
-/ec/ecbx1000.600pk> </home/lisi/.texlive2020/texmf-var/fonts/pk/ljfour/jknappen
-/ec/ecbx1200.600pk> </home/lisi/.texlive2020/texmf-var/fonts/pk/ljfour/jknappen
-/ec/ecbx1440.600pk> </home/lisi/.texlive2020/texmf-var/fonts/pk/ljfour/jknappen
-/ec/ecbx2074.600pk> </home/lisi/.texlive2020/texmf-var/fonts/pk/ljfour/jknappen
-/ec/ecrm1000.600pk> </home/lisi/.texlive2020/texmf-var/fonts/pk/ljfour/jknappen
-/ec/ecbx2488.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx
-7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/t
-exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/sym
-bols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symb
-ols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbo
-ls/msbm7.pfb>
-Output written on tesi.pdf (13 pages, 250704 bytes).
+ 113i,19n,116p,757b,1057s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/lisi/.texlive2020/texmf-var/fonts/pk/ljfour/jknappen/ec/tcrm1200.600p
+k> </home/lisi/.texlive2020/texmf-var/fonts/pk/ljfour/jknappen/ec/ecsl1200.600p
+k> </home/lisi/.texlive2020/texmf-var/fonts/pk/ljfour/jknappen/ec/ecti1200.600p
+k> </home/lisi/.texlive2020/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1200.600p
+k> </home/lisi/.texlive2020/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx1728.600p
+k> </home/lisi/.texlive2020/texmf-var/fonts/pk/ljfour/jknappen/ec/ecrm1200.600p
+k> </home/lisi/.texlive2020/texmf-var/fonts/pk/ljfour/jknappen/ec/ecbx2488.600p
+k></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cms
+y8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on tesi.pdf (18 pages, 251854 bytes).
 PDF statistics:
- 382 PDF objects out of 1000 (max. 8388607)
- 115 compressed objects within 2 object streams
+ 372 PDF objects out of 1000 (max. 8388607)
+ 114 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
