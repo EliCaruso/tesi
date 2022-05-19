@@ -693,7 +693,7 @@ Vogliamo dimostrare che esiste un gruppo $\Gamma ' \cong \Gamma$ tale che $L(\Ga
 \item Se $\exists \alpha = (\vb{A, a}) \in \Gamma $ e $1 \leq i \leq k: \vb{Aw}_i \notin E_k$ allora, grazie al lemma \ref{lemma:aw} so che $\vb{Aw}_i \in L(\Gamma)$, inoltre $\norm{\vb{Aw}_i} = 1$ dato che $A \in O(n)$, quindi $\vb{Aw}_i$ è già il $k+1$-esimo vettore cercato.
 \item Se, al contrario, tutte le componenti di rotazione delle isometrie in $\Gamma$ lasciano $E$ invariato, allora queste lasciano invariato anche $E^{\perp}$. \\
 Definisco la trasformazione affine data da
-\[ \Phi_{\nu} (x^E + x^{\perp} )=  x^E + \nu x^{\perp} , \; \nu > 0  \; \; \; \; \forall x \in \mathbb{R}^n\]
+\[ \Phi_{\nu} (\vb{x}^E + \vb{x}^{\perp} )=  \vb{x}^E + \nu \vb{x}^{\perp} , \; \nu > 0  \; \; \; \; \forall \vb{x} \in \mathbb{R}^n\]
 Scelto comunque $\alpha = (\vb{A,a}) \in Isom(\mathbb{R}^n)$ vale
 \[ ( \Phi_{\nu}  \circ \vb{A})(\vb{x}) = \Phi_{\nu} (\vb{Ax})  = \Phi_{\nu} (\vb{Ax}^E +\vb{Ax }^{\perp})  = \vb{Ax}^E +\nu \vb{Ax }^{\perp} = \vb{Ax}^E +\vb{A(\nu x) }^{\perp} = \vb{A} ( \vb{x}^E +\nu \vb{x }^{\perp})  = ( \vb{A} \circ \Phi_{\nu} ) (x)\]
 Quindi la funzione affine $\Phi_{\nu}$ commuta con la parte rotazionale delle isometrie. \\
@@ -710,65 +710,80 @@ A questo punto supponiamo per assurdo che $\forall \nu >0 $ i vettori in  $L(\Ga
 \'E inoltre noto che $\exists \vb{w} \in \mathbb{R}^n : \vb{w}_{\nu} = \Phi_{\nu}(\vb{w})$, quindi posso scrivere
 \begin{equation}
 \label{eq:nu}
-\norm{\vb{w}_{\nu}^{\perp}} = \norm{\Phi_{\nu}(\vb{w})^{\perp}} = \norm{ (\vb{w}^{E} + \nu \vb{w}^{\perp})^{\perp}} = \norm{\nu \vb{w}^{\perp}} = \nu \norm{\vb{w}^{\perp}}\geq \frac{1}{(3 + k)^{n}}
+\norm{\vb{w}_{\nu}^{\perp}} = \norm{\Phi_{\nu}(\vb{w})^{\perp}} = \norm{ (\vb{w}^{E_k} + \nu \vb{w}^{\perp})^{\perp}} = \norm{\nu \vb{w}^{\perp}} = \nu \norm{\vb{w}^{\perp}}\geq \frac{1}{(3 + k)^{n}}
 \end{equation}
 
 Se si sceglie $\nu$ molto piccolo, la disuguaglianza \ref{eq:nu}  non vale; di conseguenza non è vero che i vettori in  $L(\Gamma_{\nu})$ hanno distanze a coppie $\leq 1$ $\forall \nu >0$. Se invece $\nu = 1 $, sicuramente vale la condizione (1) perché in quel caso $L(\Gamma_{\nu}) = L(\Gamma $. 
 Definiamo 
 \[ \nu' := \inf \{\nu >0 | \textrm{la condizione 1 vale in }  L(\Gamma_{\nu}) \} \]
-Sicuramente $0 < \nu' \leq 1$. Fissato $\vb{x} \in \mathbb{R}^n$,$|Phi_{\nu}(\vb{x}) $ è una funzione continua in $\nu$. 
-
-
-
-
-
-Esiste quindi un $\nu' > 0 $ minimo tale che la condizione (1) della definizione di gruppo cristallografico normale vale in $\Gamma_{\nu '}$.  \\
-Dato che la trasformazione affine $\Phi_{\nu '}$ mantiene fissi tutti gli elementi $E$, il vettore più corto che si trova in $L(\Gamma_{\nu'}) - E  = \Phi_{\nu'}(L(\Gamma)) - E = \Phi_{\nu'}(L(\Gamma) - E)$ ha norma $1$ (PERCHé????????????????) \\
+Sicuramente $0 < \nu' \leq 1$. Fissato $\vb{x} \in \mathbb{R}^n$,$\Phi_{\nu}(\vb{x}) $ è una funzione continua in $\nu$. \\
+Dato che per ogni$\nu > \nu ' $ vale 
+\[ \norm{\Phi_{\nu}(\vb{x})} \geq 1 \]
+Allora vale anche 
+\[ \norm{\Phi_{\nu'}(\vb{x})} \geq 1  \]
+Ed in particolare vale la condizione (1) su $L(\Gamma_{\nu'})$. \\
+Sia ora $\vb{w_0}$ il vettore più corto contenuto in $L(\Gamma_{\nu'}) - E_k$, vogliamo mostrare che è un vettore unitario. 
+Supponiamo per assurdo che $\norm{\vb{w_0}} > 1$; si nota immediatamente che 
+\[ \forall \vb{w} \in L(\Gamma_{\nu'}) - E_k \; \; \; \; \norm{\vb{w}^E}^2 + \norm{\vb{w}^{\perp}}^2 \geq \norm{\vb{w_0}^E}^2 + \norm{\vb{w_0}^{\perp}}^2 \]
+Scegliamo $\nu := \norm{\vb{w}_0}^{-1}$ e consideriamo l'azione di $\Phi_{\nu}$ su $L(\Gamma_{\nu'})$; in questo modo, utilizzando le proprietà di perpendicolarità e la disuguaglianza appena mostrata si ottiene $\forall w \in L(\Gamma_{\nu'}) - E_k$
+\[ \begin{split}
+\norm{\Phi_{\nu}(\vb{w})} & = \norm{\vb{w}^E  + \nu' \vb{w}^{\perp}}^2 = \\
+ & =  \norm{\vb{w}^E}^2 + \nu'^2 \norm{\vb{w}^{\perp}}^2 \geq \\
+ & \geq \norm{\vb{w}^E}^2 + \nu'^2 (\norm{\vb{w_0}^E}^2 + \norm{\vb{w_0}}^2 - \norm{\vb{w}^E}^2  ) = \\
+ & = \norm{\vb{w}^E}^2 (1 - \nu'^2)   + \nu'^2 \norm{\vb{w_0}}^2 \geq \\
+ & \geq \nu'^2  \norm{\vb{w_0}}^2 = 1 
+\end{split}
+\]
+Dato che i vettori in $E_k \cap L(\Gamma_{\nu'})$ sono rimasti uguali alle loro copie in $L(\Gamma)$ e per loro valeva la condizioe (1) prima, allora sicuramente adesso $L(\Gamma_{\nu \nu'})$ gode anche lui della proprietà (1). 
+Tuttavia $\nu \nu'< \nu'$ e questa è una contraddizione per la scelta minimale di $\nu'$.
+In particolare quindi vale $\norm{\vb{w_0}} = 1$. 
 \end{itemize}
 Quindi ho trovato  $\Gamma_{\nu'} \cong \Gamma$ che contiene $k+1$ vettori unitari linearmente indipendenti ed ho mostrato che $\Gamma_{\nu'}$ è un gruppo cristallografico normale.  \\
-La dimostrazione si conclude per induzione. 
+La dimostrazione si conclude per induzione su k. 
 \end{proof}
 
-%\begin{theorem}
-%Ogni gruppo cristallografico normale è unicamente caratterizzato da una tabella di gruppo 
-%\end{theorem}
-%
-%\begin{proof}
-%Sia $\Gamma$ il grupo cristallografico normale, siano fissati $n$ vettori $\vb{w}_1, ... \vb{w}_n \in L(\Gamma) $ tali che siano linearmente indipendenti e $\norm{\vb{w}_i} = 1  \; \; \forall i = 1, ..., n$.  \\
-%Considero il sottoreticolo  di $L(\Gamma)$
-%\[ L = \bigg\{ \sum_{i = 1}^{n} m_i \vb{w}_i \bigg| m_i \in \mathbb{Z}, i = 1, ..., n \bigg\} \]
-%$L$ è ovviamente un sottogruppo di $\Gamma$, faccio il quoziente $\quot{\Gamma}{L} $; da ognuno degli elementi di questo quoziente scelgo un rappresentante $\omega$ la cui componente translazionale $\vb{w} $ sia tale che 
-%\[ \norm{\vb{w}} \leq \frac{1}{2} \bigg( \sum_{i = 1}^{n} \norm{ \vb{w}_i)} \bigg) = \frac{n}{2}\]  
-%Per la prima proprietà dei gruppi cristallografici esistono solo un numero finito di questi rappresentanti, li chiamo $\omega_{n+1}, ... , \omega_N$. \\
-%Adesso $\forall \alpha \in \Gamma$, questo può essere scritto come 
-%\[ \alpha = \bigg( \sum_{i = 1}^{n} m_i \vb{w}_i \bigg) \omega_{\nu} \; \; \; \; n+1 \leq \nu \leq N\]
-%Se considero $\omega_i \in \Gamma$ con $i=1, ...,n$ come le translazioni di vettori $w_i \; \; i=1, ...,n$, posso caratterizzare unicamente la struttura di gruppo di $\Gamma$ a meno di isomorfismo come 
-%\begin{equation} \label{eq:1}
-%	 \omega_j \omega_k = \bigg( \sum_{i = 1}^{n} m_{ijk} \vb{w}_i\bigg) \omega_{\nu (j,k)}      \; \; \; \forall j,k =1, ...,N 
-%\end{equation}
-%$\Gamma$  è quindi unicamente determinato (a meno di isomorfismo) da $N, \omega_{\nu (j,k)}$ e $m_{ijk} \in \mathbb{Z}$.
-%
-%\end{proof}
-%
-%\begin{lemma}
-%I valori assoluti di $N, \nu (j,k)$  e $m_{ijk}$ sono maggiorati da un intero che dipende solo dalla dimensione $n$ dello spazio $\mathbb{E}^n$.
-%\end{lemma}
-%
-%\begin{proof}
-%E' necessario distinguere il caso in cui $n = 1$ dal caso in cui $n > 1$. \\
-%\begin{itemize}
-%\item Se $n = 1$, allora la tabella di gruppo \ref{eq:1} si può in realtà scrivere come 
-%\[ \omega_j \omega_k =  m_{1jk} \vb{w}_1 \omega_{\nu (j,k)}      \; \; \; \forall j,k =1, ...,N \]
-%Il vettore $\vb{w}_1$ è unitario per definizione e $\norm{ trans(\omega_{\nu (j,k)} } \leq \frac{1}{2}$. \\
-%Se considero la translazione data da $\omega_j \omega_k \omega_{\nu (j,k)}^{-1}$, questa è caratterizzata da un vettore in $\mathbb{R}^n$ di norma $\leq \frac{3}{2}$.
-%\end{itemize}
-%
-%
-%
-%Considero la translazione data da 
-%\[\omega_j \omega_k \omega_{\nu (j,k)}^{-1}  =  \sum_{i = 1}^{n} m_{ijk} \vb{w}_i \]
-%Le comoponenti di translazione $\omega_j$ e $  \omega_k $  hanno modulo unitario, mentre il vettore 
-%\end{proof}
-%	
+SON ARRIVAT A CORREGGERE FINO A QUIIIIIIIIIIIIIIIIIIIIIIII
+
+\begin{theorem}
+Ogni gruppo cristallografico normale è unicamente caratterizzato da una tabella di gruppo 
+\end{theorem}
+
+\begin{proof}
+Sia $\Gamma$ un gruppo cristallografico $n$-dimensionale normale;	 siano fissati $n$ vettori $\vb{w}_1, ... \vb{w}_n \in L(\Gamma) $ linearmente indipendenti ed unitari. \\
+Consideriamo il sottoreticolo  di $L(\Gamma)$ dato da 
+\[ L = \bigg\{ \sum_{i = 1}^{n} m_i \vb{w}_i \bigg| m_i \in \mathbb{Z}, i = 1, ..., n \bigg\} \]
+$L$ è ovviamente un sottogruppo commutativo di $\Gamma$, valutiamo il quoziente $\quot{\Gamma}{L} $; da delle classi laterali destre di questo quoziente è possibile scegliere un rappresentante $\omega$ la cui componente translazionale $\vb{w} $ sia tale che 
+\[ \norm{\vb{w}} \leq \frac{1}{2} \bigg( \sum_{i = 1}^{n} \norm{ \vb{w}_i)} \bigg) = \frac{n}{2}\]  
+Per la prima proprietà dei gruppi cristallografici esistono solo un numero finito di questi rappresentanti, li chiamo $\omega_{n+1}, ... , \omega_N$. \\
+Adesso $\forall \alpha \in \Gamma$, questo può essere scritto come 
+\[ \alpha = \bigg( \sum_{i = 1}^{n} m_i \vb{w}_i \bigg) \omega_{\nu} \; \; \; \; n+1 \leq \nu \leq N\]
+Se considero $\omega_i \in \Gamma$ con $i=1, ...,n$ come le translazioni di vettori $w_i \; \; i=1, ...,n$, posso caratterizzare unicamente la struttura di gruppo di $\Gamma$ a meno di isomorfismo come 
+\begin{equation} \label{eq:1}
+	 \omega_j \omega_k = \bigg( \sum_{i = 1}^{n} m_{ijk} \vb{w}_i\bigg) \omega_{\nu (j,k)}      \; \; \; \forall j,k =1, ...,N 
+\end{equation}
+$\Gamma$  è quindi unicamente determinato (a meno di isomorfismo) da $N, \omega_{\nu (j,k)}$ e $m_{ijk} \in \mathbb{Z}$.
+
+\end{proof}
+
+\begin{lemma}
+I valori assoluti di $N, \nu (j,k)$  e $m_{ijk}$ sono maggiorati da un intero che dipende solo dalla dimensione $n$ dello spazio $\mathbb{E}^n$.
+\end{lemma}
+
+\begin{proof}
+E' necessario distinguere il caso in cui $n = 1$ dal caso in cui $n > 1$. \\
+\begin{itemize}
+\item Se $n = 1$, allora la tabella di gruppo \ref{eq:1} si può in realtà scrivere come 
+\[ \omega_j \omega_k =  m_{1jk} \vb{w}_1 \omega_{\nu (j,k)}      \; \; \; \forall j,k =1, ...,N \]
+Il vettore $\vb{w}_1$ è unitario per definizione e $\norm{ trans(\omega_{\nu (j,k)} } \leq \frac{1}{2}$. \\
+Se considero la translazione data da $\omega_j \omega_k \omega_{\nu (j,k)}^{-1}$, questa è caratterizzata da un vettore in $\mathbb{R}^n$ di norma $\leq \frac{3}{2}$.
+\end{itemize}
+
+
+
+Considero la translazione data da 
+\[\omega_j \omega_k \omega_{\nu (j,k)}^{-1}  =  \sum_{i = 1}^{n} m_{ijk} \vb{w}_i \]
+Le comoponenti di translazione $\omega_j$ e $  \omega_k $  hanno modulo unitario, mentre il vettore 
+\end{proof}
+	
 
 \end{document}

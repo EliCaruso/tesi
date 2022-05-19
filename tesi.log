@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2022.4.23)  19 MAY 2022 23:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2022.4.23)  20 MAY 2022 00:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -856,47 +856,47 @@ Underfull \hbox (badness 10000) in paragraph at lines 704--705
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 725--727
+[17]
+Underfull \hbox (badness 10000) in paragraph at lines 773--774
 
  []
 
-[17] (./tesi.aux) ) 
+[18] [19] (./tesi.aux) ) 
 Here is how much of TeX's memory you used:
- 27620 strings out of 481200
- 670938 string characters out of 5914397
- 1096621 words of memory out of 5000000
- 44123 multiletter control sequences out of 15000+600000
+ 27621 strings out of 481200
+ 670944 string characters out of 5914397
+ 1096619 words of memory out of 5000000
+ 44124 multiletter control sequences out of 15000+600000
  419074 words of font info for 64 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  113i,19n,116p,757b,1053s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/lisi/.texlive2020/texmf-var/fonts/pk/ljfour/jknappen
-/ec/tcrm1000.600pk> </home/lisi/.texlive2020/texmf-var/fonts/pk/ljfour/jknappen
-/ec/ecsl1000.600pk> </home/lisi/.texlive2020/texmf-var/fonts/pk/ljfour/jknappen
-/ec/ecti1000.600pk> </home/lisi/.texlive2020/texmf-var/fonts/pk/ljfour/jknappen
-/ec/ecbx1000.600pk> </home/lisi/.texlive2020/texmf-var/fonts/pk/ljfour/jknappen
-/ec/ecbx1440.600pk> </home/lisi/.texlive2020/texmf-var/fonts/pk/ljfour/jknappen
-/ec/ecbx2074.600pk> </home/lisi/.texlive2020/texmf-var/fonts/pk/ljfour/jknappen
-/ec/ecrm1000.600pk> </home/lisi/.texlive2020/texmf-var/fonts/pk/ljfour/jknappen
-/ec/ecbx2488.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx
-7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb>
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/t
-exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/font
-s/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type
-1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/sy
-mbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/sym
-bols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symb
-ols/msbm7.pfb>
-Output written on tesi.pdf (17 pages, 261092 bytes).
+ </home/lisi/.texlive2020/texmf-var/fonts/pk/ljfour/jkn
+appen/ec/tcrm1000.600pk> </home/lisi/.texlive2020/texmf-var/fonts/pk/ljfour/jkn
+appen/ec/ecsl1000.600pk> </home/lisi/.texlive2020/texmf-var/fonts/pk/ljfour/jkn
+appen/ec/ecti1000.600pk> </home/lisi/.texlive2020/texmf-var/fonts/pk/ljfour/jkn
+appen/ec/ecbx1000.600pk> </home/lisi/.texlive2020/texmf-var/fonts/pk/ljfour/jkn
+appen/ec/ecbx1440.600pk> </home/lisi/.texlive2020/texmf-var/fonts/pk/ljfour/jkn
+appen/ec/ecbx2074.600pk> </home/lisi/.texlive2020/texmf-var/fonts/pk/ljfour/jkn
+appen/ec/ecrm1000.600pk> </home/lisi/.texlive2020/texmf-var/fonts/pk/ljfour/jkn
+appen/ec/ecbx2488.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmbx7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/symbols/msbm7.pfb>
+Output written on tesi.pdf (19 pages, 268200 bytes).
 PDF statistics:
- 391 PDF objects out of 1000 (max. 8388607)
- 119 compressed objects within 2 object streams
+ 400 PDF objects out of 1000 (max. 8388607)
+ 124 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
