@@ -1,4 +1,4 @@
-\documentclass[12pt,a4paper]{book}
+\documentclass[a4paper]{book}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[italian]{babel}
@@ -35,28 +35,37 @@
 
 
 \newtheorem{definition}{Definizione}[section]
-
 \newtheorem{theorem}{Teorema}[section]
 \newtheorem{lemma}[theorem]{Lemma}
-
 \newcommand\normh[1]{\left\lVert#1\right\rVert}
-
-
 \newcommand*\quot[2]{{^{\textstyle #1}\big/_{\textstyle #2}}}
 
 \begin{document} 
 
 \chapter*{Introduzione e motivazioni}
 
-%Devo dire che è una dim geometrica\\
-%Devo dire che uso la dim di Buser e faccio solo i primi due teoremi di Bieb \\
-%Devo enunciare i teoremi di Bieb \\
+In occasione del secondo Congresso internazionale dei matematici a Parigi, tenutosi nel 1900,  David Hilbert propose una conferenza dal titolo “Mathematische Probleme” in cui presentò un elenco di 23 problemi all'epoca irrisolti. Lo spirito della conferenza era quello di fare il punto dello stato dell'arte della matematica ed elencare quelle che, secondo il famoso matematico, sarebbero state le domande più importanti del secolo.  \\
+\begin{quote}
+Chi di noi – iniziò Hilbert – non vorrebbe sollevare il velo sotto cui sta nascosto il futuro, per gettare uno sguardo sui prossimi progressi della nostra scienza e sui segreti del suo sviluppo durante i secoli venturi? Quali saranno gli speciali obiettivi a cui mireranno le più insigni menti matematiche delle generazioni future? Quali nuovi metodi e quali nuovi risultati scopriranno i nuovi secoli, nell’ampio e ricco campo del pensiero umano?
+\end{quote}
+Il diciottesimo problema di Hilbert chiedeva
+\begin{quote}
+Esiste un poliedro non-regolare che può tassellare lo spazio? \\
+Qual è il più denso impacchettamento di sfere?	
+\end{quote}
+In risposta alla prima domanda, negli anni fra il 1910 ed il 1912, Bieberbach dimostrò quelli che sono adesso conosciuti come i tre teoremi di Bieberbach sui gruppi cristallografici. \\
+La sua dimostrazione si basava sul lavoro di Minkowski sulle approssimazioni razionali simultanee, ma risulta complessa da seguire; pochi anni dopo Frobenius diede una dimostrazione semplificata, ma sempre a carattere fortemente algebrico. La dimostrazione data da Frobenius è diventata lo standard nella pratica matematica e viene utilizzata nella maggior parte dei testi.
+\paragraph{}
+Nella prima parte di questo elaborato (capitoli 1 - 3) si propone una dimostrazione alternativa dei primi due teoremi data da Paul Buser in un articolo del 1985 intitolato "A geometric proof of Bieberbach's theorems on crystallographic groups". Buser dimostra i primi due teoremi di Bieberbach attraverso un procedimento estremamente elementare che utilizza approcci prettamente geometrici, nello spirito della geometria dei numeri di Minkowski. 
+
+\paragraph{}
+Nell'ultimo capitolo si espone invece una semplice classificazione dei gruppi cristallografici in dimensione 2, chiamati in letteratura "wallpaper patterns", come data da Schwarzenberger nel suo articolo "The 17 plane symmetry groups". 
 
 
 \chapter{Risultati preliminari}
 In questo capitolo enunciamo alcune definizioni e risultati fondamentali per approcciare la dimostrazione geometrica dei primi due teoremi di Bieberbach.  \\
 
-Nella prima sezione riprendiamo la definizione di spazio euclideo $n$-dimensionale e del suo gruppo di isometrie, descriviamo una loro rappresentazione come composizione dell'applicazione di una matrice ortogonale e di una translazione; definiamo poi poi il coniugio di due isometrie. \\
+Nella prima sezione riprendiamo la definizione di spazio euclideo $n$-dimensionale e del suo gruppo di isometrie, descriviamo una loro rappresentazione come composizione dell'applicazione di una matrice ortogonale e di una translazione; definiamo poi il coniugio di due isometrie. \\
 La lunghezza e la direzzione del vettore translazione di una data isometria danno immediatamente informazioni su come questa agisce sui punti di $\mathbb{R}^n$; più complicato è invece capire, data una matrice ortogonale, come questa trasformi lo spazio. \\
 Nella seconda sezione viene defnita quindi una funzione che stima per eccesso di quanto ogni matrice ortogonale si discosta dalla matrice identità; viene poi definita attraverso essa una scomposizione dello spazio in due spazi ortogonali; infine si dimostra un teorema che stima la "misura" del commutatore di due matrici a partire dalle loro "misure".  
 
@@ -77,17 +86,16 @@ Imponendo questa metrica sullo spazio vettoriale $\mathbb{R}^n$ ottengo lo spazi
 Dati $\vb{x, y} \in \mathbb{R}^n$ definisco l'angolo fra di essi $\angle (\vb{x},\vb{y})$ come 
 \[ \angle (\vb{x},\vb{y}) = arccos \bigg( \frac{\vb{x} \cdot \vb{y}}{\norm{\vb{x}} \norm{\vb{y}}} \bigg) \in [0, \pi] \]
 \end{definition} 
-\'E noto che gli automorfismi di $\mathbb{R}^n$ (ovvero le applicazioni lineari biettive da $\mathbb{R}^n$ in sé stesso) formano un gruppo con l'operazione di composizione di applicazioni lineari isomorfo  a $ GL(n, \mathbb{R}) $, il gruppo delle matrici quadrate $n-$dimensionali con determinante non nullo. 
-Se si considerano invece le mappe affini da $\mathbb{R}^n$ in sé stesso con il prodotto dato dalla composizione, si ottinene il gruppo affine $Aff(n, \mathbb{R})$; esso può essere rappresentato come il prodotto demidiretto 
+\`E noto che gli automorfismi di $\mathbb{R}^n$ (ovvero le applicazioni lineari biettive da $\mathbb{R}^n$ in se stesso) formano un gruppo con l'operazione di composizione di applicazioni lineari isomorfo a $ GL(n, \mathbb{R}) $, il gruppo delle matrici quadrate $n-$dimensionali con determinante non nullo. 
+Se si considerano invece le mappe affini da $\mathbb{R}^n$ in se stesso con il prodotto dato dalla composizione, si ottiene il gruppo affine $Aff(n, \mathbb{R})$; esso può essere rappresentato come il prodotto semidiretto 
 \[  \mathbb{R}^{n} \rtimes GL(n, \mathbb{R})   \]
 con l'operazione di composizione data da 
 \[ (\vb{A, a}) \cdot (\vb{B, b}) = (\vb{ a + Ab, AB})  \; \; \forall \vb{A, B}  \in  GL(n, \mathbb{R}) \; \forall \vb{a, b} \in \mathbb{R}^n. \]
-I teoremi di Bieberbach trattano in particolare i gruppi cristallograici, che sono dei particolari tipi di sottogruppi del gruppo delle isometrie.
+I teoremi di Bieberbach trattano in particolare i gruppi cristallografici, che sono dei particolari tipi di sottogruppi del gruppo delle isometrie.
 \begin{definition}
 	Un'isometria di $\mathbb{E}^n$  è un funzione $ \alpha : \mathbb{R}^{n} \longrightarrow \mathbb{R}^{n} $  tale che $\forall \vb{x,y} \in \mathbb{R}^n $ vale 
 	\[ d(\alpha(\vb{x}), \alpha(\vb{y})) = d(\vb{x} , \vb{y} )\]
-\end{definition} 
-Il seguente teorema è enunciato senza dimostrazione in quanto si tratta di un risultato classico. 
+\end{definition} Il seguente teorema è enunciato senza dimostrazione in quanto si tratta di un risultato classico. 
 \begin{theorem}
 Data un'isometria di $\mathbb{E}^n $, questa può essere scritta in modo unico come composizione di una rotazione e di una traslazione rispetto alla base standard di $\mathbb{R}^n$
 \[ \alpha : \mathbb{R}^{n} \longrightarrow \mathbb{R}^{n} \]
@@ -95,7 +103,7 @@ Data un'isometria di $\mathbb{E}^n $, questa può essere scritta in modo unico c
 dove $\vb{A} = rot( \alpha ) \in O(n) $ è detta componente di rotazione di $\alpha$ \\
 e $\vb{a} = trans( \alpha ) \in \mathbb{R}^{n} $ è detta componente di traslazione di $\alpha$. 
 \end{theorem}
-In questa trattazione indicheremo spesso le isometrie secondo la rappresentazione fornita dal teorema precedente. In particolare scriveremo $\alpha = ( \vb{A, a})  $ per indicare che l'isometria $\alpha$ ha come componente di rotazione la matrice $\vb{A}$ e come componente di translazione il vettore $\vb{a}$. \\
+In questa trattazione indicheremo spesso le isometrie secondo la rappresentazione fornita dal teorema precedente. In particolare scriveremo $\alpha = ( \vb{A, a})  $ per indicare che l'isometria $\alpha$ ha come componente di rotazione la matrice $\vb{A}$ e come componente di traslazione il vettore $\vb{a}$. \\
 Indichiamo l'insieme delle isometrie di  $\mathbb{E}^{n} $ come $Isom(n)$
 \begin{lemma}
 $Isom(n)$ è un gruppo con operazione di composizione di applicazioni; in particolare è un sottogruppo del gruppo affine e come tale può essere scritto come prodotto semidiretto nella forma
@@ -104,10 +112,12 @@ $Isom(n)$ è un gruppo con operazione di composizione di applicazioni; in partic
 dove $O(n)$ indica il gruppo delle matrici ortogonali $n-$dimensionali, in particolare 
 \[ O(n) = \{ \vb{A} \in GL(n, \mathbb{R}) \big| \vb{A A^{T}} = \vb{A^{T} A} = \vb{id} \}\]
 \end{lemma}
-\'E noto che le matrici ortogonali hanno la proprietà
+
+\`E noto che le matrici ortogonali hanno la proprietà
 \[ \norm{\vb{Ax}} = \norm{\vb{x}}   \; \; \; \; \forall x \in \mathbb{R}^n \; \forall A \in O(n)\]
 All'interno di ogni gruppo è definito il commutatore di due elementi, posso quindi anche definirlo per $Isom(n)$.
 \begin{lemma}
+\label{lemma:1}
 	Comunque prese  $ \alpha = (\vb{A,a}), \beta = (\vb{B,b}) \in Isom(n)$\\
 	definisco il loro commutatore come  $ [ \alpha , \beta] = \alpha \beta \alpha^{-1} \beta^{-1}$. \\
 Valgono le due seguenti uguaglianze:
@@ -121,8 +131,8 @@ trans([ \alpha	, \beta ]) = \vb{(A-id)b+(id-[A,B])b+A(id-B)A^{-1}a }
 
 \begin{proof}
 	$ [ \alpha, \beta ](\vb{x}) = ( \alpha \beta \alpha^{-1} \beta^{-1} ) (\vb{x})$. \\
-	Dato che $ \alpha : \vb{x} \longmapsto \vb{Ax + a}$ , allora sicuramente  $\alpha^{-1}: \vb{y} \longmapsto \vb{A^{-1}(y-a)}$.  \\
-	Allo stesso modo, dato che $ \beta : \vb{x} \longmapsto \vb{Bx + b}$ , so che $\beta^{-1}: \vb{y} \longmapsto \vb{B^{-1}(y-b)}$. 
+	Dato che $ \alpha : \vb{x} \longmapsto \vb{Ax + a}$ , allora sicuramente  $\alpha^{-1}: \vb{x} \longmapsto \vb{A^{-1}(x-a)}$.  \\
+	Allo stesso modo, dato che $ \beta : \vb{x} \longmapsto \vb{Bx + b}$ , so che $\beta^{-1}: \vb{x} \longmapsto \vb{B^{-1}(x-b)}$. 
 \begin{equation*}
 \begin{split}
 [ \alpha, \beta ](\vb{x}) = (\alpha \beta \alpha^{-1} \beta^{-1} ) (\vb{x})
@@ -213,7 +223,7 @@ Quindi il segno di disuguaglianza in (4) è un'uguaglianza, in particolare
 \[   \norm{\vb{A(x+y) - (x+y)}}^2 + \norm{\vb{A(x-y) - (x-y)}}^2  = m(\vb{A})^2(\norm{\vb{x+y}}^2 + \norm{\vb{x-y}}^2)  \]
 Spostando i termini da parte a parte ottengo
 \[ \norm{\vb{A(x+y) - (x+y)}}^2 - m(\vb{A})^2 \norm{\vb{x+y}}^2=  m(\vb{A})^2 \norm{\vb{x-y}}^2 - \norm{\vb{A(x-y) - (x-y)}}^2 \]
-E' possibile poi scomporre le differenze di quadrati a sinistra e destra dell'uguaglianza ottenendo
+\`E possibile poi scomporre le differenze di quadrati a sinistra e destra dell'uguaglianza ottenendo
 \begin{equation} 
 \begin{split}
 \big( & \norm{\vb{A(x+y) - (x+y)}}  + m(\vb{A})\norm{\vb{x+y}} \big) \big( \norm{\vb{A(x+y) - (x+y)}} - m(\vb{A}) \norm{\vb{x+y}} \big) = \\
@@ -249,7 +259,7 @@ $ \norm{\vb{A(Ax) - Ax }} =  \norm{\vb{A(Ax-x)}} = \norm{\vb{Ax - x}} = m(\vb{A}
 \end{proof}
 Il seguente lemma è un noto risultato relativo alle scomposizioni ortogonali di spazi vettoriali. 
 \begin{lemma}
-$E_{\vb{A}}$ sottospazio vettoriale di $\mathbb{R}^n $ non banale, è possibile quindi definire il suo complemento ortogonale $E^{\perp}_{\vb{A}} \neq \mathbb{R}^n$ ed anche questo è $\vb{A}$-invariante. 
+$E_{\vb{A}}$ sottospazio vettoriale di $\mathbb{R}^n $ non banale: è possibile quindi definire il suo complemento ortogonale $E^{\perp}_{\vb{A}} \neq \mathbb{R}^n$ ed anche questo è $\vb{A}$-invariante. 
 \end{lemma} 
 
 \begin{definition}
@@ -266,6 +276,7 @@ $E_{\vb{A}}$ sottospazio vettoriale di $\mathbb{R}^n $ non banale, è possibile 
 \begin{lemma}
 
 \begin{equation}
+\label{diseq:ma}
 \begin{split}
 m^{\perp}(\vb{A})  & < m(\vb{A}) \; \; \; \; \; \; \; \; \; se \; \vb{A \neq id}  \\
  m^{\perp}(\vb{A})  & = m(\vb{A}) = 0 \; \; \;  se \; \vb{A = id}
@@ -287,15 +298,16 @@ questo è però assurdo perché abbiamo imposto che $x\vb{ \neq 0}$
 \end{proof}
 
 \begin{lemma}
-$\forall \vb{x} \in \mathbb{R}^n $ posso scrivere $\vb{x}$ in modo unico in decomposizione ortogonale. 
+Ogni $\vb{x}$ in $\mathbb{R}^n $ può essere scritto in modo unico in decomposizione ortogonale. 
 \[ \vb{x} = \vb{x}^E + \vb{x}^{\perp} \; \mathit{dove} \; \vb{x}^E \in E_{\vb{A}} \; \mathit{e} \; \vb{x}^{\perp} \in E^{\perp}_{\vb{A}} \]
-\'E inoltre immediato verificare le seguenti proprietà:
+\`E inoltre immediato verificare le seguenti proprietà:
 \[ \norm{\vb{Ax}^E - \vb{x}^E }= m(\vb{A})\norm{\vb{x}^E} \] \[\norm{\vb{Ax}^{\perp} - \vb{x}^{\perp}} \leq m(\vb{A}) \norm{\vb{x}^{\perp}} \]
 \end{lemma}
 
 Il seguente risultato ci permette di stimare la "misura" del commutatore di due matrici a partire dalla misura delle stesse. 
 \begin{lemma}
- $\forall \vb{ A, B} \in O(n)$ vale la disuguaglianza 
+\label{lemma:2}
+ Comunque scelti $\vb{ A, B} \in O(n)$ vale la disuguaglianza 
  \[ m([\vb{A,B}]) \leq 2m(\vb{A})m(\vb{B}) \]
 \end{lemma}
 
@@ -324,7 +336,7 @@ Quindi segue immediatamente la tesi.
 \end{proof}
 
 \chapter{Primo teorema di Bieberbach}
-In questo capitolo sezione viene dimostrato il primo teorema di Bieberbach. \\
+In questo capitolo viene dimostrato il primo teorema di Bieberbach. \\
 Nella prima sezione si dà la definizione precisa di gruppo cristallografico e viene esplicitato il contenuto del teorema nella forma in cui verrà dimostrato. \\
 Nella seconda sezione sono presentati e dimostrati alcuni sottoteoremi che concorrono alla dimostrazione del primo teorema di Bieberbach. \\ 
 Infine nella sezione finale verranno connesse le varie proposizioni in una dimostrazione del teorema vero e proprio.  \\
@@ -334,13 +346,13 @@ In questo elaborato utilizzo la seguente definizione di gruppo cristallografico:
 \begin{definition}
 Sia $\Gamma$ un sottogrupo di $Isom(n)$, dico che è un gruppo cristallografico $n$-dimensionale se valgono le seguenti condizioni:
 \begin{enumerate}
-	\item $ \forall t \in \mathbb{R} : t > 0 $  esistono solo un numero finito di $\alpha = \vb{(A, a)} \in \Gamma $  tali che  $\norm{a} \leq t$
-	\item $ \exists d \in \mathbb{R}: \forall \vb{x} \in \mathbb{R}^n   \exists \alpha = \vb{(A,a)} \in \Gamma : \norm{\vb{a-x}}\leq d $
+	\item $ \forall t \in \mathbb{R} : t > 0 $  esistono solo un numero finito di $\alpha = \vb{(A, a)} \in \Gamma $  tali che  $\norm{a} \leq t$ 
+	\item $ \exists d \in \mathbb{R}: \forall \vb{x} \in \mathbb{R}^n ,  \exists \alpha = \vb{(A,a)} \in \Gamma : \norm{\vb{a-x}}\leq d $
 \end{enumerate}
 \end{definition}
 La condizione 1. implica che il gruppo agisce in modo propriamente discontinuo sullo spazio topologico dato da $\mathbb{R}^n$ con la topologia euclidea, mentre la condizione 2. significa che l'azione di $\Gamma$ ha dominio fondamentale limitato. Ricoridamo che, dato uno spazio topologico $X$ ed un gruppo $G$ che agisce su di esso, un dominio fondamentale è un sottoinsieme di $X$ che contiene uno ed un solo punto di ogni orbita dell'azione.\\
 \begin{theorem}
-Ogni gruppo cristallografico $n-$dimensionale contiene $n$ translazioni linearmente indipendenti
+Ogni gruppo cristallografico $n-$dimensionale contiene $n$ traslazioni linearmente indipendenti
 \end{theorem}
 \newpage 
 \section{Mini Bieberbach e caratterizzazione delle translazioni} 
@@ -366,7 +378,6 @@ Consideriamo ora la successione degli angoli fra i vettori $\vb{u}$ e $\vb{b}_k$
 \[ \angle (\vb{u , b_k}) = \angle (\vb{ku, b_k}) = : \theta_k \]
 \begin{figure}[!h]
 \centering
-\label{fig:trangolo1}
 \begin{tikzpicture}[line cap=round]
   \coordinate (O) at (0,0);
   \coordinate (A) at (6, 0);
@@ -378,43 +389,44 @@ Consideriamo ora la successione degli angoli fra i vettori $\vb{u}$ e $\vb{b}_k$
   \pic[draw,"$\theta_k$",angle radius=20,angle eccentricity=1.25] {angle=A--O--B}; 
   \pic[draw,"$\gamma_k$",angle radius=20,angle eccentricity=1.25] {angle=B--A--O};  
 \end{tikzpicture}
-\centering
 \caption{I vettori $k \vb{u}$, $\vb{b_k}$ e $\vb{b_k}-k\vb{u}$ formano un triangolo. \\ Chiamo $\gamma_k$ l'angolo contenuto fra $k \vb{u}$ e $\vb{b_k}-k\vb{u}$}
+\label{fig:trangolo1}
 \end{figure} \\
-Possiamo applicare il teorema dei seni al triangolo in figura ~\ref{fig:trangolo1}
+Possiamo applicare il teorema dei seni al triangolo in figura \ref{fig:trangolo1}
 \[ \frac{\norm{\vb{b_k}}}{sin(\gamma_k)} = \frac{\norm{\vb{b_k} - k\vb{u}}}{sin(\theta_k)}  \leq \frac{d}{sin(\theta_k)} \]
 Si può ora riscrivere la disequazione in modo da ottenere
 \[  sin(\theta_k) \leq \frac{sin(\gamma_k)d}{\norm{\vb{b_k}}} \longrightarrow 0 \Longrightarrow \theta_k \longrightarrow 0 \]
-
-$O(n)$  è compatto e ${ \{\vb{B}_k \} }_{k \in \mathbb{N}}$ successione in  $O(n)$  ammette quindi almeno un punto di accumulazione per il teorema di Bolzano-Weierstrass. Si può quindi estarrre da ${ \{ \vb{B}_k \}}_{k \in \mathbb{N}}$  una sottosuccessione  convergente: $ { \{ \vb{A}_k \} }_{k \in \mathbb{N}} = { \{ \vb{B}_{k_j} \} }_{j \in \mathbb{N}}$ .  \\
+$O(n)$  è compatto e ${ \{\vb{B}_k \} }_{k \in \mathbb{N}}$ successione in  $O(n)$  ammette quindi almeno un punto di accumulazione per il teorema di Bolzano-Weierstrass. Si può quindi estarrre da ${ \{ \vb{B}_k \}}_{k \in \mathbb{N}}$  una sottosuccessione  convergente: $ { \{ \vb{A}_k \} }_{k \in \mathbb{N}} = { \{ \vb{B}_{k_j} \} }_{j \in \mathbb{N}}$. 
 \newpage
-La funzione  $ m: O(n) \longrightarrow \mathbb{R}$  è continua in quanto composizione di funzioni continue ($ \vb{A} \mapsto \max{\norm{\vb{Ax-x}}} $), quindi con $i,j \in \mathbb{R} \longrightarrow \infty $ sicuramente $m(\vb{A}_j \vb{A}^{-1}_i) \longrightarrow m(\vb{id}) = 0 $ \\
-Associata a questa sottosuccessione ho ovviamente una sottosuccessione di ${ \{\beta_k \}}_{k \in \mathbb{N}}$ che chiamo ${ \{\alpha_k \}}_{k \in \mathbb{N}} = \{ (\vb{A}_k , \vb{a}_k ) \}_{k \in \mathbb{N}}$. \\
+La funzione  $ m: O(n) \longrightarrow \mathbb{R}$  è continua in quanto composizione di funzioni continue \\ ($ \vb{A} \mapsto \max{\norm{\vb{Ax-x}}} $), quindi con $i,j \in \mathbb{R} \longrightarrow \infty $ sicuramente $m(\vb{A}_j \vb{A}^{-1}_i) \longrightarrow m(\vb{id}) = 0 $ \\
+Associata a questa sottosuccessione di matrici ho ovviamente una sottosuccessione di isometrie che chiamo ${ \{\alpha_k \}}_{k \in \mathbb{N}} = \{ (\vb{A}_k , \vb{a}_k ) \}_{k \in \mathbb{N}}$. \\
+A questo punto ho dimostrato che esiste una successione di isometrie in $\Gamma$ tale che la norma delle componenti translazionali tende ad infinito, l'angolo fra gli elementi della successione ed il vettore unitario fissato nell'ipotesi tende a zero e $m(\vb{A}_j \vb{A}^{-1}_i) \longrightarrow m(\vb{id}) = 0 $; è immediato verificare che $\exists i,j \in \mathbb{N} $  tali che  $ i < j$  e che valgano contemporaneamente
+\begin{equation}
+\label{eq:bib1}
+\begin{split}
+& \norm{\vb{a}_i} \leq \frac{\delta}{4}\norm{\vb{a}_j} \\
+& \angle(u, \vb{a}_j ) \leq \frac{\delta}{2} \\
+& m( \vb{A}_j \vb{A}^{-1}_i ) \leq \epsilon  
+\end{split}
+\end{equation}
 
 
-Dato che valgono tutte le proprietà appena dimostrate, è immediato verificare che $\exists i,j \in \mathbb{N} $  tali che  $ i < j$  e che valgano contemporaneamente
-\[ \begin{cases} \angle(u, \vb{a}_j ) \leq \frac{\delta}{2} \\
-\norm{\vb{a}_i} \leq \frac{\delta}{4}\norm{\vb{a}_j} \\
-m( \vb{A}_j \vb{A}^{-1}_i ) \leq \epsilon  \end{cases} \]
-Considero l'isometria definita da $\alpha \in \Gamma$ come 
-\[ \alpha = (\vb{A, a})  : x \longmapsto \alpha_j \alpha^{-1}_i \vb{x} = \vb{A}_j \vb{A}^{-1}_i \vb{x} + \vb{a}_j - \vb{A}_j \vb{A}^{-1}_i \vb{a}_i\]
+Considero l'isometria $\alpha \in \Gamma$ data da 
+\[ \alpha := (\vb{A, a})  : x \longmapsto \alpha_j \alpha^{-1}_i \vb{x} = \vb{A}_j \vb{A}^{-1}_i \vb{x} + \vb{a}_j - \vb{A}_j \vb{A}^{-1}_i \vb{a}_i\]
 Questa isometria verifica tutte le proprietà richieste dalla tesi
 
 \begin{itemize}
-\item $m(\vb{A}) = m(\vb{A}_j \vb{A}^{-1}_i) \leq \epsilon$ vero per precedente dimostrazione
 \item Verifichiamo  $\vb{a}= \vb{a}_j - \vb{A}_j \vb{A}^{-1}_i \vb{a}_i \neq 0$ 
 \[ \norm{\vb{a}_j - \vb{A}_j \vb{A}^{-1}_i \vb{a}_i} \geq \bigg| \norm{\vb{a}_j} - \norm{ \vb{A}_j \vb{A}^{-1}_i \vb{a}_i } \bigg| \geq \bigg| \norm{\vb{a}_j } + \norm{\vb{a}_i} \bigg| \geq \norm{\vb{a}_i} \bigg| \frac{4}{\delta} -1 \bigg| \]
 $\norm{\vb{a}_i} \neq 0 \Longrightarrow \vb{a} \neq 0$
  
-\item Verifichiamo $ \angle (\vb{u, a})  = \angle (\vb{u} , \vb{a_j - A_j A_i^{-1} a_i} ) \leq \delta $. Applicando la disuguaglianza triangolare sugli angoli si può scrivere
+\item Verifichiamo $ \angle (\vb{u, a})  = \angle (\vb{u} , \vb{a_j - A_j A_i^{-1} a_i} ) \leq \delta $. \\Applicando la disuguaglianza triangolare sugli angoli si può scrivere
 \begin{equation}
-\angle (\vb{u} , \vb{a_j - A_j A_i^{-1} a_i} ) \leq \angle (\vb{u} , \vb{a_j}) + \angle(\vb{a_j}, \vb{a_j- A_j A_i^{-1} a_i} ) 
+\label{eq:angle}
+\angle ( \vb{u} , \vb{a_j - A_j A_i^{-1} a_i} ) \leq \angle (\vb{u} , \vb{a_j}) + \angle(\vb{a_j}, \vb{a_j- A_j A_i^{-1} a_i} ) 
 \end{equation}
-
-Dato che $ \norm{\vb{a}_i} \leq \frac{\delta}{4}\norm{\vb{a}_j}$, la punta del vettore $\vb{a}_j - \vb{A_j A_i^{-1} a_i}$ cade all'interno di una palla n-dimensionale che ha come centro la punta di $\vb{a}_j$ e raggio $r = \frac{\delta}{4}\norm{\vb{a}_j}$\\
 \begin{figure}[!h]
 \centering
-\label{fig:triangolo2}
 \begin{tikzpicture}[line cap=round]
   \coordinate (O) at (0,0);
   \coordinate (A) at (9,0);
@@ -429,16 +441,16 @@ Dato che $ \norm{\vb{a}_i} \leq \frac{\delta}{4}\norm{\vb{a}_j}$, la punta del v
   \draw[vector,red] (A) -- (X);
   \draw[vector] (O) -- (X)node[midway,below] {$\vb{a}_j - \vb{A_j A_i^{-1} a_i}$};
 \end{tikzpicture}
-\caption{AGGIUNGERE UNA CAPTION SENSATA}
+\caption{Rappresentazione schematica delle relazioni fra i vettori}
+\label{fig:palla}
 \end{figure} 
 
-\begin{minipage}{0.3\textwidth}
-$\forall \rm P$ scelto all'interno della circonferenza \\ $ \widehat{PAO} \leq \widehat{TAO} $ 
-\[ \frac{\overline{TO}}{sin( \widehat{TAO}) } = \frac{\overline{AO}}{sin( \widehat{ATO}) } \] 
-Quindi
-\[ sin(\widehat{PAO}) \leq sin( \widehat{TAO})= \frac{\overline{TO}}{\overline{AO}} = \frac{\delta}{4}\]
-\end{minipage} \hfill
-\begin{minipage}{0.6\textwidth}
+Dato che $ \norm{\vb{a}_i} \leq \frac{\delta}{4}\norm{\vb{a}_j}$, se posiziono la coda del vettore $\vb{a}_j - \vb{A_j A_i^{-1} a_i}$ sulla punta del vettore $\vb{a}_j$ cade all'interno di una palla n-dimensionale che ha come centro la punta di $\vb{a}_j$ e raggio $r = \frac{\delta}{4}\norm{\vb{a}_j}$ come da figura \ref{fig:palla} \\
+\newpage
+Per semplificare la fruibilità della sezione seguente di questa dimostrazione utilizziamo la notazione di geometria sintetica come riportato in figura \ref{fig:triangolo3}.
+
+\begin{figure}[h!]
+\centering
 \begin{tikzpicture}
   \def\r{2} % radius
   \def\q{-7} % distance center-external point q = |OQ|
@@ -460,13 +472,26 @@ Quindi
   \fill(X) circle(0.05) node[above=3,right=4] {P};
   \pic [draw, angle radius=4, angle eccentricity=4] {right angle = O--P--Q};
 \end{tikzpicture}
-\end{minipage}
+\caption{Si tracci una circonferenza di centro O e si considerino due punti, uno esterno alla circonferenza A ed uno interno P. Si tracci poi la tangente alla circonferenza dal punto A e si chiami il punto di tangenza T}
+\label{fig:triangolo3}
+\end{figure}
 
-So quindi che 
+
+Comunque venga scelto un punto $ \rm P$ all'interno della circonferenza si ottiene ovviamente $ \widehat{PAO} \leq \widehat{TAO} $. 
+Applicando il teorema dei seni al triangolo $TAO$  si ottiene
+\[ \frac{\overline{TO}}{sin( \widehat{TAO}) } = \frac{\overline{AO}}{sin( \widehat{ATO}) } \]
+Che può essere riscritta come 
 \begin{equation}
+\label{eq:seni}
+sin(\widehat{PAO}) \leq sin( \widehat{TAO})= \frac{\overline{TO}}{\overline{AO}}
+\end{equation}
+
+Trasponendo qusto risultato nel caso di \ref{fig:palla} ed usando \ref{eq:bib1}, si ottiene 
+\begin{equation}
+\label{eq:angle2}
 sin(\angle(\vb{a_j}, \vb{a_j- A_j A_i^{-1} a_i} ) ) \leq \frac{\delta}{4} \Longrightarrow \angle(\vb{a_j}, \vb{a_j- A_j A_i^{-1} a_i} ) \leq \frac{\delta}{4} + o \bigg( \frac{\delta^2}{16} \bigg) \leq \frac{\delta}{2}
 \end{equation}
-E (9) insieme con (8) e $ \angle(\vb{u}, \vb{a}_j) \leq \frac{\delta}{2}$ implica che 
+Mettendo insieme \ref{eq:angle} con \ref{eq:angle2} e \ref{eq:bib1} otteniamo
 \[ \angle (\vb{u, a}) \leq \delta \]
 \end{itemize}
 
@@ -475,25 +500,18 @@ E (9) insieme con (8) e $ \angle(\vb{u}, \vb{a}_j) \leq \frac{\delta}{2}$ implic
 
 
 \begin{theorem}
- Comunque scelta $\alpha \in \Gamma$:  $x \longmapsto \vb{Ax +a} $  tale per cui $m(\vb{A}) \leq \frac{1}{2} $, questa isometria è una traslazione pura 
+ Comunque scelta $\alpha = (\vb{A, a}) \in \Gamma$:  $x \longmapsto \vb{Ax +a} $  tale per cui $m(\vb{A}) \leq \frac{1}{2} $, questa isometria è una traslazione pura, ovvero $\vb{A} = \vb{id}$
 \end{theorem}
 
 \begin{proof}
- Se $m(\vb{A}) = 0 \Longrightarrow A = id \Longrightarrow \alpha$ è una traslazione pura. \\
- 
- 
-\begin{minipage}{0.5\textwidth}
-Fra le isometrie in $\Gamma$ che soddisfano la condizione  $ 0 < m(\vb{A}) \leq \frac{1}{2}$  scelgo quella che ha $\norm{\vb{a}}$ minimo (posso farlo perché vale la condizione (1) sugli elementi di un gruppo cristallografico). \\
-
-So che $m(\vb{A}) > m^{\perp}(\vb{A})$ se  $\vb{A} \neq id$. \\
-$\forall \vb{u} \in E_{\vb{A}}$ vettore unitario, \\ $\epsilon := \frac{1}{8} \bigg( m(\vb{A}) - m^{\perp}(\vb{A}) \bigg)$  \\ed applico il teorema Mini Bieberbach. \\
-\[ \exists \beta \in \Gamma : m(\vb{B}) \leq \epsilon ; \vb{b} \neq 0 ; \angle(\vb{u, b})  \leq \delta \]
-In particolare scelgo $\delta $ in modo da avere $\norm{\vb{b}^{\perp}} \leq \norm{\vb{b}^E}$, posso farlo come da figura. \\
-Fra questi $\beta$ scelgo quello per cui $\norm{\vb{b}}$ è minimo ($\neq 0$, posso farlo per la prima proprietà dei gruppi cristallografici). \\
-Osservo che, se $\beta$ non è una traslazione, allora \\
-$ \norm{\vb{b}} \geq \norm{\vb{a}}$, questo perché $m(\vb{B}) \leq \frac{1}{8}m(\vb{A}) \leq \frac{1}{4}$ e $\alpha$ è stato scelto fra le isometrie in $\Gamma$ con in modo da minimizzare il modulo della componente traslatoria).  
-\end{minipage} \hfill
-\begin{minipage}{0.5\textwidth}
+Se $m(\vb{A}) = 0 \Longrightarrow A = id \Longrightarrow \alpha$ è una traslazione pura. \\
+Fra le isometrie in $\Gamma$ che soddisfano la condizione  $ 0 < m(\vb{A}) \leq \frac{1}{2}$ è possibile scegliere quella che ha $\norm{\vb{a}}$ minimo (questo perché vale la condizione (1) sugli elementi di un gruppo cristallografico). \\
+\'E noto da \ref{diseq:ma} che $m(\vb{A}) > m^{\perp}(\vb{A})$ se  $\vb{A} \neq id$; è quindi possibile scegliere  $\epsilon := \frac{1}{8} \bigg( m(\vb{A}) - m^{\perp}(\vb{A}) \bigg) >0$.
+$E_{\vb{A}}$ è un sottospazio vettoriale di $\mathbb{R}^n$, quindi contiene sicuramente un vettore unitario; chiamiamo tale vettore $\vb{u}$.  ed applichiamo ad esso il teorema Mini Bieberbach con un $\delta >0$, l'$\epsilon >0 $ scelto in precendenza. \\
+\[ \exists \beta = (\vb{B, b}) \in \Gamma : m(\vb{B}) \leq \epsilon ; \vb{b} \neq 0 ; \angle(\vb{u, b})  \leq \delta \]
+In particolare è possibile scegliere $\delta $ in modo da avere $\norm{\vb{b}^{\perp}} \leq \norm{\vb{b}^E}$ come mostrato in figura \ref{fig:ea}. \\
+\begin{figure}[h!]
+\centering
 \begin{tikzpicture}
   \coordinate (O) at (0,0);
   \coordinate (A) at (3,5);
@@ -514,92 +532,116 @@ $ \norm{\vb{b}} \geq \norm{\vb{a}}$, questo perché $m(\vb{B}) \leq \frac{1}{8}m
 		\fill[blue!20] (0,0) -- (-3,5) -- (3,5) -- cycle;
   \end{scope}
 \end{tikzpicture}
-\end{minipage}
-Definisco una nuova isometria $ \tilde{\beta} := [\vb{\alpha,\beta}] \in \Gamma$  \\
-So dal lemma 1.3 e dal lemma1.10 che
+\caption{Comunque scelto un punto in $\mathbb{R}^n$ sono ben definite le distanze di tale punto rispettivamente dal sottospazio $E_{\vb{A}}$ e di $E_{\vb{A}}^{\perp}$, consideriamo la sezione di $\mathbb{R}^n$ con la proprietà che i punti contenuti in essa siano più vicini a $E_{\vb{A}}$. I punti contenuti in questa zona hanno sicuramente  $\norm{\vb{b}^{\perp}} \leq \norm{\vb{b}^E}$. Basta quindi scegliere un $\delta$ in modo che il cono di vettori che formano un angolo $\leq \delta$ con $\vb{u} $ sia completamente contenuto in questa regione}
+\label{fig:ea}
+\end{figure}
+
+Fra questi $\beta$ scegliamo quello per cui $\norm{\vb{b}}$ è minimo ($\neq 0$, posso farlo per la prima proprietà dei gruppi cristallografici). \\
+Osserviamo che, se $\beta$ non è una traslazione, allora $ \norm{\vb{b}} \geq \norm{\vb{a}}$, questo perché $m(\vb{B}) \leq \frac{1}{8}m(\vb{A}) \leq \frac{1}{4}$ e $\alpha$ è stato scelto fra le isometrie in $\Gamma$ con $m \leq \frac{1}{2}$ in modo da minimizzare il modulo della componente traslatoria).  
+
+
+
+
+
+Definisco una nuova isometria $ \tilde{\beta} := [\vb{\alpha,\beta}] = (\vb{\tilde{B}, \tilde{b}})\in \Gamma$  \\
+Si possono ora utilizzare i lemmi \ref{lemma:1} e \ref{lemma:2} per scrivere 
 \[ m(\tilde{B} ) = m[\vb{A,B}] \leq 2m(\vb{A}) m(\vb{B}) \leq 2 \frac{1}{2}m(\vb{B}) = m(\vb{B}) \]
 \[ trans( \tilde{\beta}) = \vb{(A-id)b + (id-[A,B])b + A(id-B)A^{-1}a} = \vb{(A-id)b + r}\]
-Con $\vb{r} = \vb{(id-\tilde{B})b + A(id-B)A^{-1}a}$ e $\tilde{\vb{b}}^{\perp} =  \vb{(A-id)b^{\perp} + r}$.
+Con $\vb{r} = \vb{(id-\tilde{B})b + A(id-B)A^{-1}a}$.
 \begin{itemize}
 \item Se $\beta$  è una translazione $\Longrightarrow \vb{B = id = \tilde{B}} \Longrightarrow \vb{r} = 0$. 
 \item Se $\beta$ non è una translazione $\Longrightarrow \norm{\vb{b}} \geq \norm{\vb{a}}$  e quindi \\
-\[ \norm{\vb{r}} \leq m(\tilde{\vb{B}}) \norm{\vb{b}} + m(\vb{B}) \norm{\vb{a}} \leq \big( m(\tilde{\vb{B}}) + m(\vb{B}) \big) \norm{\vb{b}} \leq 2m(\vb{B})(\vb{b^{E}+ b^{\perp}}) < 4 m(\vb{B}) \norm{\vb{b}^{E}} \leq \frac{1}{2} \big( m(\vb{A}) - m^{\perp}(\vb{A}) \big)\norm{\vb{b}^{E}} \]
+\[ \norm{\vb{r}} \leq m(\tilde{\vb{B}}) \norm{\vb{b}} + m(\vb{B}) \norm{\vb{a}} \leq \big( m(\tilde{\vb{B}}) + m(\vb{B}) \big) \norm{\vb{b}} \leq 2m(\vb{B})(\norm{\vb{b^{E}+ b^{\perp}}}) < 4 m(\vb{B}) \norm{\vb{b}^{E}} \leq \frac{1}{2} \big( m(\vb{A}) - m^{\perp}(\vb{A}) \big)\norm{\vb{b}^{E}} \]
 \end{itemize}
-In entrambi i casi ho che $\norm{\vb{r}} < \frac{1}{2} \big( m(\vb{A}) - m^{\perp}(\vb{A}) \big)\norm{\vb{b}^{E}}$. \\
-Posso scrivere 
+In entrambi risulta $\norm{\vb{r}} < \frac{1}{2} \big( m(\vb{A}) - m^{\perp}(\vb{A}) \big)\norm{\vb{b}^{E}}$. \\
+Per come sono definite le componenti ortogonali si può scrivere
 \[ \tilde{\vb{b}}^{E} -(\vb{A-id) b}^{E} - \vb{r}^{E} = (\vb{A-id) b}^{\perp} + \vb{r}^{\perp} - \tilde{\vb{b}}^{\perp} = 0 \]
-Usando la caratterizzazione $\norm{\vb{b}^{\perp}} \leq \norm{\vb{b}^E}$  ottengo
+Usando la caratterizzazione $\norm{\vb{b}^{\perp}} \leq \norm{\vb{b}^E}$ si ottiene
 \[ \norm{\tilde{\vb{b}}^{\perp}} \leq  m^{\perp}(\vb{A}) \norm{\vb{b}^{\perp}} + \norm{\vb{r}^{\perp}} < m^{\perp}(\vb{A}) \norm{\vb{b}^{E}} + \frac{1}{2} \big( m(\vb{A}) - m(\vb{A}^{\perp}) \big)\norm{\vb{b}^{E}}  \] 
-Sommando a destra ottengo
+Sommando a destra risulta
 \[ \norm{\tilde{\vb{b}}^{\perp}} < \frac{1}{2} \big( m(\vb{A}) + m(\vb{A}^{\perp}) \big) \]
-D'altro canto, utilizzanzo la disuguaglianza triangolare inversa, posso scrivere
-\[ \norm{\vb{b}^{E}} = \norm{(\vb{A-id) b}^{E} + \vb{r}^{E}} \geq \bigg| m(A) \norm{\vb{b}^E} - \norm{\vb{r}}\bigg| > m(\vb{A}) \norm{\vb{b}^E} - \frac{1}{2} \bigg( m(\vb{A}) - m^{\perp}(\vb{A})\bigg)\norm{\vb{b}^E} =  \frac{1}{2} \big( m(\vb{A}) + m(\vb{A}^{\perp}) \big)\]
+D'altro canto, utilizzanzo la disuguaglianza triangolare inversa e la stima sulla norma di $\vb{r}$, si può scrivere
+\[ \norm{\tilde{\vb{b}}^{E} }= \norm{(\vb{A-id) b}^{E} + \vb{r}^{E}} \geq \bigg| m(A) \norm{\vb{b}^E} - \norm{\vb{r}}\bigg| > m(\vb{A}) \norm{\vb{b}^E} - \frac{1}{2} \bigg( m(\vb{A}) - m^{\perp}(\vb{A})\bigg)\norm{\vb{b}^E} =  \frac{1}{2} \big( m(\vb{A}) + m(\vb{A}^{\perp}) \big)\]
 In particolare quindi 
-\[ \norm{\vb{b}^{E}} > \norm{\vb{b}^{\perp}}\]
-So inoltre che 
+\[ \norm{\tilde{\vb{b}}^{E}} > \norm{\tilde{\vb{b}}^{\perp}}\]
+Stimando la norma di $\vb{\tilde{b}}$ si ottiene 
 \[ \norm{\tilde{\vb{b}}} \leq m(\vb{A}) \norm{\vb{b}} + \norm{\vb{r}} < m(\vb{A})\norm{\vb{b}} + \frac{1}{2} \big( m(\vb{A}) - m^{\perp}(\vb{A}) \big)\norm{\vb{b}^{E}} \leq  \norm{\vb{b}} \bigg( \frac{1}{2} + \frac{1}{4}\bigg) < \norm{\vb{b}} \]
-Ho un assurdo perché $\beta$ era stato scelto fra tutti quelli che soddisfavano le condizioni in modo da minimizzare la norma di $b$.
-
-
+Ma questo è assurdo perché $\beta$ era stato scelto fra tutti quelli che soddisfavano le condizioni, che engono soddisfatte anche da $\tilde{\beta}$  in modo da minimizzare la norma di $\vb{b}$.
 \end{proof}
 
 \section{Dimostrazione del primo teorema di Bieberbach}
-
-Posso quindi concludere la dimostrazione del primo teorema di Bieberbach.
-
 \begin{proof}
-Considero la base standard di $\mathbb{R}^N$; se applico ad ognuno dei vettori di tale base il teorema Mini Bieberbach con $\epsilon = \frac{1}{2}$ e $\delta = 1/N \forall N \in \mathbb{N}$, ottengo $n$ successioni di elementi in $\Gamma$ che sono translazioni pure (per il teorema 6.2). 
-Se passo al limite per $N \longrightarrow \infty$ so che ognuna di queste successioni converge ad un elemento in $\Gamma$ \\
- (NON è VEROOOOOOOO!!! come faccio qui? devo far vedere che converge ad una direzione, ma non saprei come farlo. Inoltre come faccio a dire che se tot vettori distano ognuno meno di $\delta $ da un vettore della base standard, allora questi sono linearmente indipendenti? posso fare il limite per n --> infinito? non convergono necessariamente i moduli)
+Essere una base di vettori di $\mathbb{R}^n$ è una condizione aperta, questo significa che, dati ad esempio i vettori della base standard $ e_1, ...e_n$, posso trovare un $\delta >0$  che mi garantisce che, comunque scelti $n $ vettori di $\mathbb{R}^n$ $x_1, .., x_n$ tali che $ \angle(e_i, x_i) \leq \delta   \; \; \forall i = 1, ..., n$, questi $\{x_i \}_{i=1,..,n}$ formano ancora una base di $\mathbb{R}^n$.
+Sceliamo quindi in questo modo un $\delta >0$; fissiamo $\epsilon = \frac{1}{2}$ e con questi valori applichiamo ad ogni elemento della base standard il teorema Mini Biebrerbach; otteniamo così $n$ translazioni in $\Gamma$ linearmente indipendenti. 
 \end{proof}
 
 \chapter{Secondo teorema di Bieberbach}
 
+\section{Reticoli}
 \begin{definition}
 Un reticolo $L$ è un gruppo cristallografico che contiene solo translazioni. \\
-Gli elementi di $L$ possono essere identificati con i vettori di $\mathbb{R}^n$ corrispondenti alla propria componenete di translazione e vengono chiamati punti di reticolo. 
+Gli elementi di un reticolo $n$-dimensionale possono essere identificati con i vettori di $\mathbb{R}^n$ corrispondenti alla loro componenete di translazione e vengono chiamati punti di reticolo. 
 \end{definition}
 
-Dato un elemento $\omega \in L$, per abuso di notazione scriveremo $\omega = trans(\omega) = \vb{w}$. 
-Enuncio il seguente risultato senza disubmostrarlo.
+Dato un elemento $\omega \in L$, per abuso di notazione scriveremo $\omega = (\vb{id, w} = \vb{w}$. 
+Il seguente risultato è enunciato senza dimostrazione 
 \begin{lemma}
-Ogni reticolo $L$ di dimensione $n$ è isomorfo a $\mathbb{Z}^n$. \\
+Ogni reticolo $L$ $n$-dimensionale è isomorfo a $\mathbb{Z}^n$. \\
 Di conseguenza $L$ è abeliano e la distanza minima fra due punti di reticolo coincide con la lunghezza del minimo vettore non nullo in $L$.  
 \end{lemma}
 
 \begin{lemma}
-Sia $L$ un reticolo in $\mathbb{E}^n$ i cui vettori abbiano distanza a coppie $\geq 1$. \\
+\label{lemma:rho}
+Sia $L$ un reticolo $n$-dimensionale i cui vettori abbiano distanza a coppie $\geq 1$. \\
 Sia $\rho >0$, chiamo $P(\rho)$ il numero di punti di reticolo in $L$ con distanza dall'origine $\leq \rho$. 
 \[ P(\rho) \leq (2 \rho +1)^n\]
 \end{lemma}
 \begin{proof}
-Per ogni punto di reticolo a distanza inferiore o uguale di $\rho$ dall'origine posso considerare una palla aperta $n$-dimensionale centrata in esso e di raggio $\frac{1}{2}$. Queste palle sono sicuramente disgiunte in quanto la distanzza fra due punti del reticolo è superiore al doppio dei raggi; sono inoltre tutte contenute nella palla $n$-dimensionale centrata nell'orgine di raggio $ \rho + \frac{1}{2}$. 
-Il volume della palla centrata nell'origine è sicuramente superiore alla somma dei volumi delle singole palle di raggio $\frac{1}{2}$, confrontando i volumi ottengo
-
+Per ogni punto di reticolo a distanza inferiore o uguale di $\rho$ dall'origine si consideri una palla $n$-dimensionale centrata nel punto e di raggio $\frac{1}{2}$. Queste palle sono sicuramente disgiunte in quanto la distanzza fra due punti del reticolo è superiore al doppio dei raggi; sono inoltre tutte completamente contenute nella palla $n$-dimensionale centrata nell'orgine di raggio $ \rho + \frac{1}{2}$. 
+Il volume della palla centrata nell'origine è quindi sicuramente superiore alla somma dei volumi delle singole palle di raggio $\frac{1}{2}$; confrontando i volumi si ottiene
 \[ P(\rho) \bigg(  \frac{1}{2} \bigg) \leq \bigg( \rho + \frac{1}{2} \bigg) \]
 \[ P(\rho) \leq \bigg( 2 \rho + 1 \bigg)\]
 \end{proof}
 
 \begin{lemma}
-Sia $L$ un reticolo in $\mathbb{E}^n$ i cui vettori abbiano distanza a coppie $\geq 1$. \\ Consideriamo un sottospazio lineare di $\mathbb{R}^n$ generato da $k$ vettori $\vb{w}_i \in L$ con $i = 1,... ,k$. \\
+\label{lemma:somma}
+Sia $\{w_i \}_{i=1,...,n}$ una base di $\mathbb{R}^n$. Comunque scelto $\vb{x} \in \mathbb{R}^n$, esistono $k_i, ...; k_n \in \mathbb{Z}$ tali che 
+\[ \norm{\vb{x} - \sum_{i=1}^{n} k_i \vb{w}_i} \leq \frac{1}{2} \sum_{i=1}^{n} \norm{\vb{w_i}} \] 
+\end{lemma}
+
+\begin{proof}
+Dato che $\{w_i \}_{i=1,...,n}$ è base, $\exists a_i \in \mathbb{R}$ tali che 
+\[\vb{x} = \sum_{i=1}^{n} a_i \vb{w_i} \]
+Scegliamo per ogni $i= 1,...,n$ un intero 
+\[ k_i := \begin{cases} 
+\lfloor a_i \rfloor \;  & se \; \; a_i - \lfloor a_i \rfloor \leq \frac{1}{2} \\
+\lceil a_i \rceil \; & altrimenti
+\end{cases}\]
+
+In questo modo 
+\[ \norm{\vb{x} - \sum_{i=1}^{n} k_i \vb{w}_i} = \norm{\sum_{i=1}^{n} \big(a_i - k_i \big)\vb{w}_i} \leq  \frac{1}{2} \sum_{i=1}^{n} \norm{\vb{w_i}}  \]
+\end{proof}
+
+\begin{lemma}
+\label{lemma:somma2}
+Sia $L$ un reticolo $n$-dimensionale i cui vettori abbiano distanza a coppie $\geq 1$. \\ Consideriamo un sottospazio lineare di $\mathbb{R}^n$ generato da $k$ vettori $\vb{w}_i \in L$ con $i = 1,... ,k$. \\
 Se un punto di reticolo $\vb{w} \in L$ non è contenuto in $E$, allora la sua componenete in $E^{\perp}$ è tale che 
 \[ \norm{\vb{w}^{\perp}} \geq \bigg( 3 +  \sum_{i = 1}^{k} \norm{\vb{w}_i} \bigg)^{-n} \]
 \end{lemma}
 
 \begin{proof}
-Sia \hfill \[ N = \left\lfloor
+Sia \[ N := \left\lfloor
 \bigg( 3 +  \sum_{i = 1}^{k} \norm{\vb{w}_i} \bigg)^{n}
-\right\rfloor\] \\
-Suppongo per assurdo che $0 < \norm{\vb{w}^{\perp}}  < \frac{1}{N}$. \\
+\right\rfloor\]
+Si supponga per assurdo che $0 < \norm{\vb{w}^{\perp}}  < \frac{1}{N}$. \\
 In questa situazione i vettori $j \vb{w}$ con $j = 0, ..., N$ hanno distanze da $E$ inferiori a 1. \\
-Aggiungendo ad ognuno di questi una combinazione lineare di ${\{\vb{w}_i\}}_{1 \leq i \leq k }$ posso modificarne la componenete in $E$ senza andare a toccare la componente perpendicolare. \\
-In particolare scelgo la combinazione in modo che $j \vb{w}^{E} \leq \frac{1}{2} \bigg( \sum_{i = 1}^{k} \norm{\vb{w}_i} \bigg)$     $\forall j = 0, ..., N$. 
-Posso farlo in quanto (???????????????????????????????????????? devo rimanere nel reticolo, quindi dovrei fare combinazioni lineari intere, se fossero combinazioni lineari generiche sarebbe immediato; come lo faccio vedere?). \\
-Questi $N+1$ punti di reticolo hanno quindi una distanza dall'origine inferiore a alla somma delle loro distanze da $E$ ed $E^{\perp}$, in quanto l'origine appartiene ad entrambi i sottospazi.
+Aggiungendo ad ognuno di questi una combinazione lineare di ${\{\vb{w}_i\}}_{1 \leq i \leq k }$ posso modificarne la componenete in $E$ senza andare a toccare la componente perpendicolare; i vettori così ottenuti rimangono all'interno del reticolo. \\
+In particolare, grazie al lemma \ref{lemma:somma}, è possibile scegliere $\forall j = 0, ..., N$ la combinazione in modo che \[ j \vb{w}^{E} \leq \frac{1}{2} \bigg( \sum_{i = 1}^{k} \norm{\vb{w}_i} \bigg)  \]  
+Si ottengono in questo modo $N+1$ punti di reticolo ad una distanza dall'origine inferiore a alla somma delle loro distanze da $E$ ed $E^{\perp}$, in quanto l'origine appartiene ad entrambi i sottospazi.
 \[ d(j\vb{w}, \underline{0} ) \leq 1 + \frac{1}{2} \bigg( \sum_{i = 1}^{k} \norm{\vb{w}_i} \bigg) \]
-Questa è una contraddizione al lemma (8.2) in quanto ho 
+Questa è una contraddizione al lemma \ref{lemma:rho} in quanto 
 \[ N+1 \leq P \Bigg( 1 + \frac{1}{2} \bigg( \sum_{i = 1}^{k} \norm{\vb{w}_i} \bigg) \Bigg)  \leq \Bigg( 3 +  \sum_{i = 1}^{k} \norm{\vb{w}_i} \Bigg)^{-n} \leq  \frac{1}{N} \]
-E non esistono $N \in \mathbb{N}^{+}$ che mi soddisfino questa disequazione.
+E non esistono $N \in \mathbb{N}$ che soddisfano questa disequazione.
 \end{proof}
 
 
@@ -610,82 +652,123 @@ Sia $\Gamma$ un gruppo cristallografico $n$-dimensionale, definisco $L(\Gamma)<G
 La precedente è una buona definizione in quanto la composizione di due translazioni è una translazione. 
 
 \begin{lemma}
-Comunque scelte $\alpha \in \Gamma$ e $\vb{w} \in L(\Gamma) \Longrightarrow \vb{Aw} \in L(\Gamma)$ 
+\label{lemma:aw}
+Comunque scelte $\alpha = (\vb{A, a}) \in \Gamma$ e $\vb{w} \in L(\Gamma) \Longrightarrow \vb{Aw} \in L(\Gamma)$ 
 \end{lemma}
 
 \begin{proof}
-$w = trans(\omega)$ con $\omega \in L(\Gamma)$.
-Considero $\alpha \omega \alpha^{-1} \in \Gamma$; questa è una translazione di vettore $\vb{Aw}$. Quindi $\vb{Aw} \in L(\Gamma)$
+$w = trans(\omega)$ con $\omega = (\vb{id, w}	) \in L(\Gamma)$. 
+Considero $\alpha \omega \alpha^{-1} \in \Gamma$; 
+\[ \begin{split}
+( \alpha \omega \alpha^{-1} )(\vb{x}) & = ( \alpha \omega)(\vb{A^{-1}(x-a)}) = \\
+& =  ( \alpha  )(\vb{A^{-1}(x-a)} + \vb{w}) = \\
+& = \vb{AA^{-1}(x-a)} + \vb{Aw} + \vb{a} = \vb{x} + \vb{Aw} 
+\end{split}\] 
+Questa è una translazione di vettore $\vb{Aw}$, quindi $\vb{Aw} \in L(\Gamma)$
 \end{proof}
 
+
+\section{Gruppi cristallografici normali}
+
 \begin{definition}
-Un gruppo cristallografico $\Gamma$ è detto normale se:
+Un gruppo cristallografico $n$-dimensionale $\Gamma$ è detto normale se:
 \begin{enumerate}
 \item i vettori che sono contenuti in $L(\Gamma)$ hanno distanze a coppie $\geq 1$
 \item $L(\Gamma)$ contiene $n$ vettori unitari linearmente indipendenti
 \end{enumerate}
 \end{definition}
 
+
 \begin{theorem}
-Ogni gruppo cristallografico $\Gamma$ è isomorfo ad un gruppo cristallografico normale
+Ogni gruppo cristallografico $n$-dimensionale $\Gamma$ è isomorfo ad un gruppo cristallografico normale $n$-dimensionale.
 \end{theorem}
 
 \begin{proof}
-Per la proprietà (1) dei gruppi cristallografici so che esiste un vettore in $L(\Gamma)$ di lunghezza minima. Scalo per omotetia tutti i vettori in $\Gamma$ in modo da avere tale vettore di norma $1$. \\
-Suppongo per induzione che $L(\Gamma)$ soddisfi la condizione (1) e che $\exists \vb{w}_i \in L(\Gamma)$ con $1 \leq i \leq k < n $ linearmente indipendenti tali che $\norm{\vb{w}_i} = 1 $.  
-Chiamo $E$ il sottospazio vettoriale di dimensione $k$ di $\mathbb{R}^n$ generato da essi.\\
-Voglio dimostrare che esiste un gruppo $\Gamma ' \cong \Gamma$ tale che $L(\Gamma')$ soddisfi la condizione (1) e che contenga $k+1$ vettori linearmente indipendenti. \\
+Per la proprietà di discretezza dei gruppi cristallografici esiste un vettore in $L(\Gamma)$ di lunghezza minima. Scaliamo per omotetia (che è un isomorfismo) $\Gamma$ in modo da avere tale vettore di norma $1$. \\ 
+
+Suponiamo per induzione che $L(\Gamma)$ soddisfi la condizione (1) della tesi e che $\exists \vb{w}_i \in L(\Gamma)$ con $1 \leq i \leq k < n $ linearmente indipendenti tali che $\norm{\vb{w}_i} = 1 $.  
+Chiamiamo $E_k$ il sottospazio vettoriale di dimensione $k$ di $\mathbb{R}^n$ generato da essi.\\
+Vogliamo dimostrare che esiste un gruppo $\Gamma ' \cong \Gamma$ tale che $L(\Gamma')$ soddisfi la condizione (1) e che contenga $k+1$ vettori linearmente indipendenti. 
 \begin{itemize}
-\item Se $\exists \alpha \in \Gamma $ e $1 \leq i \leq k: \vb{Aw}_i \notin E$ allora, grazie al lemma 2.0.4 so che $\vb{Aw}_i \in L(\Gamma)$, inoltre $\norm{\vb{Aw}_i} = 1$ dato che $A \in O(n)$, quindi $\vb{Aw}_i$ è già il $k+1$-esimo vettore cercato.
+\item Se $\exists \alpha = (\vb{A, a}) \in \Gamma $ e $1 \leq i \leq k: \vb{Aw}_i \notin E_k$ allora, grazie al lemma \ref{lemma:aw} so che $\vb{Aw}_i \in L(\Gamma)$, inoltre $\norm{\vb{Aw}_i} = 1$ dato che $A \in O(n)$, quindi $\vb{Aw}_i$ è già il $k+1$-esimo vettore cercato.
 \item Se, al contrario, tutte le componenti di rotazione delle isometrie in $\Gamma$ lasciano $E$ invariato, allora queste lasciano invariato anche $E^{\perp}$. \\
-Definisco la trasformazione affine 
-\[ \Phi_{\nu} (x^E + x^{\perp} )=  x^E + \nu x^{\perp} , \; \nu > 0  \; \forall x \in \mathbb{R}^n\]
-Scelto comunque $\alpha$ con componente rotatoria $\vb{A}$, dato che le componenti rotatorie di $\Gamma$ lasciano invariate $E$ ed $E^{\perp}$ vale
+Definisco la trasformazione affine data da
+\[ \Phi_{\nu} (x^E + x^{\perp} )=  x^E + \nu x^{\perp} , \; \nu > 0  \; \; \; \; \forall x \in \mathbb{R}^n\]
+Scelto comunque $\alpha = (\vb{A,a}) \in Isom(\mathbb{R}^n)$ vale
 \[ ( \Phi_{\nu}  \circ \vb{A})(\vb{x}) = \Phi_{\nu} (\vb{Ax})  = \Phi_{\nu} (\vb{Ax}^E +\vb{Ax }^{\perp})  = \vb{Ax}^E +\nu \vb{Ax }^{\perp} = \vb{Ax}^E +\vb{A(\nu x) }^{\perp} = \vb{A} ( \vb{x}^E +\nu \vb{x }^{\perp})  = ( \vb{A} \circ \Phi_{\nu} ) (x)\]
-Quindi la funzione affine $\Phi_{\nu}$ commuta con la parte rotazionale delle isometrie in $\Gamma$. \\
-Definisco il gruppo $\Gamma_{\nu} := \Phi_{\nu} \Gamma \Phi_{\nu}^{-1} < Aff(\mathbb{R}^n)$. Questo è coniugato a $\Gamma$ nel gruppo affine (ed è quindi isomorfo a $\Gamma$), ma è effettivamente anche un gruppo di isometrie in quanto 
+Quindi la funzione affine $\Phi_{\nu}$ commuta con la parte rotazionale delle isometrie. \\
+Definiamo il gruppo $\Gamma_{\nu} := \Phi_{\nu} \Gamma \Phi_{\nu}^{-1} < Aff(\mathbb{R}^n)$. Questo è coniugato a $\Gamma$ nel gruppo affine (ed è quindi isomorfo a $\Gamma$), ma è effettivamente anche un gruppo di isometrie in quanto 
 \[ \forall \alpha_{\nu} \in \Gamma_{\nu} \; \exists \alpha \in \Gamma : \; \; \alpha_{\nu} =  \Phi_{\nu} \alpha \Phi_{\nu}^{-1}  \]
 \[ rot( \alpha_{\nu}) = rot(\Phi_{\nu} \alpha \Phi_{\nu}^{-1}) = rot(\alpha) \in O(n)\]
 
-Se $\beta_{\nu} \in L(\Gamma_{\nu}) $ con  $ \beta_{\nu} = \Phi_{\nu} \beta \Phi_{\nu}^{-1} \Longrightarrow rot(\beta_{\nu}) = rot(\Phi_{\nu} \beta \Phi_{\nu}^{-1}) = rot(\beta) = \vb{id}  \Longrightarrow \beta \in L(\Gamma)$. \\ Scrivo $\beta \vb{x} = \vb{x} + \vb{b}  $. 
+Se $\beta_{\nu} \in L(\Gamma_{\nu}) $ con  $ \beta_{\nu} = \Phi_{\nu} \beta \Phi_{\nu}^{-1}  $ e $\beta = (\vb{B, b}) $ $ \Longrightarrow rot(\beta_{\nu}) = rot(\Phi_{\nu} \beta \Phi_{\nu}^{-1}) = rot(\beta) = \vb{id}  \Longrightarrow \beta \in L(\Gamma)$. \\
 \[\beta_{\nu} \vb{x} = (\Phi_{\nu} \beta \Phi_{\nu}^{-1})(\vb{x}) = (\Phi_{\nu} \beta \Phi_{\nu}^{-1})(\vb{x}^E + \vb{x}^{\perp}) =  
  (\Phi_{\nu} \beta)(\vb{x}^E + \frac{1}{\nu}\vb{x}^{\perp}) =  \Phi_{\nu}(\vb{x}^E + \frac{1}{\nu}\vb{x}^{\perp} + \vb{b}) = \vb{x}^E + \vb{x}^{\perp} + \Phi_{\nu}(\vb{b}) \] 
 Quindi  $L(\Gamma_{\nu})  = L(\Phi_{\nu} \Gamma \Phi_{\nu}^{-1}) = \Phi_{\nu}(L(\Gamma))$. \\
-A questo punto se io considero $\nu >0 $ e suppongo che i vettori in  $L(\Gamma_{\nu})$ abbiano distanze a coppie $\geq 1$, posso applicare il teorema 2.0.3 utilizzando il sottospazio $E$. So quindi che $\forall \vb{w}_{\nu} = \in L(\Gamma_{\nu})$ tale che $\vb{w}_{\nu}^{\perp} \neq \vb{0}$ vale 
+A questo punto supponiamo per assurdo che $\forall \nu >0 $ i vettori in  $L(\Gamma_{\nu})$ abbiano distanze a coppie $\leq 1$. Possiamo applicare il lemma  \ref{lemma:somma2} utilizzando il sottospazio $E_k$. Otteniamo che, $\forall \vb{w}_{\nu} = \in L(\Gamma_{\nu})$ tale che $\vb{w}_{\nu}^{\perp} \neq \vb{0}$,  vale 
 \[ \norm{\vb{w}_{\nu}^{\perp}} \geq (3 + k)^{-n}\]
-So inoltre che $\exists \vb{w} \in \mathbb{R}^n : \vb{w}_{\nu} = \Phi_{\nu}(\vb{w})$, quindi posso scrivere
-\[ \norm{\vb{w}_{\nu}^{\perp}} = \norm{\Phi_{\nu}(\vb{w})^{\perp}} = \norm{ (\vb{w}^{E} + \nu \vb{w}^{\perp})^{\perp}} = \norm{\nu \vb{w}^{\perp}} = \nu \norm{\vb{w}^{\perp}}\geq \frac{1}{(3 + k)^{n}} \]
-Se scelgo $\nu$ molto piccolo, la disuguaglianza precedente non vale più, e di conseguenza non è vero che i vettori in  $L(\Gamma_{\nu})$ hanno distanze a coppie $\geq 1$. Esiste quindi un $\nu' > 0 $ minimo tale che la condizione (1) della definizione di gruppo cristallografico normale vale in $\Gamma_{\nu '}$.  \\
+\'E inoltre noto che $\exists \vb{w} \in \mathbb{R}^n : \vb{w}_{\nu} = \Phi_{\nu}(\vb{w})$, quindi posso scrivere
+\begin{equation}
+\label{eq:nu}
+\norm{\vb{w}_{\nu}^{\perp}} = \norm{\Phi_{\nu}(\vb{w})^{\perp}} = \norm{ (\vb{w}^{E} + \nu \vb{w}^{\perp})^{\perp}} = \norm{\nu \vb{w}^{\perp}} = \nu \norm{\vb{w}^{\perp}}\geq \frac{1}{(3 + k)^{n}}
+\end{equation}
+
+Se si sceglie $\nu$ molto piccolo, la disuguaglianza \ref{eq:nu}  non vale; di conseguenza non è vero che i vettori in  $L(\Gamma_{\nu})$ hanno distanze a coppie $\leq 1$ $\forall \nu >0$. Se invece $\nu = 1 $, sicuramente vale la condizione (1) perché in quel caso $L(\Gamma_{\nu}) = L(\Gamma $. 
+Definiamo 
+\[ \nu' := \inf \{\nu >0 | \textrm{la condizione 1 vale in }  L(\Gamma_{\nu}) \} \]
+Sicuramente $0 < \nu' \leq 1$. Fissato $\vb{x} \in \mathbb{R}^n$,$|Phi_{\nu}(\vb{x}) $ è una funzione continua in $\nu$. 
+
+
+
+
+
+Esiste quindi un $\nu' > 0 $ minimo tale che la condizione (1) della definizione di gruppo cristallografico normale vale in $\Gamma_{\nu '}$.  \\
 Dato che la trasformazione affine $\Phi_{\nu '}$ mantiene fissi tutti gli elementi $E$, il vettore più corto che si trova in $L(\Gamma_{\nu'}) - E  = \Phi_{\nu'}(L(\Gamma)) - E = \Phi_{\nu'}(L(\Gamma) - E)$ ha norma $1$ (PERCHé????????????????) \\
 \end{itemize}
 Quindi ho trovato  $\Gamma_{\nu'} \cong \Gamma$ che contiene $k+1$ vettori unitari linearmente indipendenti ed ho mostrato che $\Gamma_{\nu'}$ è un gruppo cristallografico normale.  \\
 La dimostrazione si conclude per induzione. 
 \end{proof}
 
-\begin{theorem}
-Ogni gruppo cristallografico normale è unicamente caratterizzato da una tabella di gruppo 
-\end{theorem}
-
-\begin{proof}
-Sia $\Gamma$ il grupo cristallografico normale, siano fissati $n$ vettori $\vb{w}_1, ... \vb{w}_n \in L(\Gamma) $ tali che siano linearmente indipendenti e $\norm{\vb{w}_i} = 1  \; \; \forall i = 1, ..., n$.  \\
-Considero il sottoreticolo  di $L(\Gamma)$
-\[ L = \bigg\{ \sum_{i = 1}^{n} m_i \vb{w}_i \bigg| m_i \in \mathbb{Z}, i = 1, ..., n \bigg\} \]
-$L$ è ovviamente un sottogruppo di $\Gamma$, faccio il quoziente $\quot{\Gamma}{L} $; da ognuno degli elementi di questo quoziente scelgo un rappresentante $\omega$ la cui componente translazionale $\vb{w} $ sia tale che 
-\[ \norm{\vb{w}} \leq \frac{1}{2} \bigg( \sum_{i = 1}^{n} \norm{ \vb{w}_i)} \bigg) = \frac{n}{2}\]  
-Per la prima proprietà dei gruppi cristallografici esistono solo un numero finito di questi rappresentanti, li chiamo $\omega_{n+1}, ... , \omega_N$. \\
-Adesso $\forall \alpha \in \Gamma$, questo può essere scritto come 
-\[ \alpha = \bigg( \sum_{i = 1}^{n} m_i \vb{w}_i \bigg) \omega_{\nu} \; \; \; \; n+1 \leq \nu \leq N\]
-Se considero $\omega_i \in \Gamma$ con $i=1, ...,n$ come le translazioni di vettori $w_i \; \; i=1, ...,n$, posso caratterizzare unicamente la struttura di gruppo di $\Gamma$ a meno di isomorfismo come 
-\begin{equation}
-	 \omega_j \omega_k = \bigg( \sum_{i = 1}^{n} m_{ijk} \vb{w}_i\bigg) \omega_{\nu (j,k)}      \; \; \; \forall j,k =1, ...,N 
-\end{equation}
-$\Gamma$  è quindi unicamente determinato (a meno di isomorfismo) da $N, \omega_{\nu (j,k)}$ e $m_{ijk} \in \mathbb{Z}$.
-
-\end{proof}
-
-\begin{theorem}
-I valori assoluti di $N, \omega_{\nu (j,k)}$ e $m_{ijk}$ sono maggiorati da un intero che dipende solo dalla dimensione $n$ dello spazio euclideo.
-\end{theorem}
-	
+%\begin{theorem}
+%Ogni gruppo cristallografico normale è unicamente caratterizzato da una tabella di gruppo 
+%\end{theorem}
+%
+%\begin{proof}
+%Sia $\Gamma$ il grupo cristallografico normale, siano fissati $n$ vettori $\vb{w}_1, ... \vb{w}_n \in L(\Gamma) $ tali che siano linearmente indipendenti e $\norm{\vb{w}_i} = 1  \; \; \forall i = 1, ..., n$.  \\
+%Considero il sottoreticolo  di $L(\Gamma)$
+%\[ L = \bigg\{ \sum_{i = 1}^{n} m_i \vb{w}_i \bigg| m_i \in \mathbb{Z}, i = 1, ..., n \bigg\} \]
+%$L$ è ovviamente un sottogruppo di $\Gamma$, faccio il quoziente $\quot{\Gamma}{L} $; da ognuno degli elementi di questo quoziente scelgo un rappresentante $\omega$ la cui componente translazionale $\vb{w} $ sia tale che 
+%\[ \norm{\vb{w}} \leq \frac{1}{2} \bigg( \sum_{i = 1}^{n} \norm{ \vb{w}_i)} \bigg) = \frac{n}{2}\]  
+%Per la prima proprietà dei gruppi cristallografici esistono solo un numero finito di questi rappresentanti, li chiamo $\omega_{n+1}, ... , \omega_N$. \\
+%Adesso $\forall \alpha \in \Gamma$, questo può essere scritto come 
+%\[ \alpha = \bigg( \sum_{i = 1}^{n} m_i \vb{w}_i \bigg) \omega_{\nu} \; \; \; \; n+1 \leq \nu \leq N\]
+%Se considero $\omega_i \in \Gamma$ con $i=1, ...,n$ come le translazioni di vettori $w_i \; \; i=1, ...,n$, posso caratterizzare unicamente la struttura di gruppo di $\Gamma$ a meno di isomorfismo come 
+%\begin{equation} \label{eq:1}
+%	 \omega_j \omega_k = \bigg( \sum_{i = 1}^{n} m_{ijk} \vb{w}_i\bigg) \omega_{\nu (j,k)}      \; \; \; \forall j,k =1, ...,N 
+%\end{equation}
+%$\Gamma$  è quindi unicamente determinato (a meno di isomorfismo) da $N, \omega_{\nu (j,k)}$ e $m_{ijk} \in \mathbb{Z}$.
+%
+%\end{proof}
+%
+%\begin{lemma}
+%I valori assoluti di $N, \nu (j,k)$  e $m_{ijk}$ sono maggiorati da un intero che dipende solo dalla dimensione $n$ dello spazio $\mathbb{E}^n$.
+%\end{lemma}
+%
+%\begin{proof}
+%E' necessario distinguere il caso in cui $n = 1$ dal caso in cui $n > 1$. \\
+%\begin{itemize}
+%\item Se $n = 1$, allora la tabella di gruppo \ref{eq:1} si può in realtà scrivere come 
+%\[ \omega_j \omega_k =  m_{1jk} \vb{w}_1 \omega_{\nu (j,k)}      \; \; \; \forall j,k =1, ...,N \]
+%Il vettore $\vb{w}_1$ è unitario per definizione e $\norm{ trans(\omega_{\nu (j,k)} } \leq \frac{1}{2}$. \\
+%Se considero la translazione data da $\omega_j \omega_k \omega_{\nu (j,k)}^{-1}$, questa è caratterizzata da un vettore in $\mathbb{R}^n$ di norma $\leq \frac{3}{2}$.
+%\end{itemize}
+%
+%
+%
+%Considero la translazione data da 
+%\[\omega_j \omega_k \omega_{\nu (j,k)}^{-1}  =  \sum_{i = 1}^{n} m_{ijk} \vb{w}_i \]
+%Le comoponenti di translazione $\omega_j$ e $  \omega_k $  hanno modulo unitario, mentre il vettore 
+%\end{proof}
+%	
 
 \end{document}
