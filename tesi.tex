@@ -1,4 +1,4 @@
-\documentclass[a4paper]{book}
+\documentclass[a4paper,11pt,openright,twoside	]{book}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage[italian]{babel}
@@ -7,8 +7,27 @@
 \usepackage{amssymb}
 \usepackage{amsthm}
 \usepackage{physics}
+\usepackage{lmodern}
+\usepackage{latexsym}
+\usepackage{setspace}
+\usepackage{lmodern}
+\usepackage{latexsym}
+\usepackage{amsthm}
+\usepackage{a4}
+\usepackage{listings}
+\usepackage{color} %red, green, blue, yellow, cyan, magenta, black, white
+\usepackage{graphicx}
+\usepackage{xifthen}
+\usepackage{bm}
+\usepackage{subfigure}
+\usepackage{color}
+\usepackage{eucal}
+\usepackage{amscd}
+\usepackage{mathtools}
+\usepackage{array}
+\usepackage{float}
 \usepackage{tikz}
-\usepackage{ wasysym }
+\usepackage{wasysym}
 \usepackage{caption}
 \usepackage[justification=centering]{caption}
 \usetikzlibrary{backgrounds}
@@ -44,8 +63,7 @@
 
 \chapter*{Introduzione e motivazioni}
 
-In occasione del secondo Congresso internazionale dei matematici a Parigi, tenutosi nel 1900,  David Hilbert propose una conferenza dal titolo “Mathematische Probleme” in cui presentò un elenco di 23 problemi all'epoca irrisolti. Lo spirito della conferenza era quello di fare il punto dello stato dell'arte della matematica ed elencare quelle che, secondo il famoso matematico, sarebbero state le domande più importanti del secolo.  \\
-\begin{quote}
+In occasione del secondo Congresso internazionale dei matematici a Parigi, tenutosi nel 1900,  David Hilbert propose una conferenza dal titolo “Mathematische Probleme” in cui presentò un elenco di 23 problemi all'epoca irrisolti. Lo spirito della conferenza era quello di fare il punto dello stato dell'arte della matematica ed elencare quelle che, secondo il famoso matematico, sarebbero state le domande più importanti del secolo. \begin{quote}
 Chi di noi – iniziò Hilbert – non vorrebbe sollevare il velo sotto cui sta nascosto il futuro, per gettare uno sguardo sui prossimi progressi della nostra scienza e sui segreti del suo sviluppo durante i secoli venturi? Quali saranno gli speciali obiettivi a cui mireranno le più insigni menti matematiche delle generazioni future? Quali nuovi metodi e quali nuovi risultati scopriranno i nuovi secoli, nell’ampio e ricco campo del pensiero umano?
 \end{quote}
 Il diciottesimo problema di Hilbert chiedeva
@@ -571,8 +589,8 @@ Ma questo è assurdo perché $\beta$ era stato scelto fra tutti quelli che soddi
 
 \section{Dimostrazione del primo teorema di Bieberbach}
 \begin{proof}
-Essere una base di vettori di $\mathbb{R}^n$ è una condizione aperta, questo significa che, dati ad esempio i vettori della base standard $ e_1, ...e_n$, posso trovare un $\delta >0$  che mi garantisce che, comunque scelti $n $ vettori di $\mathbb{R}^n$ $x_1, .., x_n$ tali che $ \angle(e_i, x_i) \leq \delta   \; \; \forall i = 1, ..., n$, questi $\{x_i \}_{i=1,..,n}$ formano ancora una base di $\mathbb{R}^n$.
-Sceliamo quindi in questo modo un $\delta >0$; fissiamo $\epsilon = \frac{1}{2}$ e con questi valori applichiamo ad ogni elemento della base standard il teorema Mini Biebrerbach; otteniamo così $n$ translazioni in $\Gamma$ linearmente indipendenti. 
+Essere una base di vettori di $\mathbb{R}^n$ è una condizione aperta, questo significa che, dati ad esempio i vettori della base standard $ e_1, ...e_n$, è possibile trovare un $\delta >0$  tale che, comunque scelti $n $ vettori di $\mathbb{R}^n$ $x_1, .., x_n$ tali che $ \angle(e_i, x_i) \leq \delta   \; \; \forall i = 1, ..., n$, questi $\{x_i \}_{i=1,..,n}$ formano ancora una base di $\mathbb{R}^n$.
+Scegliamo quindi in questo modo un $\delta >0$; fissiamo $\epsilon = \frac{1}{2}$ e con questi valori applichiamo ad ogni elemento della base standard il teorema Mini Biebrerbach; otteniamo così $n$ translazioni in $\Gamma$ linearmente indipendenti. 
 \end{proof}
 
 \chapter{Secondo teorema di Bieberbach}
@@ -583,7 +601,7 @@ Un reticolo $L$ è un gruppo cristallografico che contiene solo translazioni. \\
 Gli elementi di un reticolo $n$-dimensionale possono essere identificati con i vettori di $\mathbb{R}^n$ corrispondenti alla loro componenete di translazione e vengono chiamati punti di reticolo. 
 \end{definition}
 
-Dato un elemento $\omega \in L$, per abuso di notazione scriveremo $\omega = (\vb{id, w} = \vb{w}$. 
+Dato un elemento $\omega \in L$, per abuso di notazione scriveremo $\omega = (\vb{id, w} ) = \vb{w}$. 
 Il seguente risultato è enunciato senza dimostrazione 
 \begin{lemma}
 Ogni reticolo $L$ $n$-dimensionale è isomorfo a $\mathbb{Z}^n$. \\
@@ -738,21 +756,19 @@ Dato che i vettori in $E_k \cap L(\Gamma_{\nu'})$ sono rimasti uguali alle loro 
 Tuttavia $\nu \nu'< \nu'$ e questa è una contraddizione per la scelta minimale di $\nu'$.
 In particolare quindi vale $\norm{\vb{w_0}} = 1$. 
 \end{itemize}
-Quindi ho trovato  $\Gamma_{\nu'} \cong \Gamma$ che contiene $k+1$ vettori unitari linearmente indipendenti ed ho mostrato che $\Gamma_{\nu'}$ è un gruppo cristallografico normale.  \\
+Quindi  $\Gamma_{\nu'} \cong \Gamma$ contiene $k+1$ vettori unitari linearmente indipendenti e $\Gamma_{\nu'}$ è un gruppo cristallografico normale.  
 La dimostrazione si conclude per induzione su k. 
 \end{proof}
-
-SON ARRIVAT A CORREGGERE FINO A QUIIIIIIIIIIIIIIIIIIIIIIII
 
 \begin{theorem}
 Ogni gruppo cristallografico normale è unicamente caratterizzato da una tabella di gruppo 
 \end{theorem}
 
 \begin{proof}
-Sia $\Gamma$ un gruppo cristallografico $n$-dimensionale normale;	 siano fissati $n$ vettori $\vb{w}_1, ... \vb{w}_n \in L(\Gamma) $ linearmente indipendenti ed unitari. \\
+Sia $\Gamma$ un gruppo cristallografico $n$-dimensionale normale;	 applicando il primo teorema di Bieberbach siano fissati $n$ vettori $\vb{w}_1, ... \vb{w}_n \in L(\Gamma) $ linearmente indipendenti ed unitari. \\
 Consideriamo il sottoreticolo  di $L(\Gamma)$ dato da 
 \[ L = \bigg\{ \sum_{i = 1}^{n} m_i \vb{w}_i \bigg| m_i \in \mathbb{Z}, i = 1, ..., n \bigg\} \]
-$L$ è ovviamente un sottogruppo commutativo di $\Gamma$, valutiamo il quoziente $\quot{\Gamma}{L} $; da delle classi laterali destre di questo quoziente è possibile scegliere un rappresentante $\omega$ la cui componente translazionale $\vb{w} $ sia tale che 
+$L$ è ovviamente un sottogruppo commutativo di $\Gamma$, valutiamo il quoziente $\quot{\Gamma}{L} $; da ognuna delle classi laterali destre di questo quoziente è possibile scegliere un rappresentante $\omega$ la cui componente translazionale $\vb{w} $ sia tale che 
 \[ \norm{\vb{w}} \leq \frac{1}{2} \bigg( \sum_{i = 1}^{n} \norm{ \vb{w}_i)} \bigg) = \frac{n}{2}\]  
 Per la prima proprietà dei gruppi cristallografici esistono solo un numero finito di questi rappresentanti, li chiamo $\omega_{n+1}, ... , \omega_N$. \\
 Adesso $\forall \alpha \in \Gamma$, questo può essere scritto come 
@@ -770,19 +786,32 @@ I valori assoluti di $N, \nu (j,k)$  e $m_{ijk}$ sono maggiorati da un intero ch
 \end{lemma}
 
 \begin{proof}
-E' necessario distinguere il caso in cui $n = 1$ dal caso in cui $n > 1$. \\
+E' immediato affermare che $\nu (j,k) \leq N$. \\
+Per ottenere una stima dei moduli di $m_{ijk}$ è necessario distinguere il caso in cui $n = 1$ dal caso in cui $n > 1$. \\
 \begin{itemize}
 \item Se $n = 1$, allora la tabella di gruppo \ref{eq:1} si può in realtà scrivere come 
 \[ \omega_j \omega_k =  m_{1jk} \vb{w}_1 \omega_{\nu (j,k)}      \; \; \; \forall j,k =1, ...,N \]
-Il vettore $\vb{w}_1$ è unitario per definizione e $\norm{ trans(\omega_{\nu (j,k)} } \leq \frac{1}{2}$. \\
-Se considero la translazione data da $\omega_j \omega_k \omega_{\nu (j,k)}^{-1}$, questa è caratterizzata da un vettore in $\mathbb{R}^n$ di norma $\leq \frac{3}{2}$.
+Il vettore $\vb{w}_1$ è unitario per definizione e $\norm{ trans(\omega_{\nu (j,k)} ) } \leq \frac{1}{2}$. \\
+Se considero la translazione data da $\omega_j \omega_k \omega_{\nu (j,k)}^{-1}$, questa è caratterizzata da un vettore in $\mathbb{R}^n$ di norma $\leq \frac{5}{2}$. In particolare, vale 
+\[ \norm{m_{1jk} \vb{w}_1 } =  \norm{m_{1jk}} \leq \frac{5}{2} \] 
+\item Se $n>1$, consideriamo l'isometria data da 
+\[  \omega_j \omega_k \omega^{-1}_{\nu (j,k)} = \bigg( \sum_{i = 1}^{n} m_{ijk} \vb{w}_i\bigg)      \; \; \; \forall j,k =1, ...,N \]
+Questa è una translazione ed il vettore associato ha lunghezza minore di $ \frac{3n}{2}$ in quanto le comoponenti di translazione di $\omega_j$ e $  \omega_k $  hanno modulo unitario, mentre il vettore $trans(\omega^{-1}_{\nu (j,k)}) $ ha norma $\leq \frac{1}{2}$  per com'è stato scelto. 
+Si consideri adesso, $\forall i = 1,...,n$ il sottospazio vettoriale $E_i$ generato da $ \{ \vb{w}_j \}_{i \neq j}$. Otteniamo quindi 
+\begin{equation}
+\label{eq:mijk}
+\norm{m_{ijk} \vb{w}_i^{\perp}}  \leq \frac{3n}{2} \; \; \; \; \forall i = 1, ---, n
+\end{equation}
+Applicando il lemma \ref{lemma:somma2} al sottospazio $E_i$ e combinando con la disequazione precedente si ottiene 
+\begin{equation}
+\norm{m_{ijk} } \leq \frac{3n}{2} (n+2)^{n}
+\end{equation}
 \end{itemize}
-
-
-
-Considero la translazione data da 
-\[\omega_j \omega_k \omega_{\nu (j,k)}^{-1}  =  \sum_{i = 1}^{n} m_{ijk} \vb{w}_i \]
-Le comoponenti di translazione $\omega_j$ e $  \omega_k $  hanno modulo unitario, mentre il vettore 
+Concentriamoci adesso sulla stima di $N$. \\
+Dato che i vettori $\vb{w}_i $ con $i=1,...,n$ sono base unitaria di $\mathbb{R}^n$ ;  $ \forall \alpha  = (\vb{A,a}) \in \Gamma$, $A$ è unicamente determinata da i vettori $Aw_i$ con $i=1,...,n$. Grazie al lemma \ref{lemma:aw} sappiamo che ognuna di queste immagini $Aw_i$ è un vettore unitario in $L(\Gamma)$; è possibile applicare il lemma \ref{lemma:rho} con $\rho = 1$ e si ottiene  che esistono al più $3^n$ translazioni in $L(\Gamma)$ di vettore di norma $\leq 1$. \'E quindi possibile concludere che esistono al più $(3^n)^n$ differenti $A$ possibili componenti di rotazione delle isometrie in $\Gamma$. \\
+Consideriamo il caso in cui $\omega_s = (S,s) $ e $\omega_t = (T,t)$ scelti fra gli $\omega_{n+1},...,\omega_N $ siano tali che $S = T$; allora l'isometria $\omega_s \omega_t^{-1}$ è una translazione di vettore di norma $\leq \frac{n}{2} + \frac{n}{2} = n$ (in particolare è un elemento di $L(\Gamma)$);  si può quindi applicare nuovamente il lemma \ref{lemma:rho} con $\rho = n$ e si ottiene che questo vettore è uno fra al più $(2n+1)^n$ candidati. \\
+Abbiamo in questo modo ottenuto concluso la dimostrazione in quanto 
+\[ N \leq n + (3^n)^n (2n+1)^n\]
 \end{proof}
 	
 
