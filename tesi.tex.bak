@@ -71,10 +71,10 @@ Il diciottesimo problema di Hilbert chiedeva
 Esiste un poliedro non-regolare che può tassellare lo spazio? \\
 Qual è il più denso impacchettamento di sfere?	
 \end{quote}
-In risposta alla prima domanda, negli anni fra il 1910 ed il 1912, Bieberbach dimostrò quelli che sono adesso conosciuti come i tre teoremi di Bieberbach sui gruppi cristallografici. \\
-La sua dimostrazione si basava sul lavoro di Minkowski sulle approssimazioni razionali simultanee, ma risulta complessa da seguire; pochi anni dopo Frobenius diede una dimostrazione semplificata, ma sempre a carattere fortemente algebrico. La dimostrazione data da Frobenius è diventata lo standard nella pratica matematica e viene utilizzata nella maggior parte dei testi.
+In risposta alla prima domanda, negli anni fra il 1910 ed il 1912, Bieberbach dimostrò quelli che sono adesso conosciuti come i tre teoremi di Bieberbach sui gruppi cristallografici: i gruppi cristalografici $n$-dimensionali sono particolari sottogruppi del gruppo delle isometrie di $\mathbb{E}^n$, primo teorema di Bieberbach assicura che ognuno diessi contiene $n$ translazioni linearmente indipendenti, mentre il secondo garantisce che vi siano un numero finito di gruppi cristallografici in una data dimensione. \\
+La dimostrazione di Bieberbach si basa sul lavoro di Minkowski sulle approssimazioni razionali simultanee, ma risulta complessa da seguire; pochi anni dopo Frobenius diede una dimostrazione semplificata, ma sempre a carattere fortemente algebrico. La dimostrazione data da Frobenius è diventata lo standard nella pratica matematica e viene utilizzata nella maggior parte dei testi.
 \paragraph{}
-Nella prima parte di questo elaborato (capitoli 1 - 3) si propone una dimostrazione alternativa dei primi due teoremi data da Paul Buser in un articolo del 1985 intitolato "A geometric proof of Bieberbach's theorems on crystallographic groups". Buser dimostra i primi due teoremi di Bieberbach attraverso un procedimento estremamente elementare che utilizza approcci prettamente geometrici, nello spirito della geometria dei numeri di Minkowski. 
+Nella prima parte di questo elaborato (capitoli 1 - 3) si propone una dimostrazione alternativa dei primi due teoremi data da Paul Buser in un articolo del 1985 intitolato "A geometric proof of Bieberbach's theorems on crystallographic groups". Buser dimostra i primi due teoremi di Bieberbach attraverso un procedimento estremamente elementare che utilizza approcci prettamente geometrici.
 
 \paragraph{}
 Nell'ultimo capitolo si espone invece una semplice classificazione dei gruppi cristallografici in dimensione 2, chiamati in letteratura "wallpaper patterns", come data da Schwarzenberger nel suo articolo "The 17 plane symmetry groups". 
@@ -84,8 +84,8 @@ Nell'ultimo capitolo si espone invece una semplice classificazione dei gruppi cr
 In questo capitolo enunciamo alcune definizioni e risultati fondamentali per approcciare la dimostrazione geometrica dei primi due teoremi di Bieberbach.  \\
 
 Nella prima sezione riprendiamo la definizione di spazio euclideo $n$-dimensionale e del suo gruppo di isometrie, descriviamo una loro rappresentazione come composizione dell'applicazione di una matrice ortogonale e di una translazione; definiamo poi il coniugio di due isometrie. \\
-La lunghezza e la direzzione del vettore translazione di una data isometria danno immediatamente informazioni su come questa agisce sui punti di $\mathbb{R}^n$; più complicato è invece capire, data una matrice ortogonale, come questa trasformi lo spazio. \\
-Nella seconda sezione viene defnita quindi una funzione che stima per eccesso di quanto ogni matrice ortogonale si discosta dalla matrice identità; viene poi definita attraverso essa una scomposizione dello spazio in due spazi ortogonali; infine si dimostra un teorema che stima la "misura" del commutatore di due matrici a partire dalle loro "misure".  
+La lunghezza e la direzione del vettore translazione di una data isometria danno immediatamente informazioni su come questa agisce sui punti di $\mathbb{R}^n$; più complicato è invece capire, data una matrice ortogonale, come questa trasformi lo spazio. \\
+Nella seconda sezione viene definita quindi una funzione che funge da misura di quanto ogni matrice ortogonale si discosta dalla matrice identità; viene poi definita attraverso essa una scomposizione dello spazio in due spazi ortogonali; infine si dimostra un teorema che stima la "misura" del commutatore di due matrici a partire dalle loro "misure".  
 
 
 \section{Spazio euclideo $\mathbb{E}^n$ ed isometrie}
@@ -99,7 +99,7 @@ e la norma ad esso associata
 \]
 Imponiamo sullo spazio la distanza associata al prodotto scalare 
 \[ d(\vb{x}, \vb{y} ) = \norm{\vb{x-y}}           \; \; \; \forall \vb{x} , \vb{y} \in \mathbb{R}^{n}\] 
-Imponendo questa metrica sullo spazio vettoriale $\mathbb{R}^n$ ottengo lo spazio euclideo $\mathbb{E}^n$. 
+Imponendo questa metrica sullo spazio vettoriale $\mathbb{R}^n$ otteniamo lo spazio euclideo $\mathbb{E}^n$. 
 \begin{definition}
 Dati $\vb{x, y} \in \mathbb{R}^n$ definisco l'angolo fra di essi $\angle (\vb{x},\vb{y})$ come 
 \[ \angle (\vb{x},\vb{y}) = arccos \bigg( \frac{\vb{x} \cdot \vb{y}}{\norm{\vb{x}} \norm{\vb{y}}} \bigg) \in [0, \pi] \]
@@ -113,9 +113,14 @@ I teoremi di Bieberbach trattano in particolare i gruppi cristallografici, che s
 \begin{definition}
 	Un'isometria di $\mathbb{E}^n$  è un funzione $ \alpha : \mathbb{R}^{n} \longrightarrow \mathbb{R}^{n} $  tale che $\forall \vb{x,y} \in \mathbb{R}^n $ vale 
 	\[ d(\alpha(\vb{x}), \alpha(\vb{y})) = d(\vb{x} , \vb{y} )\]
-\end{definition} Il seguente teorema è enunciato senza dimostrazione in quanto si tratta di un risultato classico. 
+\end{definition} 
+Indichaimo con $O(n)$ il gruppo delle matrici ortogonali $n-$dimensionali, in particolare 
+\[ O(n) = \{ \vb{A} \in GL(n, \mathbb{R}) \big| \vb{A A^{T}} = \vb{A^{T} A} = \vb{id} \}\]
+\`E noto che le matrici ortogonali hanno la proprietà
+\[ \norm{\vb{Ax}} = \norm{\vb{x}}   \; \; \; \; \forall x \in \mathbb{R}^n \; \forall A \in O(n)\]
+Il seguente teorema è enunciato senza dimostrazione in quanto si tratta di un risultato classico. 
 \begin{theorem}
-Data un'isometria di $\mathbb{E}^n $, questa può essere scritta in modo unico come composizione di una rotazione e di una traslazione rispetto alla base standard di $\mathbb{R}^n$
+Data un'isometria di $\mathbb{E}^n $, questa può essere scritta in modo unico come composizione di un'applicazione di una matrice ortogonale e di una traslazione rispetto alla base standard di $\mathbb{R}^n$
 \[ \alpha : \mathbb{R}^{n} \longrightarrow \mathbb{R}^{n} \]
 \[\vb{x} \longmapsto \vb{Ax + a} \]
 dove $\vb{A} = rot( \alpha ) \in O(n) $ è detta componente di rotazione di $\alpha$ \\
@@ -127,12 +132,7 @@ Indichiamo l'insieme delle isometrie di  $\mathbb{E}^{n} $ come $Isom(n)$
 $Isom(n)$ è un gruppo con operazione di composizione di applicazioni; in particolare è un sottogruppo del gruppo affine e come tale può essere scritto come prodotto semidiretto nella forma
 \[ Isom(n) \cong   O(n) \rtimes \mathbb{R}^{n} <  GL(n, \mathbb{R}) \rtimes\mathbb{R}^{n} 
 \]
-dove $O(n)$ indica il gruppo delle matrici ortogonali $n-$dimensionali, in particolare 
-\[ O(n) = \{ \vb{A} \in GL(n, \mathbb{R}) \big| \vb{A A^{T}} = \vb{A^{T} A} = \vb{id} \}\]
 \end{lemma}
-
-\`E noto che le matrici ortogonali hanno la proprietà
-\[ \norm{\vb{Ax}} = \norm{\vb{x}}   \; \; \; \; \forall x \in \mathbb{R}^n \; \forall A \in O(n)\]
 All'interno di ogni gruppo è definito il commutatore di due elementi, posso quindi anche definirlo per $Isom(n)$.
 \begin{lemma}
 \label{lemma:1}
@@ -146,7 +146,6 @@ rot([ \alpha	, \beta ]) = \vb{[A, B]} = \vb{ABA^{-1}B^{-1}}
 trans([ \alpha	, \beta ]) = \vb{(A-id)b+(id-[A,B])b+A(id-B)A^{-1}a }
 \end{equation} 
 \end{lemma}
-
 \begin{proof}
 	$ [ \alpha, \beta ](\vb{x}) = ( \alpha \beta \alpha^{-1} \beta^{-1} ) (\vb{x})$. \\
 	Dato che $ \alpha : \vb{x} \longmapsto \vb{Ax + a}$ , allora sicuramente  $\alpha^{-1}: \vb{x} \longmapsto \vb{A^{-1}(x-a)}$.  \\
@@ -180,6 +179,7 @@ trans([ \alpha, \beta ]) & = \vb{-ABA^{-1}B^{-1}b -ABA^{-1}a +Ab + a }= \\
 
 \section{"Misura" della componente di rotazione}
 \begin{definition}
+\label{def:misura}
 Comunque preso  $  \vb{A} \in O(n) $  definisco
 \[ m(\vb{A}) = \max \bigg\{ \frac{\norm{\vb{Ax-x}}}{\norm{\vb{x}}} \bigg|  \vb{x} \in \mathbb{R}^{n}-\vb{0} \bigg\} \]
 \end{definition}
@@ -190,11 +190,11 @@ La precedente è una buona definizione e inoltre vale
 \end{lemma}
 
 \begin{proof}
-$ \forall \vb{x} \in \mathbb{R}^{n}-\vb{0}$  $ \exists \vb{y} \in \mathbb{R}^{n}-\vb{0} $ tale che $\; \; \vb{x} = \lambda \vb{y} , \lambda \in \mathbb{R} \land \norm{\vb{y}} = 1 $. 
+Scelto comunque $\vb{x} \in \mathbb{R}^{n}-\vb{0}$ definiamo il suo normalizzato  $ \vb{y}  =  \frac{\vb{x}}{\norm{\vb{x}}} \in \mathbb{R}^{n}-\vb{0}$; ovviamente $ \vb{y} $ ha norma unitaria.
 
-\[ \frac{\norm{\vb{Ax-x}}}{\norm{\vb{x}}} = \frac{\norm{\vb{A}\lambda \vb{y}-\lambda \vb{y}}}{\norm{\lambda \vb{y}}} =   \frac{|\lambda| \norm{\vb{Ay-y}}}{|\lambda| \norm{\vb{ y}}} = \norm{\vb{Ay-y}} \]
+\[ \frac{\norm{\vb{Ax-x}}}{\norm{\vb{x}}} = \frac{\norm{\vb{A}\norm{\vb{x}} \vb{y}-\norm{\vb{x}} \vb{y}}}{\norm{\norm{\vb{x}} \vb{y}}} =   \frac{\norm{\vb{x}} \norm{\vb{Ay-y}}}{\norm{\vb{x}} \norm{\vb{y}}} = \norm{\vb{Ay-y}} \]
 
-L'insime $\vb{x} \in \mathbb{R}^{n} \land \norm{\vb{x}} = 1 $  è un compatto in  $\mathbb{R}^{n}$, quindi per il teorema di Weierstrass esiste una $\vb{x} \in \mathbb{R}^{n} : \norm{\vb{x}} = 1$ che mi verifica il max. 
+L'insime $\vb{y} \in \mathbb{R}^{n} \land \norm{\vb{y}} = 1 $  è un compatto in  $\mathbb{R}^{n}$; la funzione che associa $\vb{y}$ a  $\norm{\vb{Ay-y}}$ è continua in quanto composizione di funzioni continue; quindi possiamo applicare il teorema di Weierstrass e concludere che esiste una $\vb{x} \in \mathbb{R}^{n} : \norm{\vb{x}} = 1$ che verifica la condizione di massimo. 
 \end{proof}
 
 \begin{lemma}
@@ -204,7 +204,7 @@ Comunque preso $ \vb{x} \in \mathbb{R}^{n}$  vale  \[ \norm{\vb{Ax-x}} \leq m(\v
 \begin{proof}
 Infatti vale $\forall \vb{x} \in \mathbb{R}^{n}-\vb{0}$  e vale anche per  $\vb{x}=0$
 \end{proof}
-Una volta defiinta la funzione $m$, è possibile definire il sottoinsieme di $\mathbb{R}^n$ che contiene tutti e soli i vettori che realizzano il massimo nella sua definizione. 
+Una volta definita la funzione $m$, possiamo definire il sottoinsieme di $\mathbb{R}^n$ che contiene tutti e soli i vettori che realizzano il massimo nella definizione \ref{def:misura}. 
 \begin{definition}
 \[ E_{\vb{A}} := \{ \vb{x} \in \mathbb{R}^{n} :  \norm{\vb{Ax - x}} = m(\vb{A}) \norm{\vb{x}}\} \]
 \end{definition}
@@ -221,6 +221,7 @@ $\vb{x} \in E_{\vb{A}} \Longrightarrow \norm{\vb{Ax-x}} = m(\vb{A})\norm{\vb{x}}
 $\vb{x} \in E_{\vb{A}} \Longrightarrow \norm{\vb{Ax-x}} = m(\vb{A})\norm{\vb{x}}$ \\
 $\vb{y} \in E_{\vb{A}} \Longrightarrow \norm{\vb{Ay-y}} = m(\vb{A})\norm{\vb{y}}$ 
 \begin{equation} 
+\label{eq:xpiuy}
 \begin{split}
 & \norm{\vb{A(x+y) - (x+y)}}^2 + \norm{\vb{A(x-y) - (x-y)}}^2  = \\
 & = \norm{\vb{Ax - x + Ay -y}}^2 + \norm{\vb{Ax - x -(Ay -y)}}^2 = \\
@@ -228,18 +229,18 @@ $\vb{y} \in E_{\vb{A}} \Longrightarrow \norm{\vb{Ay-y}} = m(\vb{A})\norm{\vb{y}}
 & = 2m(\vb{A})^2(\norm{\vb{x}}^2 + \norm{\vb{y}}^2) 
 \end{split}
 \end{equation}
-Dalla precedente catena di uguaglianze segue
+Dalla catena di uguaglianze in \ref{eq:xpiuy} segue
 \begin{equation} 
+\label{eq:disug}
 \begin{split}
 2m(\vb{A})^2(\norm{\vb{x}}^2 + \norm{\vb{y}}^2) & = \norm{\vb{A(x+y) - (x+y)}}^2 + \norm{\vb{A(x-y) - (x-y)}}^2 \leq \\
 & \leq m(\vb{A})^2(\norm{\vb{x+y}}^2 + \norm{\vb{x-y}}^2) = \\ 
-& = m(\vb{A})^2(\norm{\vb{x+y}}^2 + \norm{\vb{x-y}}^2)  = \\
 & = 2m(\vb{A})^2(\norm{\vb{x}}^2 + \norm{\vb{y}}^2)
 \end{split}
 \end{equation}
-Quindi il segno di disuguaglianza in (4) è un'uguaglianza, in particolare 
+Quindi il segno di disuguaglianza in \ref{eq:disug} è un'uguaglianza, in particolare 
 \[   \norm{\vb{A(x+y) - (x+y)}}^2 + \norm{\vb{A(x-y) - (x-y)}}^2  = m(\vb{A})^2(\norm{\vb{x+y}}^2 + \norm{\vb{x-y}}^2)  \]
-Spostando i termini da parte a parte ottengo
+Spostando i termini da parte a parte otteniamo
 \[ \norm{\vb{A(x+y) - (x+y)}}^2 - m(\vb{A})^2 \norm{\vb{x+y}}^2=  m(\vb{A})^2 \norm{\vb{x-y}}^2 - \norm{\vb{A(x-y) - (x-y)}}^2 \]
 \`E possibile poi scomporre le differenze di quadrati a sinistra e destra dell'uguaglianza ottenendo
 \begin{equation} 
@@ -275,10 +276,8 @@ Dato che $\vb{A} \in O(n)$ vale la seguente catena di uguaglianze:\\
 $ \norm{\vb{A(Ax) - Ax }} =  \norm{\vb{A(Ax-x)}} = \norm{\vb{Ax - x}} = m(\vb{A})\norm{\vb{x}} = m(\vb{A})\norm{\vb{Ax}} \Longrightarrow \vb{Ax} \in E_{\vb{A}}$
 \end{itemize} 
 \end{proof}
-Il seguente lemma è un noto risultato relativo alle scomposizioni ortogonali di spazi vettoriali. 
-\begin{lemma}
-$E_{\vb{A}}$ sottospazio vettoriale di $\mathbb{R}^n $ non banale: è possibile quindi definire il suo complemento ortogonale $E^{\perp}_{\vb{A}} \neq \mathbb{R}^n$ ed anche questo è $\vb{A}$-invariante. 
-\end{lemma} 
+Abbiamo dimostrato che $E_{\vb{A}}$ è un sottospazio vettoriale di $\mathbb{R}^n $ non banale: è possibile quindi, grazie alla teoria sulle scomposizioni ortogonali di spazi vettoriali, definire il suo complemento ortogonale $E^{\perp}_{\vb{A}} \neq \mathbb{R}^n$;  in particolare, dato che $E_{\vb{A}}$ è $\vb{A}$-invariante, anche $E^{\perp}_{\vb{A}}$ risulta $\vb{A}$-invariante. 
+
 
 \begin{definition}
 
@@ -311,7 +310,7 @@ m^{\perp}(\vb{A})  & < m(\vb{A}) \; \; \; \; \; \; \; \; \; se \; \vb{A \neq id}
 \[ m(\vb{A}) = \max \bigg\{ \frac{\norm{\vb{Ax-x}}}{\norm{\vb{x}}} \bigg|  \vb{x} \in \mathbb{R}^{n}-\vb{0} \bigg\} 
 \geq \max \bigg\{ \frac{\norm{\vb{Ax-x}}}{\norm{\vb{x}}} \bigg|  \vb{x} \in E^{\perp}_{\vb{A}} - \vb{0} \bigg\} =  m^{\perp}(\vb{A}) \]
 Se valesse $m(\vb{A}) = m^{\perp}(\vb{A}) \Longrightarrow \exists \vb{x} \in E^{\perp}_{\vb{A}} - \vb{0} : \norm{\vb{Ax-x}} = m(\vb{A})\norm{\vb{x}} \Longrightarrow \vb{x} \in E_{\vb{A}}$  ma questo implica $\vb{x} \in E_{\vb{A}} \cap E^{\perp}_{\vb{E}} = {\vb{0}} \Longrightarrow \vb{x = 0} $;  \\
-questo è però assurdo perché abbiamo imposto che $x\vb{ \neq 0}$ 
+questo è però assurdo perché l'insieme su cui stiamo calcolando il massimo non contiene il vettore $0$.
 \end{itemize}
 \end{proof}
 
@@ -346,18 +345,18 @@ Dalla precedente catena di uguaglianze segue, scelto comunque $\vb{x} \in \mathb
 & \leq m(\vb{A})m(\vb{B})\norm{\vb{A^{-1}B^{-1}x}} + m(\vb{B})m(\vb{A}) \norm{\vb{A^{-1}B^{-1}x}}
 \end{split}
 \end{equation*}
-Dato che $ \vb{A,B} \in O(n)$ è possibile scrivere $\norm{\vb{A^{-1}B^{-1}x}} = \norm{\vb{x}} $ , quindi 
+Dato che $ \vb{A,B} \in O(n)$, allora $\norm{\vb{A^{-1}B^{-1}x}} = \norm{\vb{x}} $, quindi 
 \begin{equation*}
   \norm{\vb{([A,B] - id )x}}  \leq 2m(\vb{A})m(\vb{B})\norm{\vb{x}}
 \end{equation*} 
-Quindi segue immediatamente la tesi. 
+Da questo segue immediatamente la tesi. 
 \end{proof}
 
 \chapter{Primo teorema di Bieberbach}
 In questo capitolo viene dimostrato il primo teorema di Bieberbach. \\
 Nella prima sezione si dà la definizione precisa di gruppo cristallografico e viene esplicitato il contenuto del teorema nella forma in cui verrà dimostrato. \\
-Nella seconda sezione sono presentati e dimostrati alcuni sottoteoremi che concorrono alla dimostrazione del primo teorema di Bieberbach. \\ 
-Infine nella sezione finale verranno connesse le varie proposizioni in una dimostrazione del teorema vero e proprio.  \\
+Nella seconda sezione sono presentati e dimostrati alcuni risultati che concorrono alla dimostrazione del primo teorema di Bieberbach. \\ 
+Infine nella sezione finale le varie proposizioni verranno connesse in una dimostrazione del teorema vero e proprio.  \\
 
 \section{Enunciati}
 In questo elaborato utilizzo la seguente definizione di gruppo cristallografico:
@@ -368,7 +367,7 @@ Sia $\Gamma$ un sottogrupo di $Isom(n)$, dico che è un gruppo cristallografico 
 	\item $ \exists d \in \mathbb{R}: \forall \vb{x} \in \mathbb{R}^n ,  \exists \alpha = \vb{(A,a)} \in \Gamma : \norm{\vb{a-x}}\leq d $
 \end{enumerate}
 \end{definition}
-La condizione 1. implica che il gruppo agisce in modo propriamente discontinuo sullo spazio topologico dato da $\mathbb{R}^n$ con la topologia euclidea, mentre la condizione 2. significa che l'azione di $\Gamma$ ha dominio fondamentale limitato. Ricoridamo che, dato uno spazio topologico $X$ ed un gruppo $G$ che agisce su di esso, un dominio fondamentale è un sottoinsieme di $X$ che contiene uno ed un solo punto di ogni orbita dell'azione.\\
+La condizione 1. implica che il gruppo agisce in modo propriamente discontinuo sullo spazio topologico dato da $\mathbb{R}^n$ con la topologia euclidea, mentre la condizione 2. significa che l'azione di $\Gamma$ ha dominio fondamentale limitato. Ricoridamo che, dato uno spazio topologico $X$ ed un gruppo $G$ che agisce su di esso, chiamiamo dominio fondamentale stretto un sottoinsieme misurabile di $X$ che contiene uno ed un solo punto di ogni orbita dell'azione; il dominio fondamentale è un sovrainsieme del dominio fondamentale in senso stretto che contiene anche eventuali ulteriori punti di frontiera. \\
 \begin{theorem}
 Ogni gruppo cristallografico $n-$dimensionale contiene $n$ traslazioni linearmente indipendenti
 \end{theorem}
@@ -387,12 +386,10 @@ $  \forall \epsilon ,\delta >0 $ $   \exists \alpha = \vb{(A,a)} \in \Gamma $ ch
 \begin{proof}
 Per la seconda proprietà dei gruppi cristallografici sappiamo che \\
 $ \exists d \in \mathbb{R} : \forall k \in \mathbb{N} $ $  \exists \beta_k = \vb{( B_k, b_k)} \in \Gamma  $ tale che 
-\[  \norm{\vb{b_k - ku }} \leq d \]
-Se $k \longrightarrow \infty$ allora sicuramente $ \norm{\vb{b_k}} \longrightarrow \infty$.  \\
-Infatti se, per assurdo, questo non fosse vero $\exists M \in \mathbb{R} : \norm{\vb{b_k}} \leq M $   $  \forall k \in \mathbb{N} $
-\[ d \geq \norm{\vb{b_k - ku}} \geq | \norm{\vb{b_k}} - k | \]
-Nella disequazione  precedente, se la successione è limitata allora l'ultimo termine diverge ma questo è assurdo perché è maggiorato da $d$. \\
-Consideriamo ora la successione degli angoli fra i vettori $\vb{u}$ e $\vb{b}_k$, vogliamo mostrare che l'ampiezza tende a 0. 
+\[  \norm{\vb{b_k }- k\vb{u }} \leq d \]
+Se $k \longrightarrow \infty$ allora sicuramente $ \norm{\vb{b_k}} \longrightarrow \infty$.  
+Infatti $\norm{ k\vb{u }}  \longrightarrow \infty$ e $\norm{\vb{b_k}} \geq \norm{ k\vb{u }} - d $.\\
+Consideriamo ora la successione degli angoli fra i vettori $\vb{u}$ e $\vb{b}_k$, vogliamo mostrare che la loro ampiezza tende a 0. 
 \[ \angle (\vb{u , b_k}) = \angle (\vb{ku, b_k}) = : \theta_k \]
 \begin{figure}[!h]
 \centering
@@ -414,35 +411,35 @@ Possiamo applicare il teorema dei seni al triangolo in figura \ref{fig:trangolo1
 \[ \frac{\norm{\vb{b_k}}}{sin(\gamma_k)} = \frac{\norm{\vb{b_k} - k\vb{u}}}{sin(\theta_k)}  \leq \frac{d}{sin(\theta_k)} \]
 Si può ora riscrivere la disequazione in modo da ottenere
 \[  sin(\theta_k) \leq \frac{sin(\gamma_k)d}{\norm{\vb{b_k}}} \longrightarrow 0 \Longrightarrow \theta_k \longrightarrow 0 \]
-$O(n)$  è compatto e ${ \{\vb{B}_k \} }_{k \in \mathbb{N}}$ successione in  $O(n)$  ammette quindi almeno un punto di accumulazione per il teorema di Bolzano-Weierstrass. Si può quindi estarrre da ${ \{ \vb{B}_k \}}_{k \in \mathbb{N}}$  una sottosuccessione  convergente: $ { \{ \vb{A}_k \} }_{k \in \mathbb{N}} = { \{ \vb{B}_{k_j} \} }_{j \in \mathbb{N}}$. 
-\newpage
-La funzione  $ m: O(n) \longrightarrow \mathbb{R}$  è continua in quanto composizione di funzioni continue \\ ($ \vb{A} \mapsto \max{\norm{\vb{Ax-x}}} $), quindi con $i,j \in \mathbb{R} \longrightarrow \infty $ sicuramente $m(\vb{A}_j \vb{A}^{-1}_i) \longrightarrow m(\vb{id}) = 0 $ \\
-Associata a questa sottosuccessione di matrici ho ovviamente una sottosuccessione di isometrie che chiamo ${ \{\alpha_k \}}_{k \in \mathbb{N}} = \{ (\vb{A}_k , \vb{a}_k ) \}_{k \in \mathbb{N}}$. \\
-A questo punto ho dimostrato che esiste una successione di isometrie in $\Gamma$ tale che la norma delle componenti translazionali tende ad infinito, l'angolo fra gli elementi della successione ed il vettore unitario fissato nell'ipotesi tende a zero e $m(\vb{A}_j \vb{A}^{-1}_i) \longrightarrow m(\vb{id}) = 0 $; è immediato verificare che $\exists i,j \in \mathbb{N} $  tali che  $ i < j$  e che valgano contemporaneamente
+$O(n)$  è compatto quindi, per il teorema di Bolzano-Weierstrass  la successione ${ \{\vb{B}_k \} }_{k \in \mathbb{N}}$  in  $O(n)$  ammette almeno un punto di accumulazione. Possiamo quindi, a meno di estrarne una sottosuccessione convergente, supporre che  ${ \{ \vb{B}_k \}}_{k \in \mathbb{N}}$ converga a $\vb{B} \in O(n)$. \\
+La funzione  $ m: O(n) \longrightarrow \mathbb{R}$  è continua, come lo sono anche la moltiplicazione fra matrici e l'inversa di una matrice,  quindi se facciamo tendere $i,j$ ad infinito, sicuramente $m(\vb{B}_j \vb{B}^{-1}_i) \longrightarrow m(\vb{B B^{-1}}) = m(\vb{id}) = 0 $ \\
+Associata alla successione ${ \{\vb{B}_k \} }_{k \in \mathbb{N}}$ abbiamo una sottosuccessione di isometrie ${ \{\beta_k \}}_{k \in \mathbb{N}} = \{ (\vb{B}_k , \vb{b}_k ) \}_{k \in \mathbb{N}}$. \\
+A questo punto abbiamo dimostrato che esiste una successione di isometrie in $\Gamma$ tale che la norma delle componenti translazionali tende ad infinito, l'angolo fra gli elementi della successione ed il vettore unitario fissato nell'ipotesi tende a zero e $m(\vb{B}_j \vb{B}^{-1}_i) \longrightarrow m(\vb{id}) = 0 $; è immediato verificare che $\exists i,j \in \mathbb{N} $  tali che  $ i < j$  e che valgano contemporaneamente
 \begin{equation}
 \label{eq:bib1}
 \begin{split}
-& \norm{\vb{a}_i} \leq \frac{\delta}{4}\norm{\vb{a}_j} \\
-& \angle(u, \vb{a}_j ) \leq \frac{\delta}{2} \\
-& m( \vb{A}_j \vb{A}^{-1}_i ) \leq \epsilon  
+& \norm{\vb{b}_i} \leq \frac{\delta}{4}\norm{\vb{b}_j} \\
+& \angle(u, \vb{b}_j ) \leq \frac{\delta}{2} \\
+& m( \vb{B}_j \vb{B}^{-1}_i ) \leq \epsilon  
 \end{split}
 \end{equation}
 
 
 Considero l'isometria $\alpha \in \Gamma$ data da 
-\[ \alpha := (\vb{A, a})  : x \longmapsto \alpha_j \alpha^{-1}_i \vb{x} = \vb{A}_j \vb{A}^{-1}_i \vb{x} + \vb{a}_j - \vb{A}_j \vb{A}^{-1}_i \vb{a}_i\]
+\[ \alpha := (\vb{A, a})  : x \longmapsto \beta_j \beta^{-1}_i \vb{x} = \vb{B}_j \vb{B}^{-1}_i \vb{x} + \vb{b}_j - \vb{B}_j \vb{B}^{-1}_i \vb{b}_i\]
 Questa isometria verifica tutte le proprietà richieste dalla tesi
 
 \begin{itemize}
-\item Verifichiamo  $\vb{a}= \vb{a}_j - \vb{A}_j \vb{A}^{-1}_i \vb{a}_i \neq 0$ 
-\[ \norm{\vb{a}_j - \vb{A}_j \vb{A}^{-1}_i \vb{a}_i} \geq \bigg| \norm{\vb{a}_j} - \norm{ \vb{A}_j \vb{A}^{-1}_i \vb{a}_i } \bigg| \geq \bigg| \norm{\vb{a}_j } + \norm{\vb{a}_i} \bigg| \geq \norm{\vb{a}_i} \bigg| \frac{4}{\delta} -1 \bigg| \]
-$\norm{\vb{a}_i} \neq 0 \Longrightarrow \vb{a} \neq 0$
+\item Verifichiamo  $\vb{a}= \vb{b}_j - \vb{B}_j \vb{B}^{-1}_i \vb{b}_i \neq 0$ 
+\[ \norm{\vb{b}_j - \vb{B}_j \vb{B}^{-1}_i \vb{b}_i} \geq \bigg| \norm{\vb{b}_j} - \norm{ \vb{B}_j \vb{B}^{-1}_i \vb{b}_i } \bigg| \geq \bigg| \norm{\vb{b}_j } + \norm{\vb{b}_i} \bigg| \geq \norm{\vb{b}_i} \bigg| \frac{4}{\delta} -1 \bigg| \]
+$\norm{\vb{b}_i} \neq 0 \Longrightarrow \vb{a} \neq 0$
  
-\item Verifichiamo $ \angle (\vb{u, a})  = \angle (\vb{u} , \vb{a_j - A_j A_i^{-1} a_i} ) \leq \delta $. \\Applicando la disuguaglianza triangolare sugli angoli si può scrivere
+\item Verifichiamo $ \angle (\vb{u, a})  = \angle (\vb{u} , \vb{b_j - B_j B_i^{-1} b_i} ) \leq \delta $. \\Applicando la disuguaglianza triangolare sugli angoli otteniamo
 \begin{equation}
 \label{eq:angle}
-\angle ( \vb{u} , \vb{a_j - A_j A_i^{-1} a_i} ) \leq \angle (\vb{u} , \vb{a_j}) + \angle(\vb{a_j}, \vb{a_j- A_j A_i^{-1} a_i} ) 
+\angle ( \vb{u} , \vb{b_j - B_j B_i^{-1} b_i} ) \leq \angle (\vb{u} , \vb{b_j}) + \angle(\vb{b_j}, \vb{b_j- B_j B_i^{-1} b_i} ) 
 \end{equation}
+Sappiamo già che $\angle (\vb{u} , \vb{b_j}) \leq \frac{\delta}{2}$, vogliamo mostrare che $\angle(\vb{b_j}, \vb{b_j- B_j B_i^{-1} b_i} \leq \frac{\delta}{2}$
 \begin{figure}[!h]
 \centering
 \begin{tikzpicture}[line cap=round]
@@ -452,23 +449,29 @@ $\norm{\vb{a}_i} \neq 0 \Longrightarrow \vb{a} \neq 0$
   \coordinate (C) at ($(O)-(B)$);
   \coordinate (U) at (1, -1.5);
   \coordinate (X) at ($(A)+(C)$);
-  \draw[vector] (O) -- (A) node[midway,above] {$\vb{a}_j$};
-  \draw[vector,red] (O) -- (B) node[above right = -2] {$\vb{A_j A_i^{-1} a_i}$};
-  \draw (A) circle (2)node[right]{$r = \frac{\delta}{4}\norm{\vb{a}_j}$};
+  \coordinate (Y) at (10.4142135624, 1.41421356237);
+  \draw[vector] (O) -- (A) node[midway,above] {$\vb{b}_j$};
+  \draw[vector,red] (O) -- (B) node[above right = -2] {$\vb{B_j B_i^{-1} b_i}$};
+  \draw (A) circle (2)node[right]{};
   \draw[vector, black] (O) -- (U) node[midway, below] {$ \vb{u} $};
-  \draw[vector,red] (A) -- (X);
-  \draw[vector] (O) -- (X)node[midway,below] {$\vb{a}_j - \vb{A_j A_i^{-1} a_i}$};
+  \draw[vector,red] (X) -- (A);
+  \draw (A) -- (Y) node[below, right]{$r = \frac{\delta}{4}\norm{\vb{b}_j}$};
+  \draw[vector] (O) -- (X)node[midway,below] {$\vb{b}_j - \vb{B_j B_i^{-1} b_i}$};
 \end{tikzpicture}
 \caption{Rappresentazione schematica delle relazioni fra i vettori}
 \label{fig:palla}
 \end{figure} 
 
-Dato che $ \norm{\vb{a}_i} \leq \frac{\delta}{4}\norm{\vb{a}_j}$, se posiziono la coda del vettore $\vb{a}_j - \vb{A_j A_i^{-1} a_i}$ sulla punta del vettore $\vb{a}_j$ cade all'interno di una palla n-dimensionale che ha come centro la punta di $\vb{a}_j$ e raggio $r = \frac{\delta}{4}\norm{\vb{a}_j}$ come da figura \ref{fig:palla} \\
+Dato che $ \norm{\vb{b}_i} \leq \frac{\delta}{4}\norm{\vb{b}_j}$ e $\norm{\vb{B_j B_i^{-1} b_i}} = \norm{\vb{b_i}}$
+
+
+
+se posiziono la coda del vettore $\vb{a}_j - \vb{A_j A_i^{-1} a_i}$ sulla punta del vettore $\vb{a}_j$ cade all'interno di una palla n-dimensionale che ha come centro la punta di $\vb{a}_j$ e raggio $r = \frac{\delta}{4}\norm{\vb{a}_j}$ come da figura \ref{fig:palla} \\
 \newpage
 Per semplificare la fruibilità della sezione seguente di questa dimostrazione utilizziamo la notazione di geometria sintetica come riportato in figura \ref{fig:triangolo3}.
 
 \begin{figure}[h!]
-\centering
+\centering\
 \begin{tikzpicture}
   \def\r{2} % radius
   \def\q{-7} % distance center-external point q = |OQ|
@@ -793,7 +796,7 @@ Per ottenere una stima dei moduli di $m_{ijk}$ è necessario distinguere il caso
 \[ \omega_j \omega_k =  m_{1jk} \vb{w}_1 \omega_{\nu (j,k)}      \; \; \; \forall j,k =1, ...,N \]
 Il vettore $\vb{w}_1$ è unitario per definizione e $\norm{ trans(\omega_{\nu (j,k)} ) } \leq \frac{1}{2}$. \\
 Se considero la translazione data da $\omega_j \omega_k \omega_{\nu (j,k)}^{-1}$, questa è caratterizzata da un vettore in $\mathbb{R}^n$ di norma $\leq \frac{5}{2}$. In particolare, vale 
-\[ \norm{m_{1jk} \vb{w}^_1 } =  \norm{m_{1jk}} \leq \frac{5}{2}\] 
+\[ \norm{m_{1jk} \vb{w}_1 } =  \norm{m_{1jk}} \leq \frac{5}{2} \] 
 \item Se $n>1$, consideriamo l'isometria data da 
 \[  \omega_j \omega_k \omega^{-1}_{\nu (j,k)} = \bigg( \sum_{i = 1}^{n} m_{ijk} \vb{w}_i\bigg)      \; \; \; \forall j,k =1, ...,N \]
 Questa è una translazione ed il vettore associato ha lunghezza minore di $ \frac{3n}{2}$ in quanto le comoponenti di translazione di $\omega_j$ e $  \omega_k $  hanno modulo unitario, mentre il vettore $trans(\omega^{-1}_{\nu (j,k)}) $ ha norma $\leq \frac{1}{2}$  per com'è stato scelto. 
@@ -809,7 +812,7 @@ Applicando il lemma \ref{lemma:somma2} al sottospazio $E_i$ e combinando con la 
 \end{itemize}
 Concentriamoci adesso sulla stima di $N$. \\
 Dato che i vettori $\vb{w}_i $ con $i=1,...,n$ sono base unitaria di $\mathbb{R}^n$ ;  $ \forall \alpha  = (\vb{A,a}) \in \Gamma$, $A$ è unicamente determinata da i vettori $Aw_i$ con $i=1,...,n$. Grazie al lemma \ref{lemma:aw} sappiamo che ognuna di queste immagini $Aw_i$ è un vettore unitario in $L(\Gamma)$; è possibile applicare il lemma \ref{lemma:rho} con $\rho = 1$ e si ottiene  che esistono al più $3^n$ translazioni in $L(\Gamma)$ di vettore di norma $\leq 1$. \'E quindi possibile concludere che esistono al più $(3^n)^n$ differenti $A$ possibili componenti di rotazione delle isometrie in $\Gamma$. \\
-Consideriamo il caso in cui $\omega_s = (S,s) $ e $\omega_t = (T,t)$ scelti frasia gli $\omega_{n+1},...,\omega_N $ siano tali che $S = T$; allora l'isometria $\omega_s \omega_t^{-1}$ è una translazione di vettore di norma $\leq \frac{n}{2} + \frac{n}{2} = n$ (in particolare è un elemento di $L(\Gamma)$);  si può quindi applicare nuovamente il lemma \ref{lemma:rho} con $\rho = n$ e si ottiene che questo vettore è uno fra al più $(2n+1)^n$ candidati. \\
+Consideriamo il caso in cui $\omega_s = (S,s) $ e $\omega_t = (T,t)$ scelti fra gli $\omega_{n+1},...,\omega_N $ siano tali che $S = T$; allora l'isometria $\omega_s \omega_t^{-1}$ è una translazione di vettore di norma $\leq \frac{n}{2} + \frac{n}{2} = n$ (in particolare è un elemento di $L(\Gamma)$);  si può quindi applicare nuovamente il lemma \ref{lemma:rho} con $\rho = n$ e si ottiene che questo vettore è uno fra al più $(2n+1)^n$ candidati. \\
 Abbiamo in questo modo ottenuto concluso la dimostrazione in quanto 
 \[ N \leq n + (3^n)^n (2n+1)^n\]
 \end{proof}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2022.4.23)  25 MAY 2022 10:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2022.4.23)  1 JUN 2022 21:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -944,7 +944,63 @@ your preamble.
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-[1
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 7
+4.
+(/usr/share/texmf/tex/latex/lm/ot1lmr.fd
+File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 7
+4.
+
+(/usr/share/texmf/tex/latex/lm/omllmm.fd
+File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
+74.
+
+(/usr/share/texmf/tex/latex/lm/omslmsy.fd
+File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
+74.
+
+(/usr/share/texmf/tex/latex/lm/omxlmex.fd
+File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10.95> on input line 74.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 74.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 74.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 74.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 74.
+
+
+(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 74
+.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ulasy.fd
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+)
+LaTeX Font Info:    Font shape `U/lasy/b/n' in size <8> not available
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 74.
+LaTeX Font Info:    Font shape `U/lasy/b/n' in size <6> not available
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 74.
+LaTeX Font Info:    Trying to load font information for U+wasy on input line 74
+.
+
+(/usr/share/texlive/texmf-dist/tex/latex/wasysym/uwasy.fd
+File: uwasy.fd 2020/01/19 v2.4 Wasy-2 symbol font definitions
+) [1
 
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2
@@ -956,63 +1012,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 84--85
 
  []
 
-LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 8
-6.
-(/usr/share/texmf/tex/latex/lm/ot1lmr.fd
-File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for OML+lmm on input line 8
-6.
-
-(/usr/share/texmf/tex/latex/lm/omllmm.fd
-File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-86.
-
-(/usr/share/texmf/tex/latex/lm/omslmsy.fd
-File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-86.
-
-(/usr/share/texmf/tex/latex/lm/omxlmex.fd
-File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 86.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 86.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 86.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 86.
-
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-)
-LaTeX Font Info:    Trying to load font information for U+msb on input line 86.
-
-
-(/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-LaTeX Font Info:    Trying to load font information for U+lasy on input line 86
-.
-
-(/usr/share/texlive/texmf-dist/tex/latex/base/ulasy.fd
-File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
-)
-LaTeX Font Info:    Font shape `U/lasy/b/n' in size <8> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 86.
-LaTeX Font Info:    Font shape `U/lasy/b/n' in size <6> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 86.
-LaTeX Font Info:    Trying to load font information for U+wasy on input line 86
-.
-
-(/usr/share/texlive/texmf-dist/tex/latex/wasysym/uwasy.fd
-File: uwasy.fd 2020/01/19 v2.4 Wasy-2 symbol font definitions
-)
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <14.4> on input line 91.
 LaTeX Font Info:    External font `lmex10' loaded for size
@@ -1021,21 +1020,20 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <7> on input line 91.
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <7> not available
 (Font)              Font shape `U/lasy/m/n' tried instead on input line 91.
- [3] [4]
+[3] [4]
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 2
 17.
-
-(/usr/share/texmf/tex/latex/lm/ts1lmr.fd
+ (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) [5] [6] [7] [8]
 Capitolo 2.
 
-Underfull \hbox (badness 10000) in paragraph at lines 357--361
+Underfull \hbox (badness 10000) in paragraph at lines 356--360
 
  []
 
 
-Overfull \hbox (8.29138pt too wide) in paragraph at lines 365--366
+Overfull \hbox (8.29138pt too wide) in paragraph at lines 364--365
 []\T1/lmr/bx/n/10.95 Definizione 2.1.1. []\T1/lmr/m/it/10.95 Sia $\OT1/lmr/m/n/
 10.95 ^^@$ \T1/lmr/m/it/10.95 un sot-to-gru-po di $\OML/lmm/m/it/10.95 Isom\OT1
 /lmr/m/n/10.95 (\OML/lmm/m/it/10.95 n\OT1/lmr/m/n/10.95 )$\T1/lmr/m/it/10.95 , 
@@ -1044,19 +1042,27 @@ t/10.95 -dimensionale
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 371--372
+Underfull \hbox (badness 10000) in paragraph at lines 370--371
 
  []
 
 [9
 
-] [10]
-Underfull \hbox (badness 10000) in paragraph at lines 466--467
+]
+Overfull \hbox (7.07805pt too wide) in paragraph at lines 413--418
+\T1/lmr/m/n/10.95 Associata al-la suc-ces-sio-ne $[][]$ ab-bia-mo una sot-to-su
+c-ces-sio-ne di iso-me-trie $[][] \OT1/lmr/m/n/10.95 = \OMS/lmsy/m/n/10.95 f\OT
+1/lmr/m/n/10.95 (\OT1/lmr/bx/n/10.95 B[]\OML/lmm/m/it/10.95 ; \OT1/lmr/bx/n/10.
+95 b[]\OT1/lmr/m/n/10.95 )\OMS/lmsy/m/n/10.95 g[]$\T1/lmr/m/n/10.95 . 
+ []
+
+[10]
+Underfull \hbox (badness 10000) in paragraph at lines 469--470
 
  []
 
 [11]
-Underfull \hbox (badness 10000) in paragraph at lines 525--529
+Underfull \hbox (badness 10000) in paragraph at lines 528--532
 
  []
 
@@ -1064,12 +1070,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 525--529
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [12]
-Underfull \hbox (badness 10000) in paragraph at lines 571--572
+Underfull \hbox (badness 10000) in paragraph at lines 574--575
 
  []
 
 
-Overfull \hbox (85.27654pt too wide) detected at line 572
+Overfull \hbox (85.27654pt too wide) detected at line 575
 [] \OMS/lmsy/m/n/10.95 ^^T \OML/lmm/m/it/10.95 m\OT1/lmr/m/n/10.95 ([])[] + \OM
 L/lmm/m/it/10.95 m\OT1/lmr/m/n/10.95 (\OT1/lmr/bx/n/10.95 B\OT1/lmr/m/n/10.95 )
 [] \OMS/lmsy/m/n/10.95 ^^T []\OML/lmm/m/it/10.95 m\OT1/lmr/m/n/10.95 ([]) + \OM
@@ -1084,7 +1090,7 @@ m/n/10.95 (\OT1/lmr/bx/n/10.95 B\OT1/lmr/m/n/10.95 )([]) \OML/lmm/m/it/10.95 <
  []
 
 
-Overfull \hbox (44.11911pt too wide) detected at line 582
+Overfull \hbox (44.11911pt too wide) detected at line 585
 [] \OT1/lmr/m/n/10.95 = [] \OMS/lmsy/m/n/10.95 ^^U []\OML/lmm/m/it/10.95 m\OT1/
 lmr/m/n/10.95 (\OML/lmm/m/it/10.95 A\OT1/lmr/m/n/10.95 )[] \OMS/lmsy/m/n/10.95 
 ^^@ [][] \OML/lmm/m/it/10.95 > m\OT1/lmr/m/n/10.95 (\OT1/lmr/bx/n/10.95 A\OT1/l
@@ -1101,12 +1107,12 @@ Capitolo 3.
 [15
 
 ] [16]
-Underfull \hbox (badness 10000) in paragraph at lines 705--706
+Underfull \hbox (badness 10000) in paragraph at lines 708--709
 
  []
 
 
-Overfull \hbox (40.90195pt too wide) detected at line 716
+Overfull \hbox (40.90195pt too wide) detected at line 719
 \OT1/lmr/m/n/10.95 (^^H[] \OMS/lmsy/m/n/10.95 ^^N \OT1/lmr/bx/n/10.95 A\OT1/lmr
 /m/n/10.95 )(\OT1/lmr/bx/n/10.95 x\OT1/lmr/m/n/10.95 ) = ^^H[]([]) = ^^H[]([][]
  + [][]) = [][] + \OML/lmm/m/it/10.95 ^^W[][] \OT1/lmr/m/n/10.95 = [][] + [][] 
@@ -1117,12 +1123,12 @@ m/m/it/10.95 x\OT1/lmr/m/n/10.95 )
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 722--723
+Underfull \hbox (badness 10000) in paragraph at lines 725--726
 
  []
 
 
-Overfull \hbox (26.9717pt too wide) detected at line 724
+Overfull \hbox (26.9717pt too wide) detected at line 727
 \OML/lmm/m/it/10.95 ^^L[]\OT1/lmr/bx/n/10.95 x \OT1/lmr/m/n/10.95 = (^^H[]\OML/
 lmm/m/it/10.95 ^^L\OT1/lmr/m/n/10.95 ^^H[])(\OT1/lmr/bx/n/10.95 x\OT1/lmr/m/n/1
 0.95 ) = (^^H[]\OML/lmm/m/it/10.95 ^^L\OT1/lmr/m/n/10.95 ^^H[])(\OT1/lmr/bx/n/1
@@ -1136,16 +1142,16 @@ n/10.95 x[] \OT1/lmr/m/n/10.95 + []\OT1/lmr/bx/n/10.95 x[] \OT1/lmr/m/n/10.95 +
  []
 
 [17] [18]
-Underfull \hbox (badness 10000) in paragraph at lines 789--791
+Underfull \hbox (badness 10000) in paragraph at lines 792--794
 
  []
 
 [19] [20] (./tesi.aux) ) 
 Here is how much of TeX's memory you used:
- 30300 strings out of 481200
- 712623 string characters out of 5914397
- 1138356 words of memory out of 5000000
- 46681 multiletter control sequences out of 15000+600000
+ 30310 strings out of 481200
+ 712737 string characters out of 5914397
+ 1137356 words of memory out of 5000000
+ 46691 multiletter control sequences out of 15000+600000
  502984 words of font info for 109 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
  87i,19n,89p,757b,1049s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1164,7 +1170,7 @@ fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmro10
 /type1/public/lm/lmsy6.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></
 usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></u
 sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on tesi.pdf (20 pages, 298908 bytes).
+Output written on tesi.pdf (20 pages, 298969 bytes).
 PDF statistics:
  151 PDF objects out of 1000 (max. 8388607)
  111 compressed objects within 2 object streams
