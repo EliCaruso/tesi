@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2022.4.23)  1 JUN 2022 21:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2022.4.23)  2 JUN 2022 20:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1049,70 +1049,54 @@ Underfull \hbox (badness 10000) in paragraph at lines 370--371
 [9
 
 ]
-Overfull \hbox (7.07805pt too wide) in paragraph at lines 413--418
+Overfull \hbox (7.07805pt too wide) in paragraph at lines 414--419
 \T1/lmr/m/n/10.95 Associata al-la suc-ces-sio-ne $[][]$ ab-bia-mo una sot-to-su
 c-ces-sio-ne di iso-me-trie $[][] \OT1/lmr/m/n/10.95 = \OMS/lmsy/m/n/10.95 f\OT
 1/lmr/m/n/10.95 (\OT1/lmr/bx/n/10.95 B[]\OML/lmm/m/it/10.95 ; \OT1/lmr/bx/n/10.
 95 b[]\OT1/lmr/m/n/10.95 )\OMS/lmsy/m/n/10.95 g[]$\T1/lmr/m/n/10.95 . 
  []
 
-[10]
-Underfull \hbox (badness 10000) in paragraph at lines 469--470
-
- []
-
-[11]
-Underfull \hbox (badness 10000) in paragraph at lines 528--532
+[10] [11]
+Underfull \hbox (badness 10000) in paragraph at lines 499--500
 
  []
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
+Underfull \hbox (badness 10000) in paragraph at lines 532--536
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 536--538
+
+ []
 
 [12]
-Underfull \hbox (badness 10000) in paragraph at lines 574--575
+Underfull \hbox (badness 10000) in paragraph at lines 582--583
 
- []
-
-
-Overfull \hbox (85.27654pt too wide) detected at line 575
-[] \OMS/lmsy/m/n/10.95 ^^T \OML/lmm/m/it/10.95 m\OT1/lmr/m/n/10.95 ([])[] + \OM
-L/lmm/m/it/10.95 m\OT1/lmr/m/n/10.95 (\OT1/lmr/bx/n/10.95 B\OT1/lmr/m/n/10.95 )
-[] \OMS/lmsy/m/n/10.95 ^^T []\OML/lmm/m/it/10.95 m\OT1/lmr/m/n/10.95 ([]) + \OM
-L/lmm/m/it/10.95 m\OT1/lmr/m/n/10.95 (\OT1/lmr/bx/n/10.95 B\OT1/lmr/m/n/10.95 )
-[][] \OMS/lmsy/m/n/10.95 ^^T \OT1/lmr/m/n/10.95 2\OML/lmm/m/it/10.95 m\OT1/lmr/
-m/n/10.95 (\OT1/lmr/bx/n/10.95 B\OT1/lmr/m/n/10.95 )([]) \OML/lmm/m/it/10.95 < 
-\OT1/lmr/m/n/10.95 4\OML/lmm/m/it/10.95 m\OT1/lmr/m/n/10.95 (\OT1/lmr/bx/n/10.9
-5 B\OT1/lmr/m/n/10.95 )[] \OMS/lmsy/m/n/10.95 ^^T [][]\OML/lmm/m/it/10.95 m\OT1
-/lmr/m/n/10.95 (\OT1/lmr/bx/n/10.95 A\OT1/lmr/m/n/10.95 ) \OMS/lmsy/m/n/10.95 ^
-^@ \OML/lmm/m/it/10.95 m[]\OT1/lmr/m/n/10.95 (\OT1/lmr/bx/n/10.95 A\OT1/lmr/m/n
-/10.95 )[][]
- []
-
-
-Overfull \hbox (44.11911pt too wide) detected at line 585
-[] \OT1/lmr/m/n/10.95 = [] \OMS/lmsy/m/n/10.95 ^^U []\OML/lmm/m/it/10.95 m\OT1/
-lmr/m/n/10.95 (\OML/lmm/m/it/10.95 A\OT1/lmr/m/n/10.95 )[] \OMS/lmsy/m/n/10.95 
-^^@ [][] \OML/lmm/m/it/10.95 > m\OT1/lmr/m/n/10.95 (\OT1/lmr/bx/n/10.95 A\OT1/l
-mr/m/n/10.95 )[] \OMS/lmsy/m/n/10.95 ^^@ [][]\OML/lmm/m/it/10.95 m\OT1/lmr/m/n/
-10.95 (\OT1/lmr/bx/n/10.95 A\OT1/lmr/m/n/10.95 ) \OMS/lmsy/m/n/10.95 ^^@ \OML/l
-mm/m/it/10.95 m[]\OT1/lmr/m/n/10.95 (\OT1/lmr/bx/n/10.95 A\OT1/lmr/m/n/10.95 )[
-][] = [][]\OML/lmm/m/it/10.95 m\OT1/lmr/m/n/10.95 (\OT1/lmr/bx/n/10.95 A\OT1/lm
-r/m/n/10.95 ) + \OML/lmm/m/it/10.95 m\OT1/lmr/m/n/10.95 (\OT1/lmr/bx/n/10.95 A[
-]\OT1/lmr/m/n/10.95 )[]
  []
 
 [13] [14]
 Capitolo 3.
-[15
 
-] [16]
-Underfull \hbox (badness 10000) in paragraph at lines 708--709
+Underfull \hbox (badness 10000) in paragraph at lines 648--649
 
  []
 
 
-Overfull \hbox (40.90195pt too wide) detected at line 719
+Underfull \hbox (badness 10000) in paragraph at lines 651--652
+
+ []
+
+[15
+
+] [16]
+Underfull \hbox (badness 10000) in paragraph at lines 765--766
+
+ []
+
+
+Overfull \hbox (40.90195pt too wide) detected at line 776
 \OT1/lmr/m/n/10.95 (^^H[] \OMS/lmsy/m/n/10.95 ^^N \OT1/lmr/bx/n/10.95 A\OT1/lmr
 /m/n/10.95 )(\OT1/lmr/bx/n/10.95 x\OT1/lmr/m/n/10.95 ) = ^^H[]([]) = ^^H[]([][]
  + [][]) = [][] + \OML/lmm/m/it/10.95 ^^W[][] \OT1/lmr/m/n/10.95 = [][] + [][] 
@@ -1123,12 +1107,12 @@ m/m/it/10.95 x\OT1/lmr/m/n/10.95 )
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 725--726
+Underfull \hbox (badness 10000) in paragraph at lines 782--783
 
  []
 
 
-Overfull \hbox (26.9717pt too wide) detected at line 727
+Overfull \hbox (26.9717pt too wide) detected at line 784
 \OML/lmm/m/it/10.95 ^^L[]\OT1/lmr/bx/n/10.95 x \OT1/lmr/m/n/10.95 = (^^H[]\OML/
 lmm/m/it/10.95 ^^L\OT1/lmr/m/n/10.95 ^^H[])(\OT1/lmr/bx/n/10.95 x\OT1/lmr/m/n/1
 0.95 ) = (^^H[]\OML/lmm/m/it/10.95 ^^L\OT1/lmr/m/n/10.95 ^^H[])(\OT1/lmr/bx/n/1
@@ -1142,35 +1126,55 @@ n/10.95 x[] \OT1/lmr/m/n/10.95 + []\OT1/lmr/bx/n/10.95 x[] \OT1/lmr/m/n/10.95 +
  []
 
 [17] [18]
-Underfull \hbox (badness 10000) in paragraph at lines 792--794
+Underfull \hbox (badness 10000) in paragraph at lines 852--854
 
  []
 
-[19] [20] (./tesi.aux) ) 
+[19]
+
+LaTeX Warning: Reference `teo:grupnorm' on page 20 undefined on input line 884.
+
+
+
+LaTeX Warning: Reference `teo:caratnorm' on page 20 undefined on input line 885
+.
+
+
+LaTeX Warning: Reference `lemma:valass' on page 20 undefined on input line 885.
+
+
+[20] (./tesi.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 30310 strings out of 481200
- 712737 string characters out of 5914397
+ 30320 strings out of 481200
+ 712845 string characters out of 5914397
  1137356 words of memory out of 5000000
- 46691 multiletter control sequences out of 15000+600000
+ 46701 multiletter control sequences out of 15000+600000
  502984 words of font info for 109 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 87i,19n,89p,757b,1049s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/us
-r/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvip
-s/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/share/texm
-f/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.e
-nc}</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/t
-ype1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx8.pfb></u
-sr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/p
-ublic/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi6.pfb></usr/sha
-re/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/l
-m/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/
-fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmro10
-.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts
-/type1/public/lm/lmsy6.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on tesi.pdf (20 pages, 298969 bytes).
+ 87i,20n,89p,757b,1049s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/en
+c/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/s
+hare/texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/dvips/lm/l
+m-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}</usr/share/texmf/f
+onts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.
+pfb></usr/share/texmf/fonts/type1/public/lm/lmbx8.pfb></usr/share/texmf/fonts/t
+ype1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></
+usr/share/texmf/fonts/type1/public/lm/lmmi6.pfb></usr/share/texmf/fonts/type1/p
+ublic/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/shar
+e/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/
+lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmro10.pfb></usr/share/texmf
+/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy6
+.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on tesi.pdf (20 pages, 302770 bytes).
 PDF statistics:
  151 PDF objects out of 1000 (max. 8388607)
  111 compressed objects within 2 object streams
