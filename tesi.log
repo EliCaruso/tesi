@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2022.4.23)  2 JUN 2022 20:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2022.4.23)  6 JUN 2022 01:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -945,57 +945,57 @@ your preamble.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 7
-4.
+2.
 (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 7
-4.
+2.
 
 (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-74.
+72.
 
 (/usr/share/texmf/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-74.
+72.
 
 (/usr/share/texmf/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 74.
+(Font)              <10.95> on input line 72.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 74.
+(Font)              <8> on input line 72.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 74.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 74.
+(Font)              <6> on input line 72.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 72.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 74.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 72.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-LaTeX Font Info:    Trying to load font information for U+lasy on input line 74
+LaTeX Font Info:    Trying to load font information for U+lasy on input line 72
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 )
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <8> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 74.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 72.
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <6> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 74.
-LaTeX Font Info:    Trying to load font information for U+wasy on input line 74
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 72.
+LaTeX Font Info:    Trying to load font information for U+wasy on input line 72
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/wasysym/uwasy.fd
@@ -1007,33 +1007,28 @@ File: uwasy.fd 2020/01/19 v2.4 Wasy-2 symbol font definitions
 
 ]
 Capitolo 1.
-
-Underfull \hbox (badness 10000) in paragraph at lines 84--85
-
- []
-
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <14.4> on input line 91.
+(Font)              <14.4> on input line 83.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 91.
+(Font)              <10> on input line 83.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 91.
+(Font)              <7> on input line 83.
 LaTeX Font Info:    Font shape `U/lasy/b/n' in size <7> not available
-(Font)              Font shape `U/lasy/m/n' tried instead on input line 91.
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 83.
 [3] [4]
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 2
-17.
+02.
  (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 ) [5] [6] [7] [8]
 Capitolo 2.
 
-Underfull \hbox (badness 10000) in paragraph at lines 356--360
+Underfull \hbox (badness 10000) in paragraph at lines 327--331
 
  []
 
 
-Overfull \hbox (8.29138pt too wide) in paragraph at lines 364--365
+Overfull \hbox (8.29138pt too wide) in paragraph at lines 334--335
 []\T1/lmr/bx/n/10.95 Definizione 2.1.1. []\T1/lmr/m/it/10.95 Sia $\OT1/lmr/m/n/
 10.95 ^^@$ \T1/lmr/m/it/10.95 un sot-to-gru-po di $\OML/lmm/m/it/10.95 Isom\OT1
 /lmr/m/n/10.95 (\OML/lmm/m/it/10.95 n\OT1/lmr/m/n/10.95 )$\T1/lmr/m/it/10.95 , 
@@ -1042,14 +1037,14 @@ t/10.95 -dimensionale
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 370--371
+Underfull \hbox (badness 10000) in paragraph at lines 340--341
 
  []
 
 [9
 
 ]
-Overfull \hbox (7.07805pt too wide) in paragraph at lines 414--419
+Overfull \hbox (7.07805pt too wide) in paragraph at lines 383--388
 \T1/lmr/m/n/10.95 Associata al-la suc-ces-sio-ne $[][]$ ab-bia-mo una sot-to-su
 c-ces-sio-ne di iso-me-trie $[][] \OT1/lmr/m/n/10.95 = \OMS/lmsy/m/n/10.95 f\OT
 1/lmr/m/n/10.95 (\OT1/lmr/bx/n/10.95 B[]\OML/lmm/m/it/10.95 ; \OT1/lmr/bx/n/10.
@@ -1057,46 +1052,26 @@ c-ces-sio-ne di iso-me-trie $[][] \OT1/lmr/m/n/10.95 = \OMS/lmsy/m/n/10.95 f\OT
  []
 
 [10] [11]
-Underfull \hbox (badness 10000) in paragraph at lines 499--500
+Underfull \hbox (badness 10000) in paragraph at lines 432--460
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 532--536
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 536--538
+Underfull \hbox (badness 10000) in paragraph at lines 485--489
 
  []
 
 [12]
-Underfull \hbox (badness 10000) in paragraph at lines 582--583
+Underfull \hbox (badness 10000) in paragraph at lines 531--532
 
  []
 
 [13] [14]
 Capitolo 3.
-
-Underfull \hbox (badness 10000) in paragraph at lines 648--649
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 651--652
-
- []
-
 [15
 
 ] [16]
-Underfull \hbox (badness 10000) in paragraph at lines 765--766
-
- []
-
-
-Overfull \hbox (40.90195pt too wide) detected at line 776
+Overfull \hbox (40.90195pt too wide) detected at line 696
 \OT1/lmr/m/n/10.95 (^^H[] \OMS/lmsy/m/n/10.95 ^^N \OT1/lmr/bx/n/10.95 A\OT1/lmr
 /m/n/10.95 )(\OT1/lmr/bx/n/10.95 x\OT1/lmr/m/n/10.95 ) = ^^H[]([]) = ^^H[]([][]
  + [][]) = [][] + \OML/lmm/m/it/10.95 ^^W[][] \OT1/lmr/m/n/10.95 = [][] + [][] 
@@ -1107,12 +1082,12 @@ m/m/it/10.95 x\OT1/lmr/m/n/10.95 )
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 782--783
+Underfull \hbox (badness 10000) in paragraph at lines 700--702
 
  []
 
 
-Overfull \hbox (26.9717pt too wide) detected at line 784
+Overfull \hbox (26.9717pt too wide) detected at line 703
 \OML/lmm/m/it/10.95 ^^L[]\OT1/lmr/bx/n/10.95 x \OT1/lmr/m/n/10.95 = (^^H[]\OML/
 lmm/m/it/10.95 ^^L\OT1/lmr/m/n/10.95 ^^H[])(\OT1/lmr/bx/n/10.95 x\OT1/lmr/m/n/1
 0.95 ) = (^^H[]\OML/lmm/m/it/10.95 ^^L\OT1/lmr/m/n/10.95 ^^H[])(\OT1/lmr/bx/n/1
@@ -1126,58 +1101,63 @@ n/10.95 x[] \OT1/lmr/m/n/10.95 + []\OT1/lmr/bx/n/10.95 x[] \OT1/lmr/m/n/10.95 +
  []
 
 [17] [18]
-Underfull \hbox (badness 10000) in paragraph at lines 852--854
+Underfull \hbox (badness 10000) in paragraph at lines 765--767
 
  []
 
-[19]
+[19] [20]
+Capitolo 4.
 
-LaTeX Warning: Reference `teo:grupnorm' on page 20 undefined on input line 884.
+Underfull \hbox (badness 10000) in paragraph at lines 800--802
 
+ []
 
+[21
 
-LaTeX Warning: Reference `teo:caratnorm' on page 20 undefined on input line 885
-.
+]
+Underfull \hbox (badness 10000) in paragraph at lines 849--851
 
+ []
 
-LaTeX Warning: Reference `lemma:valass' on page 20 undefined on input line 885.
+[22]
+Underfull \hbox (badness 10000) in paragraph at lines 915--917
 
+ []
 
-[20] (./tesi.aux)
+[23]
+Underfull \hbox (badness 10000) in paragraph at lines 941--943
 
-LaTeX Warning: There were undefined references.
+ []
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+[24] [25] [26] (./tesi.aux) ) 
 Here is how much of TeX's memory you used:
- 30320 strings out of 481200
- 712845 string characters out of 5914397
- 1137356 words of memory out of 5000000
- 46701 multiletter control sequences out of 15000+600000
+ 30326 strings out of 481200
+ 712911 string characters out of 5914397
+ 1137355 words of memory out of 5000000
+ 46707 multiletter control sequences out of 15000+600000
  502984 words of font info for 109 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 87i,20n,89p,757b,1049s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/en
-c/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/s
-hare/texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/share/texmf/fonts/enc/dvips/lm/l
-m-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}</usr/share/texmf/f
-onts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.
-pfb></usr/share/texmf/fonts/type1/public/lm/lmbx8.pfb></usr/share/texmf/fonts/t
-ype1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></
-usr/share/texmf/fonts/type1/public/lm/lmmi6.pfb></usr/share/texmf/fonts/type1/p
-ublic/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/shar
-e/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/
-lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmro10.pfb></usr/share/texmf
-/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy6
-.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf
--dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on tesi.pdf (20 pages, 302770 bytes).
+ 87i,20n,89p,815b,1049s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/u
+sr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvi
+ps/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/share
+/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mat
+hex.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fo
+nts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx8.pf
+b></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/ty
+pe1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi6.pfb></us
+r/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/pub
+lic/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/t
+exmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr
+i10.pfb></usr/share/texmf/fonts/type1/public/lm/lmro10.pfb></usr/share/texmf/fo
+nts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy6.pf
+b></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on tesi.pdf (26 pages, 348029 bytes).
 PDF statistics:
- 151 PDF objects out of 1000 (max. 8388607)
- 111 compressed objects within 2 object streams
+ 174 PDF objects out of 1000 (max. 8388607)
+ 127 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
