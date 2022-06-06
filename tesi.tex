@@ -1005,25 +1005,50 @@ In questo modo, per qualunque $q$, $\lambda$ è un'applicazione lineare di $\mat
 Scriviamo i due gruppi cristallografici come delle unioni
 \[ \Gamma = L(\Gamma)(\vb{id, 0}) \cup L(\Gamma)(\vb{A, a}) \cup ... \cup L(\Gamma)(\vb{A, a})^{q-1} \]
 \[ \Delta = L(\Delta)(\vb{id, 0}) \cup L(\Delta)(\vb{A, a'}) \cup ... \cup L(\Delta)(\vb{A, a'})^{q-1} \]
-Definiamo adesso l'isomorfismo $\phi : \Gamma \longrightarrow \Delta$ in modo che per ogni $i = 0, 1,...,q-1$
+Definiamo adesso l'isomorfismo $\phi : \Gamma \longrightarrow \Delta$ in modo che per ogni $i = 0, 1,...,q-1$ e per ogni $\vb{t} \in L(\Gamma)$ valga 
 \[ \phi[(\vb{id, t})(\vb{A, a})^i] = (\vb{id}, \lambda\vb{t})(\vb{A, v'})^i \]
 Dobbiamo mostrare che $\phi$ così definito è effettivamente un omomorfismo \\
 \emph{MANCA LA FINE DELLA DIMOSTRAZIONE DEL FATTO CHE è un isomorfismo} \\
-Abbiamo mostrato che $\phi$ è un omomorfismo; è immediato trovare l'inversa di $\phi$ ed è ovvio che $\phi$ preserva i reticoli quindi $\Gamma$ e $\Delta$ sono equivalenti.  
+Abbiamo mostrato che $\phi$ è un omomorfismo; $\phi$ possiede un'inversa ed è ovvio che preserva i reticoli quindi $\Gamma$ e $\Delta$ sono equivalenti.  
 \end{proof}
 
 \begin{theorem}
-Le classi di equivalenza di gruppi cristallografici il cui gruppo puntuale contiene una singola riflessione sono 3.
+Le classi di equivalenza di gruppi cristallografici il cui gruppo puntuale contiene solo una riflessione sono 3.
 \end{theorem}
 
 \begin{proof}
-Se il gruppo puntuale contiene una sola riflessione, allora il sottogruppo $H_{\Gamma}^0$ ha indice 2 in $H_{\Gamma}$. Sia $\vb{A}$ la riflessione in $H_{\Gamma}$ rispetto alla retta per l'origine $l$. Scegliamo $\vb{r} \in L(\Gamma) \cap l$ come nel lemma \ref{lemma:shift2}. 
-Osserviamo che $\forall \vb{t} \in L(\Gamma) \; \; $
-  sappiamo che esiste un vettore 
+Se il gruppo puntuale contiene una sola riflessione,allora ha ordine $q = 2$, ovvero $H_{\Gamma} = \mathbb{Z} \diagup 2 \mathbb{Z}$.\\
+ Sia $\vb{A}$ la riflessione in $H_{\Gamma}$ rispetto alla retta per l'origine $l$. Scegliamo $\vb{r} \in L(\Gamma) \cap l$ come nel lemma \ref{lemma:shift2}. 
+Osserviamo che $\forall \vb{t} \in L(\Gamma)$ il vettore $\vb{t - At}$ è perpendicolare a $l$ in quanto $\vb{A(t - At) = At - t = - (t-At)}$, quindi per la prima proprietà dei gruppi cristallografici esisterà un vettore $\vb{s} \in L(\Gamma)$ perpendicolare a $l$ e di lunghezza minima. 
+Riprendiamo adesso le casistiche illustrate nel teorema \ref{lemma:shift2}
+\begin{enumerate}
+\item  $\vb{r} = \vb{t + At}$ con $\vb{t} \in L(\Gamma)$. Scegliamo $\vb{t} = \frac{1}{2}\vb{r} + \frac{1}{2} \vb{s}$, ovvero $\vb{t} - \vb{At} = \vb{s}$. In questo modo la coppia $\vb{r,t}$ risulta una base per il reticolo $L(\Gamma)$; un reticolo di questo tipo viene chiamato centrato rettangolare
+ \item $\vb{r}$ ed $\vb{s}$ in questo caso sono base $L(\Gamma)$; un reticolo di questo tipo viene chiamato primitivo rettangolare, in particolare le due situazioni seguenti generano due diverse classi di equivalenza di gruppi cristallografici
+ \begin{itemize}
+ \item Dato che $\vb{0}$ è un vettore di shift di $\vb{A}$, $\exists \vb{v} \in \mathbb{R}^2$ tale che $\vb{(A,v)} \in \Gamma$ e $\vb{a} = \vb{v + Av} = \vb{0}$
+ \item Dato che $\vb{r}$ è un vettore di shift di $\vb{A}$, $\exists \vb{v} \in \mathbb{R}^2$ tale che $\vb{(A,v)} \in \Gamma$ e $\vb{a} = \vb{v + Av} = \vb{r}$
+ \end{itemize}
+\end{enumerate}
+Siano $\Gamma, \Delta$ due gruppi cristallografici tali che cadono nella stessa categoria fra le 3 precendenti, in particolare il gruppo puntuale $H_{\Delta}$ sia generato da $\vb{A'}$ riflessione lungo la retta per l'origine $l'$. Si costruiscano $\vb{r', s', a'} \in L(\Delta)$ come illustrato precedentemente.\\
+Definiamo l'applicazione lineare $\lambda: L(\Gamma) \longrightarrow L(\Delta)$ tale che $\lambda \vb{r}= \vb{r'}$ e $\lambda \vb{s}= \vb{s'}$. In questo modo è immediato verificare che $\vb{A'} \lambda = \lambda \vb{A}$ e $\vb{a'} = \lambda \vb{a}$. \\
+Scriviamo i due gruppi cristallografici come delle unioni
+\[ \Gamma = L(\Gamma)(\vb{id, 0}) \cup L(\Gamma)(\vb{A, v}) \]
+\[ \Delta = L(\Delta)(\vb{id, 0}) \cup L(\Delta)(\vb{A', v'})  \]
+Definiamo adesso l'isomorfismo $\phi : \Gamma \longrightarrow \Delta$ in modo che per ogni $i = 0, 1$ e per ogni $\vb{t} \in L(\Gamma)$ 
+\[ \phi[(\vb{id, t})(\vb{A, a})^i] = (\vb{id}, \lambda\vb{t})(\vb{A', v'})^i \]
+Dobbiamo mostrare che $\phi$ così definito è effettivamente un omomorfismo \\
+\emph{MANCA LA FINE DELLA DIMOSTRAZIONE DEL FATTO CHE è un isomorfismo} \\
+Abbiamo mostrato che $\phi$ è un omomorfismo; $\phi$ possiede un'inversa ed è ovvio che preserva i reticoli quindi $\Gamma$ e $\Delta$ sono equivalenti.  
 \end{proof}
 
 \begin{theorem}
 Le classi di equivalenza di gruppi cristallografici il cui gruppo puntuale contiene più di una riflessione sono 9
 \end{theorem}
 
+\begin{proof}
+Sia $\Gamma$ un gruppo cristallografico $2$-dimensionale tale che il gruppo puntuale $H_{\Gamma}$ contenga due riflessioni $\vb{A}, \vb{B}$ rispetto alle rette per l'origine $l$ ed $m$; allora anche $\vb{C} = \vb{AB} \in H_{\Gamma}$ e $\vb{C}$ è una rotazione. \\
+Possiamo scegliere $\vb{A}$ e  $\vb{B}$ in modo che $\vb{C}$ sia una rotazione di angolo $\theta = \frac{2 \pi}{q}$ che genera $H_{\Gamma}^0$. In questa situazione le rette $l$ ed $m$ formano un angolo di $\frac{\pi}{q}$. 
+Siano inoltre $\vb{a} = \vb{v + Av}$ un vettore di shift di $\vb{A}$ su $l$ e $\vb{b} = \vb{w + Aw}$ un vettore di shift di $\vb{B}$ su $m$.\\
+Vogliamo dimostrare che ci sono 9 possibili combinazioni di gruppi puntuali e vettori di shift e che queste generano 9 diverse classi di equivalenza. 
+\end{proof}
 \end{document}
