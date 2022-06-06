@@ -797,6 +797,7 @@ Comunque scelto un gruppo cristallografico $n$-dimensionale $\Gamma$ questo è i
 Grazie al teorema \ref{teo:caratnorm} sappiamo che $\Gamma'$ è caratterizzato da una tabella di gruppo che associa ad ogni coppia di elementi il loro prodotto. \'E  noto che due gruppi che hanno la stessa tabella di gruppo sono isomorfi in modo canonico tramite un'applicazione definita a partire dalla tabella stessa;grazie al risultato \ref{lemma:valass} sappiamo che le tabelle di gruppo in dimensione $n$ sono in numero finito, quindi si può concludere che esiste solo un numero finito di classi di isomorfismo di gruppi cristallografici. 
 \end{proof}
 \chapter{Classificazione dei gruppi cristallografici in dimensione 2}
+\emph{SCRIVI INTRO}
 In questo capitolo ci concentriamo sulla classificazione dei gruppi cristallografici 2-dimensionali. \\
 Nella prima sezione descriveremo gli invarianti che ci permetteranno di caratterizzare le diverse classi di isomorfismo dei gruppi e alcune loro proprietà, mentre nella seconda procederemo con l'effettiva classificazione attraverso alcuni teoremi di caratterizzazione.  \\
 \section{Invarianti dei gruppi cristallografici}
@@ -987,6 +988,7 @@ In particolare $\lambda \vb{At} = \vb{A}' \lambda \vb{t}$ per ogni $\vb{t} \in L
 \end{lemma}
 \section{Teoremi di classificazione}
 In questa sezione saranno enunciati e dimostrati i teoremi di classificazione dei gruppi cristallografici $2$-dimensionali. Si tratta in sostanza di raccogliere i risultati fin ora dimostrati. 
+\emph{SCRIVI INTRO}
 
 \begin{theorem}
 Le classi di equivalenza di gruppi cristallograici il cui gruppo puntuale non contiene riflessioni sono 5.
@@ -997,18 +999,18 @@ Se il gruppo puntiale $H_{\Gamma}$ non contiene riflessioni, allora $H_{\Gamma} 
 Il lemma \ref{lemma:q} assicura che il gruppo puntuale è ciclico generato da una rotazione di angolo $\theta = \frac{2 \pi}{q}$ ed il teorema \ref{teo:qlg} implica che $q \in \{ 1, 2, 3, 4, 6\}$. I gruppi puntuali possibili sono quindi $\mathbb{Z}$, $\mathbb{Z} \diagup 2 \mathbb{Z}$, $\mathbb{Z} \diagup 3 \mathbb{Z}$, $\mathbb{Z} \diagup 4 \mathbb{Z}$, $\mathbb{Z} \diagup 6 \mathbb{Z}$. \\
 Siano $\Gamma, \Delta$ due gruppi cristallografici tali che $H_{\Gamma} \cong H_{\Delta}$, vogliamo costruire un isomorfimo \\
 $\lambda: L(\Gamma) \longrightarrow L(\Delta)$ tale che $\vb{A} \lambda = \lambda \vb{A}$. \\
-Se $q = 1, q=2$ allora possiamo scegliere un isomorfismo qualunque; per $q=3, q=4$ e $q=6$, sappiamo grazie al teorema \ref{teo:qlg} che 
+Se $q = 1, q=2$ possiamo scegliere un isomorfismo qualunque; per $q=3, q=4$ e $q=6$, sappiamo grazie al teorema \ref{teo:qlg} che 
 \[ L(\Gamma) = \{ n_1 \vb{t} + n_2 \vb{A} \vb{t} | n_1, n_2 \in \mathbb{Z} \}\]
 \[L(\Delta) = \{ n_1 \vb{t'} + n_2 \vb{A} \vb{t'} | n_1, n_2 \in \mathbb{Z} \} \]
 Scegliamo l'isomorfismo tale per cui $\lambda \vb{t} = \vb{t'}$  e $\lambda \vb{A}^i \vb{t} = \vb{A}^i \vb{t'}$. 
 In questo modo, per qualunque $q$, $\lambda$ è un'applicazione lineare di $\mathbb{R}^2$ tale che $\lambda \vb{A}^i =  \vb{A}^i \lambda \; \; \forall i = 0, 1,...,q-1$. \\
-Scriviamo i due gruppi cristallografici come delle unioni
+Scriviamo i due gruppi cristallografici come delle unioni come segue
 \[ \Gamma = L(\Gamma)(\vb{id, 0}) \cup L(\Gamma)(\vb{A, a}) \cup ... \cup L(\Gamma)(\vb{A, a})^{q-1} \]
 \[ \Delta = L(\Delta)(\vb{id, 0}) \cup L(\Delta)(\vb{A, a'}) \cup ... \cup L(\Delta)(\vb{A, a'})^{q-1} \]
 Definiamo adesso l'isomorfismo $\phi : \Gamma \longrightarrow \Delta$ in modo che per ogni $i = 0, 1,...,q-1$ e per ogni $\vb{t} \in L(\Gamma)$ valga 
 \[ \phi[(\vb{id, t})(\vb{A, a})^i] = (\vb{id}, \lambda\vb{t})(\vb{A, v'})^i \]
-Dobbiamo mostrare che $\phi$ così definito è effettivamente un omomorfismo \\
-\emph{MANCA LA FINE DELLA DIMOSTRAZIONE DEL FATTO CHE è un isomorfismo} \\
+La dimostrazione del fatto che $\phi$ è un omomorfismo ..
+\emph{QUI MANCA IL PEZZETTO NON HO AVUTO TEMPO}
 Abbiamo mostrato che $\phi$ è un omomorfismo; $\phi$ possiede un'inversa ed è ovvio che preserva i reticoli quindi $\Gamma$ e $\Delta$ sono equivalenti.  
 \end{proof}
 
@@ -1037,7 +1039,7 @@ Scriviamo i due gruppi cristallografici come delle unioni
 Definiamo adesso l'isomorfismo $\phi : \Gamma \longrightarrow \Delta$ in modo che per ogni $i = 0, 1$ e per ogni $\vb{t} \in L(\Gamma)$ 
 \[ \phi[(\vb{id, t})(\vb{A, a})^i] = (\vb{id}, \lambda\vb{t})(\vb{A', v'})^i \]
 Dobbiamo mostrare che $\phi$ così definito è effettivamente un omomorfismo \\
-\emph{MANCA LA FINE DELLA DIMOSTRAZIONE DEL FATTO CHE è un isomorfismo} \\
+\emph{MANCA LA FDIMOSTRAZIONE DEL FATTO CHE è un omo} \\
 Abbiamo mostrato che $\phi$ è un omomorfismo; $\phi$ possiede un'inversa ed è ovvio che preserva i reticoli quindi $\Gamma$ e $\Delta$ sono equivalenti.  
 \end{proof}
 
@@ -1050,5 +1052,9 @@ Sia $\Gamma$ un gruppo cristallografico $2$-dimensionale tale che il gruppo punt
 Possiamo scegliere $\vb{A}$ e  $\vb{B}$ in modo che $\vb{C}$ sia una rotazione di angolo $\theta = \frac{2 \pi}{q}$ che genera $H_{\Gamma}^0$. In questa situazione le rette $l$ ed $m$ formano un angolo di $\frac{\pi}{q}$. 
 Siano inoltre $\vb{a} = \vb{v + Av}$ un vettore di shift di $\vb{A}$ su $l$ e $\vb{b} = \vb{w + Aw}$ un vettore di shift di $\vb{B}$ su $m$.\\
 Vogliamo dimostrare che ci sono 9 possibili combinazioni di gruppi puntuali e vettori di shift e che queste generano 9 diverse classi di equivalenza. 
+\emph{MANCA FINE DIMOSTRAZIONE}
 \end{proof}
+
+\emph{MANCA CONCLUSIONE}
+\emph{MANCA BIBLIOGRAFIA}
 \end{document}
